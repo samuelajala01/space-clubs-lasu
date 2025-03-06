@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 // import Logo from "../../public/assets/logo.png";
 import { useState } from "react";
 
@@ -35,12 +36,12 @@ const Navbar = () => {
           gap-[3vw] items-center
         `}
         >
-          <li>Home</li>
-          <li>About</li>
-          <li>Community</li>
-          <li>Events</li>
-          <li>Resources</li>
-          <li>Contact</li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/about">About</Link></li>
+          <li><Link href="/community">Community</Link></li>
+          <li><Link href="/events">Events</Link></li>
+          <li><Link href="resources">Resources</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
 
         {/* Join Now Button */}
