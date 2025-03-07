@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  border: 1px solid red;
+}
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: darkblue;
+  background: url("../../public/images/home-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  
 }
-
