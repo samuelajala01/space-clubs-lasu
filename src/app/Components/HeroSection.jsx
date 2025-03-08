@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../../public/images/space-clubs-logo.jpg";
+import Logo from "../../../public/images/Logo.jpg";
 
 const HeroSection = () => {
   return (
