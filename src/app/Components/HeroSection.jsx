@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "../../../public/images/Logo.jpg";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -19,6 +20,19 @@ const HeroSection = () => {
             Where curiosity meets the cosmos
           </p>
           <p className="text-4xl text-white">Insipre | Educate | Engage</p>
+
+          <div className="mt-16 flex gap-6 text-center justify-center">
+          <Link href='/'>
+        <button className="bg-[#f65d2a] text-white rounded-full py-2 w-[14vw] font-semibold">
+          Join our community
+        </button>
+        </Link>
+        <Link href='/'>
+        <button className="bg-[#f65d2a] text-white rounded-full py-2 w-[14vw] font-semibold">
+          Donate 
+        </button>
+        </Link>
+          </div>
         </section>
       </>
     </>
