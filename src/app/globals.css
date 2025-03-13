@@ -12,8 +12,10 @@ body {
   box-sizing: border-box;
   background: url("../../public/images/home-bg.png");
   background-repeat: no-repeat;
-  background-size: 100%;
   background-position: center;
   background-attachment: fixed;
+  background-size: cover;
+  background-origin: content-box;
+  color: white;
   
 }

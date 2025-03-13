@@ -6,11 +6,15 @@ const HeroSection = () => {
     <>
       <>
         <section className="mx-[4vw] text-center mt-[35vh]">
-          
-    <div className="flex justify-center ">
-<Image className="w-[40vw]" src={Logo} alt="Logo" width={100} height={100}/>
-
-    </div>
+          <div className="flex justify-center ">
+            <Image
+              className="w-[40vw]"
+              src={Logo}
+              alt="Logo"
+              width={100}
+              height={100}
+            />
+          </div>
           <p className="text-2xl mb-8 text-white">
             Where curiosity meets the cosmos
           </p>

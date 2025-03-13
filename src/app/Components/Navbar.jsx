@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex justify-center absolute top-4 mt-8">
-      <div className="flex justify-center items-center gap-[4vw] py-6 px-8 bg-white w-fit rounded-full relative">
+      <div className="flex justify-center items-center gap-[4vw] py-6 px-8 bg-white w-fit rounded-full relative text-black">
         {/* Hamburger Menu for Mobile */}
         <button
           className="md:hidden absolute left-4 top-1/2 -translate-y-1/2"
