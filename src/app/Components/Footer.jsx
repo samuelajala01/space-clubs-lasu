@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <Footer>
+      <footer>
         <div>this is the footer</div>
         <div>LOGO</div>
         <p>About</p>
@@ -9,7 +9,7 @@ const Footer = () => {
         <p>Partner with us</p>
         <p>Donate</p>
         <p>Space Clubs 2025, All rights reserved</p>
-      </Footer>
+      </footer>
     </>
   );
 };
