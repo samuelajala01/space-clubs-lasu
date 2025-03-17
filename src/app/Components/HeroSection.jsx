@@ -21,17 +21,17 @@ const HeroSection = () => {
           </p>
           <p className="text-4xl text-white">Insipre | Educate | Engage</p>
 
-          <div className="mt-16 flex gap-6 text-center justify-center">
-          <Link href='/'>
-        <button className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold">
-          Join our community
-        </button>
-        </Link>
-        <Link href='/'>
-        <button className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold">
-          Donate 
-        </button>
-        </Link>
+          <div className="mt-16 flex gap-6 md:gap-[8vw] text-center justify-center">
+            <Link href="/">
+              <button className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold">
+                Join our community
+              </button>
+            </Link>
+            <Link href="/">
+              <button className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold">
+                Donate
+              </button>
+            </Link>
           </div>
         </section>
       </>
