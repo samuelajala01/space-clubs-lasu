@@ -1,3 +1,12 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+
+import {
+  faLinkedinIn,
+  faXTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
 const Footer = () => {
   return (
     <>
@@ -5,7 +14,36 @@ const Footer = () => {
         <div className="p-[4vw]">
           <div>
             <div>this is the footer</div>
-            <div>LOGO</div>
+            <div className="flex gap-4 md:gap-[4vw]">
+              <Link href="">
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  style={{
+                    width: "2.5rem", // Explicit dimensions
+                    height: "2.5rem",
+                  }}
+                />
+              </Link>
+              <Link href="/">
+                <FontAwesomeIcon
+                  icon={faXTwitter}
+                  style={{
+                    width: "2.5rem", // Explicit dimensions
+                    height: "2.5rem",
+                  }}
+                />
+                </Link>
+                <Link href="/">
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    style={{
+                      width: "2.5rem", // Explicit dimensions
+                      height: "2.5rem",
+                    }}
+                  />
+                </Link>
+              
+            </div>
             <p>About</p>
             <p>Reach Out</p>
             <p>Partner with us</p>
