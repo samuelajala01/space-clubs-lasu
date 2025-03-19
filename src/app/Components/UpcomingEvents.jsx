@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const UpcomingEvents = () => {
   const events = [
@@ -52,6 +53,13 @@ const UpcomingEvents = () => {
               <p className="text-gray-200">{event.description}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link href="/events">
+            <button className="bg-[#f65d2a] text-white rounded-full py-4 px-8 font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
+              View All Events
+            </button>
+          </Link>
         </div>
       </div>
     </section>
