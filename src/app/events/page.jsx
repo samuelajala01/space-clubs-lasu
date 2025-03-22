@@ -62,7 +62,7 @@ const EventsPage = () => {
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen mx-[6vw]">
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">
