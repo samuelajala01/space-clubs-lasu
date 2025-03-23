@@ -3,6 +3,7 @@ import HomePage from "./Components/HomePage";
 import HeroSection from "./Components/HeroSection";
 import ActivitiesSection from "./Components/ActivitiesSection";
 import UpcomingEvents from "./Components/UpcomingEvents";
+import TeamPreview from "./Components/TeamPreview";
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
         </div>
       </section>
       <ActivitiesSection />
+      <TeamPreview />
       <UpcomingEvents />
     </>
   );
