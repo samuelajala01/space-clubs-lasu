@@ -42,18 +42,17 @@ const Navbar = () => {
           <li>
             <Link href="/about">About</Link>
           </li>
-          <li>
-            <Link href="/community">Community</Link>
-          </li>
+          
           <li>
             <Link href="/events">Events</Link>
           </li>
           <li>
-            <Link href="resources">Resources</Link>
+            <Link href="/gallery">Gallery</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="resources">Resources</Link>
           </li>
+          
         </ul>
 
         {/* Join Now Button */}
