@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const ActivitiesSection = () => {
   const activities = [
@@ -29,50 +28,16 @@ const ActivitiesSection = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <section className="py-16">
       <div className="mx-[4vw] px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl text-white mb-12 text-center"
-        >
+        <h2 className="text-4xl text-white mb-12 text-center">
           Our Activities
-        </motion.h2>
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {activities.map((activity, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={itemVariants}
               className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
               <div className="text-4xl mb-4">{activity.icon}</div>
@@ -80,9 +45,9 @@ const ActivitiesSection = () => {
                 {activity.title}
               </h3>
               <p className="text-gray-300">{activity.description}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

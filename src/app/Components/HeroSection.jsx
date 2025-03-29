@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Logo from "../../../public/images/Logo.png";
+
+import Logo from "../../../public/images/Logo-light.png";
 import Link from "next/link";
 
 const HeroSection = () => {
