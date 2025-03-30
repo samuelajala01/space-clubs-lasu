@@ -20,7 +20,7 @@ const TeamPreview = () => {
       name: "David M",
       role: "Vice President",
       image: "/images/team/alex.jpg",
-      bio: "Robotics expert leading our Mars Rover project development.",
+      bio: "Organizing space science workshops and public outreach events.",
       social: {
         linkedin: "https://linkedin.com/in/alex-chen",
         twitter: "https://twitter.com/alexchen",
@@ -42,7 +42,7 @@ const TeamPreview = () => {
       name: "Samuel Ajala",
       role: "Project Lead I",
       image: "/images/team/david.jpg",
-      bio: "Organizing space science workshops and public outreach events.",
+      bio: "Robotics expert leading our Mars Rover project development",
       social: {
         linkedin: "https://linkedin.com/in/david-kim",
         twitter: "https://twitter.com/davidkim",

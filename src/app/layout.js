@@ -1,34 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
-  title: "Space Clubs LASU",
-  description: "where curiosity meets the cosmos",
+  title: "Space Club",
+  description:
+    "Join our community of space enthusiasts and explore the cosmos together.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div>
+      <body className="min-h-screen bg-black text-white">
         <Navbar />
-        {children ?? <div />}
+        <main className="pt-16">{children}</main>
         <Footer />
-        </div>
       </body>
     </html>
   );

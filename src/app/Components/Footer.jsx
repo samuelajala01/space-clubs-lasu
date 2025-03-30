@@ -57,6 +57,14 @@ const Footer = () => {
                   Resources
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/admin/login"
+                  className="hover:text-orange-200 transition-colors"
+                >
+                  Admin Login
+                </Link>
+              </li>
             </ul>
           </div>
 

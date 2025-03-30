@@ -56,7 +56,7 @@ const Navbar = () => {
         </ul>
 
         {/* Join Now Button */}
-        <Link href="/">
+        <Link href="/join">
           <button className="bg-[#f65d2a] text-white rounded-full py-2 px-6">
             Join Now
           </button>
