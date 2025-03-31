@@ -275,7 +275,7 @@ const ResourcesPage = () => {
         >
           <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Subscribe to our newsletter to receive updates about new resources,
+            Subscribe to our mailing list to receive updates about new resources,
             upcoming events, and space science news.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">

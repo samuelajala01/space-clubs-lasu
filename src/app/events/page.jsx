@@ -65,7 +65,6 @@ const EventsPage = () => {
   return (
     <div className="relative min-h-screen mx-[6vw]">
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
-      <Navbar />
       <main className="pt-20">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-5xl md:text-[4vw] text-center text-white mb-12">
@@ -123,7 +122,7 @@ const EventsPage = () => {
               Stay Updated with Our Events
             </h2>
             <p className="text-gray-200 mb-6">
-              Subscribe to our newsletter to receive updates about upcoming
+              Subscribe to our mailing list to receive updates about upcoming
               events and activities.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">

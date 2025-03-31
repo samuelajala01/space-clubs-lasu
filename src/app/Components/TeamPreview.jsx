@@ -29,7 +29,7 @@ const TeamPreview = () => {
     },
     {
       name: "Kehinde Fodurin",
-      role: "Technical Lead",
+      role: "Membership Lead",
       image: "/images/team/maya.jpg",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
@@ -50,8 +50,8 @@ const TeamPreview = () => {
       },
     },
     {
-      name: "Abraham Fakorede",
-      role: "Project Lead II",
+      name: "Samuel Adebanjo",
+      role: "Programs Lead",
       image: "/images/team/emma.jpg",
       bio: "Leading our space research initiatives and data analysis projects.",
       social: {
@@ -117,7 +117,7 @@ const TeamPreview = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
+              className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10"
             >
               <div className="relative h-64">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
