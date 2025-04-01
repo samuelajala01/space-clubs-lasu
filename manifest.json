@@ -1,0 +1,37 @@
+{
+    "name": "Space Club",
+    "short_name": "SpaceClub",
+    "description": "Join our community of space enthusiasts and explore the cosmos together.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ],
+    "categories": ["education", "science", "astronomy"],
+    "lang": "en-US",
+    "dir": "ltr",
+    "prefer_related_applications": false,
+    "related_applications": [],
+    "iarc_rating_id": "",
+    "screenshots": [
+      {
+        "src": "/screenshot1.jpg",
+        "sizes": "1280x720",
+        "type": "image/jpeg"
+      }
+    ]
+  }
