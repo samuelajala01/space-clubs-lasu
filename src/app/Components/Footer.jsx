@@ -72,9 +72,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li>Email: info@spaceclubs.org</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Address: 123 Space Street, Cosmos City</li>
+              <li><a href="mailto:spaceclubslasu@gmail.com">spaceclubslasu@gmail.com</a></li>
+              <li>Phone: <a href='tel:+2349071820601'>+234 907 182 0601</a></li>
+              <li>Address: Lagos State University, Epe, Lagos</li>
             </ul>
           </div>
 
@@ -83,13 +83,13 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <Link
-                href="https://linkedin.com/company/space-clubs"
+                href="https://www.linkedin.com/company/space-clubs-lasu/"
                 className="hover:text-orange-200 transition-colors"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} className="w-6 h-6" />
               </Link>
               <Link
-                href="https://twitter.com/spaceclubs"
+                href="https://x.com/lasu_space"
                 className="hover:text-orange-200 transition-colors"
               >
                 <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />

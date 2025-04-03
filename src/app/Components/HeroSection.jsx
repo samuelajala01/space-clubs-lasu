@@ -28,7 +28,7 @@ const HeroSection = () => {
                 Join our community
               </button>
             </Link>
-            <Link href="/">
+            <Link href="/donate">
               <button className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
                 Donate
               </button>
