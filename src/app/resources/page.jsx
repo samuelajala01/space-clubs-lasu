@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "../Components/Navbar";
 
 const ResourcesPage = () => {
   const learningResources = [
@@ -94,9 +93,8 @@ const ResourcesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black relative">
-      <Navbar />
-      <div className="mx-[4vw] px-4 pt-48 pb-16">
+    <div className="min-h-screen relative">
+      <div className="mx-[4vw] px-4 pb-16 mt-32">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -275,8 +273,8 @@ const ResourcesPage = () => {
         >
           <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Subscribe to our mailing list to receive updates about new resources,
-            upcoming events, and space science news.
+            Subscribe to our mailing list to receive updates about new
+            resources, upcoming events, and space science news.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
             <input
