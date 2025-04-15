@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../Components/Navbar";
 
 const JoinPage = () => {
   // Set this to true when accepting applications
@@ -179,23 +178,22 @@ const JoinPage = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="bg-black" id="join-page">
       {/* Starry Background */}
-      <div className="fixed inset-0 z-0">
+      <div className="inset-0 z-0">
         <Image
           src="/images/starry.jpg"
           alt="Starry background"
           fill
-          className="object-cover opacity-20"
+          className=" opacity-20"
           priority
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10">
-        <Navbar />
+      <div className="">
         <div className="pt-48 pb-16">
-          <div className="container mx-auto px-4">
+          <div className="mx-auto px-4">
             {isAcceptingApplications ? (
               <ApplicationForm />
             ) : (
