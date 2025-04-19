@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../Components/Navbar";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const AboutPage = () => {
@@ -53,21 +52,21 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
       {/* Starry Background */}
-      <div className="fixed inset-0 z-0">
+      {/* <div className="fixed">
         <Image
           src="/images/starry.jpg"
           alt="Starry background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover"
           priority
         />
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="relative z-10">
-        <Navbar />
+      <div className="relative min-h-screen  ">
         {/* Hero Section */}
         <section className="py-20 text-center">
           <div className="container mx-auto px-4">

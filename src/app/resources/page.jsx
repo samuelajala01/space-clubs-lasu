@@ -93,8 +93,8 @@ const ResourcesPage = () => {
   };
 
   return (
-    <div className="min-h-screen relative">
-      <div className="mx-[4vw] px-4 pb-16 mt-32">
+    <div className="inset-0 backdrop-blur-sm -z-10 pt-20">
+      <div className="mx-[4vw] px-4 pb-16 pt-32">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
