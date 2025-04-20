@@ -46,9 +46,10 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen relative">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
       {/* Starry Background */}
-      <div className="fixed inset-0 z-0">
+      {/* <div className="fixed inset-0 z-0">
         <Image
           src="/images/starry.jpg"
           alt="Starry background"
@@ -56,7 +57,7 @@ const AdminLogin = () => {
           className="object-cover opacity-20"
           priority
         />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-10">

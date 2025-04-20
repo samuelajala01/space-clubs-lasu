@@ -3,35 +3,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
+// import sa from "../public/SylvesterAgose_.jpg"
+// import dm from "../public/KehindeFodunrin_.png"
+
 const AboutPage = () => {
   const coreTeam = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Faculty Advisor",
-      image: "/images/team/sarah.jpg",
+      name: "Sylvester Agose",
+      role: "President",
+      image: "",
       bio: "Professor of Astrophysics with 15 years of experience in space research.",
       social: {
-        linkedin: "https://linkedin.com/in/sarah-johnson",
+        linkedin: "https://www.linkedin.com/in/sylvesteragose/",
         twitter: "https://twitter.com/sarahjohnson",
         email: "sarah.johnson@university.edu",
       },
     },
     {
-      name: "Alex Chen",
-      role: "Club President",
-      image: "/images/team/alex.jpg",
-      bio: "Senior Aerospace Engineering student passionate about space exploration.",
+      name: "David M",
+      role: "Vice President",
+      image: "",
+      bio: "Organizing space science workshops and public outreach events.",
       social: {
-        linkedin: "https://linkedin.com/in/alex-chen",
+        linkedin: "https://linkedin.com/in/sylvesteragose",
         twitter: "https://twitter.com/alexchen",
         email: "alex.chen@university.edu",
       },
     },
     {
-      name: "Maya Patel",
-      role: "Technical Lead",
-      image: "/images/team/maya.jpg",
-      bio: "Robotics expert leading our Mars Rover project development.",
+      name: "Kehinde Fodurin",
+      role: "Membership Lead",
+      image: "",
+      bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://linkedin.com/in/maya-patel",
         twitter: "https://twitter.com/mayapatel",
@@ -39,14 +42,91 @@ const AboutPage = () => {
       },
     },
     {
-      name: "David Kim",
-      role: "Events Coordinator",
+      name: "Samuel Ajala",
+      role: "Project Lead I",
       image: "/images/team/david.jpg",
-      bio: "Organizing space science workshops and public outreach events.",
+      bio: "Robotics expert leading our Mars Rover project development",
       social: {
         linkedin: "https://linkedin.com/in/david-kim",
         twitter: "https://twitter.com/davidkim",
         email: "david.kim@university.edu",
+      },
+    },
+    {
+      name: "Samuel Adebanjo",
+      role: "Education Lead",
+      image: "",
+      bio: "Leading our space research initiatives and data analysis projects.",
+      social: {
+        linkedin: "https://linkedin.com/in/emma-rodriguez",
+        twitter: "https://twitter.com/emmarodriguez",
+        email: "emma.rodriguez@university.edu",
+      },
+    },
+    {
+      name: "Favour Akinsiku",
+      role: "General Secretary",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Emmanuel Akinyemi",
+      role: "Programs Manager II",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Rukayat Seriki",
+      role: "Editorial Lead",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Esike Peace",
+      role: "Community manager",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Abdullah Saliu",
+      role: "Programs Manager I",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Abraham Fakorede",
+      role: "Projects manager II",
+      image: "/images/team/james.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
       },
     },
   ];
@@ -122,10 +202,20 @@ const AboutPage = () => {
                   className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="relative h-64">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-6xl">👨‍🚀</span>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        width='100'
+                        height='100'
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-6xl">👨‍🚀</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-2">
@@ -133,29 +223,36 @@ const AboutPage = () => {
                     </h3>
                     <p className="text-[#f65d2a] mb-3">{member.role}</p>
                     <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+
                     <div className="flex space-x-4">
-                      <a
-                        href={member.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        <FaLinkedin className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={member.social.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        <FaTwitter className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={`mailto:${member.social.email}`}
-                        className="text-gray-400 hover:text-white transition-colors"
-                      >
-                        <FaEnvelope className="w-5 h-5" />
-                      </a>
+                      {member.social.linkedin && (
+                        <a
+                          href={member.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-white transition-colors"
+                        >
+                          <FaLinkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.social.twitter && (
+                        <a
+                          href={member.social.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 hover:text-white transition-colors"
+                        >
+                          <FaTwitter className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.social.email && (
+                        <a
+                          href={`mailto:${member.social.email}`}
+                          className="text-gray-400 hover:text-white transition-colors"
+                        >
+                          <FaEnvelope className="w-5 h-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
