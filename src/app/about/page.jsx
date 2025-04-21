@@ -11,7 +11,7 @@ const AboutPage = () => {
     {
       name: "Sylvester Agose",
       role: "President",
-      image: "",
+      image: "/images/team/SylvesterAgose_.jpg",
       bio: "Professor of Astrophysics with 15 years of experience in space research.",
       social: {
         linkedin: "https://www.linkedin.com/in/sylvesteragose/",
@@ -22,7 +22,7 @@ const AboutPage = () => {
     {
       name: "David M",
       role: "Vice President",
-      image: "",
+      image: "/images/team/DavidMuraina.jpg",
       bio: "Organizing space science workshops and public outreach events.",
       social: {
         linkedin: "https://linkedin.com/in/sylvesteragose",
@@ -33,7 +33,7 @@ const AboutPage = () => {
     {
       name: "Kehinde Fodurin",
       role: "Membership Lead",
-      image: "",
+      image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://linkedin.com/in/maya-patel",
@@ -44,7 +44,7 @@ const AboutPage = () => {
     {
       name: "Samuel Ajala",
       role: "Project Lead I",
-      image: "/images/team/david.jpg",
+      image: "/images/team/SamuelAjala.jpg",
       bio: "Robotics expert leading our Mars Rover project development",
       social: {
         linkedin: "https://linkedin.com/in/david-kim",
@@ -55,7 +55,7 @@ const AboutPage = () => {
     {
       name: "Samuel Adebanjo",
       role: "Education Lead",
-      image: "",
+      image: "/images/team/Adebanjo_Samuel.jpg",
       bio: "Leading our space research initiatives and data analysis projects.",
       social: {
         linkedin: "https://linkedin.com/in/emma-rodriguez",
@@ -66,7 +66,7 @@ const AboutPage = () => {
     {
       name: "Favour Akinsiku",
       role: "General Secretary",
-      image: "/images/team/james.jpg",
+      image: "/images/team/FAVOURAKINSIKU.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -77,7 +77,7 @@ const AboutPage = () => {
     {
       name: "Emmanuel Akinyemi",
       role: "Programs Manager II",
-      image: "/images/team/james.jpg",
+      image: "/images/team/AkinyemiEmmanuel_.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -88,7 +88,7 @@ const AboutPage = () => {
     {
       name: "Rukayat Seriki",
       role: "Editorial Lead",
-      image: "/images/team/james.jpg",
+      image: "/images/team/RukayatSeriki.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -99,7 +99,7 @@ const AboutPage = () => {
     {
       name: "Esike Peace",
       role: "Community manager",
-      image: "/images/team/james.jpg",
+      image: "/images/team/EsikePeace_.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -110,7 +110,7 @@ const AboutPage = () => {
     {
       name: "Abdullah Saliu",
       role: "Programs Manager I",
-      image: "/images/team/james.jpg",
+      image: "/images/team/ABDULLAHSALIU.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -121,7 +121,7 @@ const AboutPage = () => {
     {
       name: "Abraham Fakorede",
       role: "Projects manager II",
-      image: "/images/team/james.jpg",
+      image: "/images/team/AbrahamFakorede_.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
@@ -202,7 +202,7 @@ const AboutPage = () => {
                   className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="relative h-64">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div> */}
                     {member.image ? (
                       <Image
                         src={member.image}
