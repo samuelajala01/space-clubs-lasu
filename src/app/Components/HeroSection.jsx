@@ -7,19 +7,19 @@ const HeroSection = () => {
   return (
     <>
       <>
-        <section className="mx-[4vw] text-center mt-[35vh]">
+        <section className="mx-[4vw] text-center">
           <div className="flex justify-center ">
             <Image
-              className="w-[40vw]"
+              className="w-[40vw] mt-[27vh] mb-12"
               src={Logo}
               alt="Logo"
-              width={100}
+              width={500}
               height={100}
             />
           </div>
-          <p className="text-2xl mb-8 text-white">
+          {/* <p className="text-2xl mb-8 text-white">
             Where curiosity meets the cosmos
-          </p>
+          </p> */}
           <p className="text-4xl text-white">Inspire | Educate | Engage</p>
 
           <div className="mt-16 flex gap-6 md:gap-[8vw] text-center justify-center">

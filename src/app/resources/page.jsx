@@ -94,12 +94,9 @@ const ResourcesPage = () => {
 
   return (
     <div className="inset-0 backdrop-blur-sm -z-10 pt-20">
-      <div className="mx-[4vw] px-4 pb-16 pt-32">
+      <div className="mx-[7vw] px-4 pb-16 pt-32">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -109,7 +106,7 @@ const ResourcesPage = () => {
             Discover a curated collection of tools, learning materials, and
             community resources to enhance your space exploration journey.
           </p>
-        </motion.div>
+        </div>
 
         {/* Learning Resources Section */}
         <motion.section
