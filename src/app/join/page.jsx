@@ -178,9 +178,10 @@ const JoinPage = () => {
   );
 
   return (
-    <div className="bg-black" id="join-page">
+    <div className="" id="join-page">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
       {/* Starry Background */}
-      <div className="inset-0 z-0">
+      {/* <div className="inset-0 z-0">
         <Image
           src="/images/starry.jpg"
           alt="Starry background"
@@ -188,11 +189,11 @@ const JoinPage = () => {
           className=" opacity-20"
           priority
         />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="">
-        <div className="pt-48 pb-16">
+        <div className="pt-20 pb-16">
           <div className="mx-auto px-4">
             {isAcceptingApplications ? (
               <ApplicationForm />

@@ -20,17 +20,8 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black relative">
-      {/* Starry Background */}
-      <div className="fixed inset-0 z-0">
-        <Image
-          src="/images/starry.jpg"
-          alt="Starry background"
-          fill
-          className="object-cover opacity-20"
-          priority
-        />
-      </div>
+    <div className="min-h-screen relative">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
 
       {/* Content */}
       <div className="relative z-10">
