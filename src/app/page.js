@@ -55,12 +55,7 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="p-4 mb-8"
+        <div className="p-4 mb-8"
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-[4vw] mb-8">Our Vision</h2>
@@ -75,7 +70,7 @@ export default function Home() {
               while making space education engaging and accessible to all.
             </p>
           </div>
-        </motion.div>
+        </div>
       </section>
       <ActivitiesSection />
       <TeamPreview />
