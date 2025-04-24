@@ -19,3 +19,15 @@ body {
   color: white;
   
 }
+
+::-webkit-scrollbar{
+  width: 0.7rem;
+  background-color: #1a1a1a;
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #f65d2a;
+  border-radius: 0.7rem;
+  height: 3rem;
+}

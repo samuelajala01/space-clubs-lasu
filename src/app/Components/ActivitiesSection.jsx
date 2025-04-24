@@ -9,28 +9,28 @@ const ActivitiesSection = () => {
       icon: "🔭",
     },
     {
-      title: "Rocket Building",
+      title: "Project building",
       description:
-        "Hands-on workshops to design and build model rockets, learning about propulsion and aerodynamics.",
+        "Phases where members to design and build model rockets, .",
       icon: "🚀",
     },
     {
       title: "Space Science Talks",
       description:
-        "Guest lectures from experts in astronomy, astrophysics, and space technology.",
+        "Guest lectures from experts in Astronomy and Aeronautics.Learn about propulsion and aerodynamics",
       icon: "🎓",
     },
     {
-      title: "Mars Rover Project",
+      title: "Bootcamps",
       description:
-        "Collaborative project to design and build a Mars rover prototype for competitions.",
-      icon: "🤖",
+        "Hands-on workshops covering topics like simulation, satellite communication, and robotics.",
+      icon: "👨🏽‍💻",
     },
   ];
 
   return (
     <section className="py-16">
-      <div className="mx-[4vw] px-4">
+      <div className="mx-[4vw] md:mx-[6vw] px-4">
         <h2 className="text-4xl text-white mb-12 text-center">
           Our Activities
         </h2>
