@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/images/Logo.png";
+import Logo from "../../../public/images/Logo-light.png";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -47,9 +47,9 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-center w-full mt-4">
-        <div className="flex justify-center items-center gap-[4vw] px-8 py-6 bg-white w-fit rounded-full text-black shadow-md relative">
+        {/* <div className="flex justify-center items-center gap-[4vw] px-8 py-6 bg-white w-fit rounded-full text-black shadow-md relative"> */}
           
-        {/* <div className="flex justify-center items-center gap-[4vw] px-8 py-6 w-fit rounded-full text-white shadow-md relative bg-white/5 backdrop-blur-md"> */}
+        <div className="flex justify-center items-center gap-[4vw] px-8 py-6 w-fit rounded-full text-white shadow-md relative bg-white/5 backdrop-blur-md">
 
           <button
             className="md:hidden absolute left-4 top-1/2 -translate-y-1/2"

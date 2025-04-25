@@ -103,7 +103,7 @@ const TeamPreview = () => {
         >
           Meet Our Team
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {previewTeam.map((member, index) => (
                          <div
                            key={index}
@@ -116,8 +116,9 @@ const TeamPreview = () => {
                                  src={member.image}
                                  alt={member.name}
                                  className="absolute inset-0 w-full h-full object-cover"
-                                 width='100'
-                                 height='100'
+                                 width='500'
+                                 height='500'
+                                 quality={100}
                                />
                              ) : (
                                <div className="absolute inset-0 flex items-center justify-center">

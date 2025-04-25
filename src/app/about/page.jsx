@@ -195,7 +195,7 @@ const AboutPage = () => {
         <section id="core-team" className="py-16">
           <div className="container mx-auto px-4 max-w-7xl">
             <h2 className="text-4xl text-white mb-12 text-center">Core Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {coreTeam.map((member, index) => (
                 <div
                   key={index}
@@ -208,8 +208,9 @@ const AboutPage = () => {
                         src={member.image}
                         alt={member.name}
                         className="absolute inset-0 w-full h-full object-cover"
-                        width='100'
-                        height='100'
+                        width="500"
+                        height="500"
+                        quality={100}
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center">
