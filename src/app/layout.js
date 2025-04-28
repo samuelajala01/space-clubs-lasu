@@ -14,48 +14,10 @@ export const metadata = {
   title: "Space Club | Community of Space Enthusiasts",
   description:
     "Join our community of space enthusiasts and explore the cosmos together. Discover events, resources, and connect with fellow space lovers.",
-  keywords:
-    "space club, astronomy, space enthusiasts, cosmos exploration, community",
-  authors: [{ name: "Space Club Team" }],
-  creator: "Space Club",
-  publisher: "Space Club",
-  openGraph: {
-    title: "Space Club | Community of Space Enthusiasts",
-    description:
-      "Join our community of space enthusiasts and explore the cosmos together.",
-    url: "https://spaceclub.com",
-    siteName: "Space Club",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Space Club - Explore the Cosmos Together",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Space Club | Community of Space Enthusiasts",
-    description:
-      "Join our community of space enthusiasts and explore the cosmos together.",
-    images: ["/twitter-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/shortcut-icon.png",
+    icon: [{ url: "/images/ARCH 1080.png", type: "image/png" }],
   },
   themeColor: "#000000",
-  alternates: {
-    canonical: "https://spaceclub.com",
-  },
 };
 
 export default function RootLayout({ children }) {
@@ -63,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={openSans.variable}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/images/ARCH 1080.png" type="image/png" />
       </head>
       <body className="">
         <Navbar />

@@ -12,7 +12,7 @@ const AboutPage = () => {
       name: "Sylvester Agose",
       role: "President",
       image: "/images/team/SylvesterAgose_.jpg",
-      bio: "Professor of Astrophysics with 15 years of experience in space research.",
+      bio: "Aerospace Engineering Major, interested in Space education and innovation.",
       social: {
         linkedin: "https://www.linkedin.com/in/sylvesteragose/",
         twitter: "https://twitter.com/sarahjohnson",
@@ -23,7 +23,7 @@ const AboutPage = () => {
       name: "David M",
       role: "Vice President",
       image: "/images/team/DavidMuraina.jpg",
-      bio: "Organizing space science workshops and public outreach events.",
+      bio: "a computer science graduate passionate about the use of space science and tech for the benefit of humanity",
       social: {
         linkedin: "https://linkedin.com/in/sylvesteragose",
         twitter: "https://twitter.com/alexchen",
@@ -67,7 +67,7 @@ const AboutPage = () => {
       name: "Favour Akinsiku",
       role: "General Secretary",
       image: "/images/team/FAVOURAKINSIKU.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
+      bio: "Aspiring astronaut and Aerospace Engineering Major fueled by curiosity and a passion for space exploration.",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
         twitter: "https://twitter.com/jameswilson",
@@ -122,7 +122,7 @@ const AboutPage = () => {
       name: "Abraham Fakorede",
       role: "Projects manager II",
       image: "/images/team/AbrahamFakorede_.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
+      bio: "An Aerospace Engineer passionate in making space exploration accessible through engaging projects",
       social: {
         linkedin: "https://linkedin.com/in/james-wilson",
         twitter: "https://twitter.com/jameswilson",
