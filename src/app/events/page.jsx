@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import JoinMailList from "../Components/JoinMailList";
 
 const EventsPage = () => {
   const allEvents = [
@@ -254,25 +255,7 @@ const EventsPage = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="mt-16 text-center">
-            <h2 className="text-3xl text-white mb-4">
-              Stay Updated with Our Events
-            </h2>
-            <p className="text-gray-200 mb-6">
-              Subscribe to our mailing list to receive updates about upcoming
-              events and activities.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-full border border-white/20 focus:outline-none focus:border-[#f65d2a]"
-              />
-              <button className="bg-[#f65d2a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
-                Subscribe
-              </button>
-            </div>
-          </div>
+          <JoinMailList/>
         </div>
       </main>
     </div>

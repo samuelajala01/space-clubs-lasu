@@ -6,18 +6,14 @@ import ActivitiesSection from "./Components/ActivitiesSection";
 import UpcomingEvents from "./Components/UpcomingEvents";
 import TeamPreview from "./Components/TeamPreview";
 import { motion } from "framer-motion";
+import JoinMailList from "./Components/JoinMailList";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
       <section className="mt-72 p-[4vw]">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="p-4 mb-8"
+        <div className="p-4 mb-8"
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-[4vw] mb-8">Who We Are</h2>
@@ -32,14 +28,9 @@ export default function Home() {
               knowledge.
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="p-4 mb-8"
+        <div className="p-4 mb-8"
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-[4vw] mb-8">What We Do</h2>
@@ -53,7 +44,7 @@ export default function Home() {
               that bring together space enthusiasts from all backgrounds.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         <div className="p-4 mb-8"
         >
@@ -75,6 +66,7 @@ export default function Home() {
       <ActivitiesSection />
       <TeamPreview />
       <UpcomingEvents />
+      <JoinMailList/>
     </main>
   );
 }

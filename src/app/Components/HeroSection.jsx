@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* <p className="text-2xl mb-8 text-white">
             Where curiosity meets the cosmos
           </p> */}
-          <p className="text-4xl text-white">Inspire | Educate | Engage</p>
+          <p className="text-3xl text-white">Inspire | Educate | Engage</p>
 
           <div className="mt-16 flex gap-6 md:gap-[8vw] text-center justify-center">
             <Link href="/join">

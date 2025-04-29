@@ -11,13 +11,13 @@ const ActivitiesSection = () => {
     {
       title: "Project building",
       description:
-        "Phases where members to design and build model rockets, .",
+        "Phases where members to design and build model rockets, and other space-related projects.",
       icon: "🚀",
     },
     {
-      title: "Space Science Talks",
+      title: "Webinars",
       description:
-        "Guest lectures from experts in Astronomy and Aeronautics.Learn about propulsion and aerodynamics",
+        "Guest lectures from experts in Astronomy and Aeronautics. Learn about propulsion and aerodynamics",
       icon: "🎓",
     },
     {
