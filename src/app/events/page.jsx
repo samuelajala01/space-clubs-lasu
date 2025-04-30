@@ -5,50 +5,7 @@ import JoinMailList from "../Components/JoinMailList";
 
 const EventsPage = () => {
   const allEvents = [
-    {
-      title: "New Moon Stargazing",
-      date: "March 15, 2024",
-      time: "8:00 PM",
-      location: "University Observatory",
-      description:
-        "Join us for a special stargazing session during the new moon phase, perfect for observing deep-sky objects.",
-      category: "Observation",
-      image: "/images/stargazing.jpg",
-      status: "past",
-    },
-    {
-      title: "Rocket Building Workshop",
-      date: "March 20, 2024",
-      time: "2:00 PM",
-      location: "Engineering Lab 101",
-      description:
-        "Learn the basics of rocket design and construction in this hands-on workshop.",
-      category: "Workshop",
-      image: "/images/rocket-workshop.jpg",
-      status: "ongoing",
-    },
-    {
-      title: "Space Science Symposium",
-      date: "April 5, 2024",
-      time: "10:00 AM",
-      location: "Main Auditorium",
-      description:
-        "Annual symposium featuring guest speakers from NASA and SpaceX.",
-      category: "Conference",
-      image: "/images/symposium.jpg",
-      status: "past",
-    },
-    {
-      title: "Mars Rover Challenge",
-      date: "April 15, 2024",
-      time: "9:00 AM",
-      location: "Robotics Lab",
-      description:
-        "Design and build Mars rover prototypes to complete various missions.",
-      category: "Competition",
-      image: "/images/rover-challenge.jpg",
-      status: "ongoing",
-    },
+    
     {
       title: "Astrophotography Workshop",
       date: "April 20, 2024",
@@ -58,14 +15,58 @@ const EventsPage = () => {
       category: "Workshop",
       image: "/images/astrophotography.jpg",
       status: "upcoming",
+    },{
+      title: "Nigeria and Our Space Race Webinar",
+      date: "January 25, 2025",
+      time: "5:00 PM",
+      location: "Virtual",
+      description:
+        "Together, we’ll dive into the role of technology, innovation, and policy in shaping the future of space exploration in Nigeria.",
+      category: "Webinar",
+      image: "/images/rover-challenge.jpg",
+      status: "past",
     },
+    {
+      title: "Space Week Movie Night",
+      date: "October 8, 2024",
+      time: "8:00 PM",
+      location: "LASU EPE Campus buttery",
+      description:
+        "A movie night event where you watch a movie to mark the end of space week 2024.",
+      category: "",
+      image: "/images/symposium.jpg",
+      status: "past",
+    },
+    {
+      title: "The future of climate-smart agriculture: Leveraging drones for sustainable farming",
+      date: "October 8, 2024",
+      time: "6:00 PM",
+      location: "Virtual",
+      description:
+        "Dive into the innovative world of drone technology and discover how it is revolutionizing sustainable farming practices across the globe.",
+      category: "Webinar",
+      image: "/images/stargazing.jpg",
+      status: "past",
+    },
+    {
+      title: "Monitoring the Planet: How Satellites are Combating Climate Change",
+      date: "October 4, 2024",
+      time: "6:00 PM",
+      location: "Virtual",
+      description:
+        "From tracking deforestation to disaster management, this webinar will showcase how space technology is shaping the future of environmental sustainability.",
+      category: "Webinar",
+      image: "/images/rocket-workshop.jpg",
+      status: "past",
+    }
+    
   ];
 
   const categories = [
     "All",
     "Observation",
     "Workshop",
-    "Conference",
+    "Webinar",
     "Competition",
   ];
 
