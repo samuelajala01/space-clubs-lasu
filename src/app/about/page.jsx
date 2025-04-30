@@ -25,7 +25,7 @@ const AboutPage = () => {
       image: "/images/team/DavidMuraina.jpg",
       bio: "a computer science graduate passionate about the use of space science and tech for the benefit of humanity",
       social: {
-        linkedin: "https://linkedin.com/in/sylvesteragose",
+        linkedin: "https://www.linkedin.com/in/muraina-david-017b51157/",
         twitter: "https://twitter.com/alexchen",
         email: "alex.chen@university.edu",
       },
@@ -36,7 +36,7 @@ const AboutPage = () => {
       image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
-        linkedin: "https://linkedin.com/in/maya-patel",
+        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
         twitter: "https://twitter.com/mayapatel",
         email: "maya.patel@university.edu",
       },
@@ -45,11 +45,11 @@ const AboutPage = () => {
       name: "Samuel Ajala",
       role: "Project Lead I",
       image: "/images/team/SamuelAjala.jpg",
-      bio: "Robotics expert leading our Mars Rover project development",
+      bio: "Computer Engineering student, Machine Learning and Robotics Engineer",
       social: {
-        linkedin: "https://linkedin.com/in/david-kim",
-        twitter: "https://twitter.com/davidkim",
-        email: "david.kim@university.edu",
+        linkedin: "https://linkedin.com/in/samuelajala01",
+        twitter: "https://twitter.com/cy63rx_",
+        email: "samuelajala01@gmail.com",
       },
     },
     {
@@ -58,7 +58,7 @@ const AboutPage = () => {
       image: "/images/team/Adebanjo_Samuel.jpg",
       bio: "Leading our space research initiatives and data analysis projects.",
       social: {
-        linkedin: "https://linkedin.com/in/emma-rodriguez",
+        linkedin: "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
         twitter: "https://twitter.com/emmarodriguez",
         email: "emma.rodriguez@university.edu",
       },
@@ -69,7 +69,7 @@ const AboutPage = () => {
       image: "/images/team/FAVOURAKINSIKU.jpg",
       bio: "Aspiring astronaut and Aerospace Engineering Major fueled by curiosity and a passion for space exploration.",
       social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
+        linkedin: "https://www.linkedin.com/in/favourakinsiku/",
         twitter: "https://twitter.com/jameswilson",
         email: "james.wilson@university.edu",
       },
@@ -80,7 +80,7 @@ const AboutPage = () => {
       image: "/images/team/AkinyemiEmmanuel_.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
+        linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
         twitter: "https://twitter.com/jameswilson",
         email: "james.wilson@university.edu",
       },
@@ -91,7 +91,7 @@ const AboutPage = () => {
       image: "/images/team/RukayatSeriki.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
+        linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
         twitter: "https://twitter.com/jameswilson",
         email: "james.wilson@university.edu",
       },
@@ -134,16 +134,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
-      {/* Starry Background */}
-      {/* <div className="fixed">
-        <Image
-          src="/images/starry.jpg"
-          alt="Starry background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div> */}
+     
 
       {/* Content */}
       <div className="relative min-h-screen  ">
@@ -166,27 +157,28 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">Explore</h3>
-                <p className="text-gray-300">
-                  Conduct cutting-edge research and experiments in space science
-                  and technology.
-                </p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">Learn</h3>
-                <p className="text-gray-300">
-                  Provide hands-on learning opportunities and workshops for
-                  students interested in space science.
-                </p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
                 <h3 className="text-xl font-bold text-white mb-4">Inspire</h3>
                 <p className="text-gray-300">
                   Share our passion for space exploration with the community
                   through public events and outreach programs.
                 </p>
               </div>
+              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+                <h3 className="text-xl font-bold text-white mb-4">Educate</h3>
+                <p className="text-gray-300">
+                Provide hands-on learning opportunities and workshops for
+                students interested in space science and tech.
+                </p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+                <h3 className="text-xl font-bold text-white mb-4">Engage</h3>
+                <p className="text-gray-300">
+                Conduct cutting-edge research and experiments in space science
+                and technology.
+                </p>
+              </div>
+              
             </div>
           </div>
         </section>
