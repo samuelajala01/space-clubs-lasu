@@ -1,12 +1,25 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // import sa from "../public/SylvesterAgose_.jpg"
 // import dm from "../public/KehindeFodunrin_.png"
 
 const AboutPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      mirror: true,
+    });
+  }, []);
+
   const coreTeam = [
     {
       name: "Sylvester Agose",
@@ -32,7 +45,7 @@ const AboutPage = () => {
     },
     {
       name: "Kehinde Fodurin",
-      role: "Membership Lead",
+      role: "Outreach and PR Lead",
       image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
@@ -54,11 +67,12 @@ const AboutPage = () => {
     },
     {
       name: "Samuel Adebanjo",
-      role: "Education Lead",
+      role: "Learning and Dev Co-ordinator",
       image: "/images/team/Adebanjo_Samuel.jpg",
       bio: "Leading our space research initiatives and data analysis projects.",
       social: {
-        linkedin: "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
+        linkedin:
+          "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
         twitter: "https://twitter.com/emmarodriguez",
         email: "emma.rodriguez@university.edu",
       },
@@ -133,16 +147,37 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
-     
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10">
+        <Image
+          src="/images/about-bg.jpg"
+          alt="About background"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* Content */}
-      <div className="relative min-h-screen  ">
+      <div className="relative min-h-screen">
         {/* Hero Section */}
         <section className="py-20 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-bold text-white mb-6">About Us</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div
+            className="container mx-auto px-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <h1
+              className="text-5xl font-bold text-white mb-6"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              About Us
+            </h1>
+            <p
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
               We are a passionate community of space enthusiasts, researchers,
               and innovators dedicated to exploring the mysteries of the cosmos
               and inspiring the next generation of space explorers.
@@ -153,32 +188,50 @@ const AboutPage = () => {
         {/* Mission Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-4xl text-white mb-12 text-center">
+            <h2
+              className="text-4xl text-white mb-12 text-center"
+              data-aos="fade-down"
+              data-aos-duration="1200"
+            >
               Our Mission
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+              <div
+                className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-offset="200"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Inspire</h3>
                 <p className="text-gray-300">
                   Share our passion for space exploration with the community
                   through public events and outreach programs.
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+              <div
+                className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-offset="200"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Educate</h3>
                 <p className="text-gray-300">
-                Provide hands-on learning opportunities and workshops for
-                students interested in space science and tech.
+                  Provide hands-on learning opportunities and workshops for
+                  students interested in space science and tech.
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+              <div
+                className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
+                data-aos="fade-left"
+                data-aos-delay="300"
+                data-aos-offset="200"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Engage</h3>
                 <p className="text-gray-300">
-                Conduct cutting-edge research and experiments in space science
-                and technology.
+                  Conduct cutting-edge research and experiments in space science
+                  and technology.
                 </p>
               </div>
-              
             </div>
           </div>
         </section>
@@ -186,15 +239,24 @@ const AboutPage = () => {
         {/* Core Team Section */}
         <section id="core-team" className="py-16">
           <div className="container mx-auto px-4 max-w-7xl">
-            <h2 className="text-4xl text-white mb-12 text-center">Core Team</h2>
+            <h2
+              className="text-4xl text-white mb-12 text-center"
+              data-aos="zoom-in"
+              data-aos-duration="1200"
+            >
+              Core Team
+            </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {coreTeam.map((member, index) => (
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay={index * 100}
+                  data-aos-offset="200"
+                  data-aos-mirror="true"
                 >
                   <div className="relative h-64">
-                    {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div> */}
                     {member.image ? (
                       <Image
                         src={member.image}
@@ -211,13 +273,33 @@ const AboutPage = () => {
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3
+                      className="text-xl font-bold text-white mb-2"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100 + 200}
+                    >
                       {member.name}
                     </h3>
-                    <p className="text-[#f65d2a] mb-3">{member.role}</p>
-                    <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+                    <p
+                      className="text-[#f65d2a] mb-3"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100 + 300}
+                    >
+                      {member.role}
+                    </p>
+                    <p
+                      className="text-gray-300 text-sm mb-4"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100 + 400}
+                    >
+                      {member.bio}
+                    </p>
 
-                    <div className="flex space-x-4">
+                    <div
+                      className="flex space-x-4"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 100 + 500}
+                    >
                       {member.social.linkedin && (
                         <a
                           href={member.social.linkedin}

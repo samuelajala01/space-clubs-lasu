@@ -29,7 +29,7 @@ const TeamPreview = () => {
     },
     {
       name: "Kehinde Fodunrin",
-      role: "Membership Lead",
+      role: "Outreach and PR Lead25",
       image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
@@ -45,13 +45,13 @@ const TeamPreview = () => {
       bio: "Robotics expert leading our Mars Rover project development",
       social: {
         linkedin: "https://linkedin.com/in/samuelajala01",
-        twitter: "https://twitter.com/davidkim",
+        twitter: "https://twitter.com/cy63rx_",
         email: "david.kim@university.edu",
       },
     },
     {
       name: "Samuel Adebanjo",
-      role: "Programs Lead",
+      role: "Learning and Dev Co-ordinator",
       image: "/images/team/Adebanjo_Samuel.jpg",
       bio: "Leading our space research initiatives and data analysis projects.",
       social: {
