@@ -14,7 +14,7 @@ const AboutPage = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
       offset: 100,
       mirror: true,
     });
