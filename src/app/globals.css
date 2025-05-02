@@ -4,12 +4,16 @@
 
 *{
   /* border: 1px solid red; */
-}
-
-body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+:root {
+  overflow-x: hidden;
+}
+
+body {
   background: url("../../public/images/home-bg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -17,8 +21,10 @@ body {
   background-size: cover;
   background-origin: content-box;
   color: white;
+  overflow-x: hidden;
   
 }
+
 
 ::-webkit-scrollbar{
   width: 0.7rem;
