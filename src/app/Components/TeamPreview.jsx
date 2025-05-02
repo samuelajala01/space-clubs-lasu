@@ -29,7 +29,7 @@ const TeamPreview = () => {
     },
     {
       name: "Kehinde Fodunrin",
-      role: "Outreach and PR Lead25",
+      role: "Outreach and PR Lead",
       image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
@@ -73,26 +73,6 @@ const TeamPreview = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
 
   return (
     <section className="py-16">
@@ -107,7 +87,11 @@ const TeamPreview = () => {
           {previewTeam.map((member, index) => (
                          <div
                            key={index}
-                           className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
+                           className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300
+                           " data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                           data-aos-delay={index * 100}
+                           data-aos-offset="100"
+                           data-aos-mirror="true"
                          >
                            <div className="relative h-64">
                              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div> */}
