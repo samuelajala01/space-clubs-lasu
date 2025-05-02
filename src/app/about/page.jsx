@@ -89,17 +89,6 @@ const AboutPage = () => {
       },
     },
     {
-      name: "Emmanuel Akinyemi",
-      role: "Programs Manager II",
-      image: "/images/team/AkinyemiEmmanuel_.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
-        twitter: "https://twitter.com/jameswilson",
-        email: "james.wilson@university.edu",
-      },
-    },
-    {
       name: "Rukayat Seriki",
       role: "Editorial Lead",
       image: "/images/team/RukayatSeriki.jpg",
@@ -116,7 +105,7 @@ const AboutPage = () => {
       image: "/images/team/EsikePeace_.jpg",
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
+        linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
         twitter: "https://twitter.com/jameswilson",
         email: "james.wilson@university.edu",
       },
@@ -133,8 +122,19 @@ const AboutPage = () => {
       },
     },
     {
+      name: "Emmanuel Akinyemi",
+      role: "Programs Manager II",
+      image: "/images/team/AkinyemiEmmanuel_.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
       name: "Abraham Fakorede",
-      role: "Projects manager II",
+      role: "Projects Lead II",
       image: "/images/team/AbrahamFakorede_.jpg",
       bio: "An Aerospace Engineer passionate in making space exploration accessible through engaging projects",
       social: {
@@ -200,7 +200,7 @@ const AboutPage = () => {
                 className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
                 data-aos="fade-right"
                 data-aos-delay="100"
-                data-aos-offset="200"
+                data-aos-offset="100"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Inspire</h3>
                 <p className="text-gray-300">
@@ -212,7 +212,7 @@ const AboutPage = () => {
                 className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                data-aos-offset="200"
+                data-aos-offset="100"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Educate</h3>
                 <p className="text-gray-300">
@@ -224,7 +224,7 @@ const AboutPage = () => {
                 className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10"
                 data-aos="fade-left"
                 data-aos-delay="300"
-                data-aos-offset="200"
+                data-aos-offset="100"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Engage</h3>
                 <p className="text-gray-300">
@@ -253,7 +253,7 @@ const AboutPage = () => {
                   className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
                   data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                   data-aos-delay={index * 100}
-                  data-aos-offset="200"
+                  data-aos-offset="100"
                   data-aos-mirror="true"
                 >
                   <div className="relative h-64">
@@ -276,21 +276,21 @@ const AboutPage = () => {
                     <h3
                       className="text-xl font-bold text-white mb-2"
                       data-aos="fade-up"
-                      data-aos-delay={index * 100 + 200}
+                      data-aos-delay={index * 100 + 100}
                     >
                       {member.name}
                     </h3>
                     <p
                       className="text-[#f65d2a] mb-3"
                       data-aos="fade-up"
-                      data-aos-delay={index * 100 + 300}
+                      data-aos-delay={index * 100 + 200}
                     >
                       {member.role}
                     </p>
                     <p
                       className="text-gray-300 text-sm mb-4"
                       data-aos="fade-up"
-                      data-aos-delay={index * 100 + 400}
+                      data-aos-delay={index * 100 + 300}
                     >
                       {member.bio}
                     </p>
@@ -298,7 +298,7 @@ const AboutPage = () => {
                     <div
                       className="flex space-x-4"
                       data-aos="fade-up"
-                      data-aos-delay={index * 100 + 500}
+                      data-aos-delay={index * 100 + 400}
                     >
                       {member.social.linkedin && (
                         <a

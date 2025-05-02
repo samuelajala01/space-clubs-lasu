@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ActivitiesSection = () => {
+
   const activities = [
     {
       title: "Stargazing Sessions",
@@ -31,7 +35,10 @@ const ActivitiesSection = () => {
   return (
     <section className="py-16">
       <div className="mx-[4vw] md:mx-[6vw] px-4">
-        <h2 className="text-4xl text-white mb-12 text-center">
+        <h2
+          className="text-4xl text-white mb-12 text-center"
+          data-aos="fade-up"
+        >
           Our Activities
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -39,12 +46,31 @@ const ActivitiesSection = () => {
             <div
               key={index}
               className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+              data-aos-duration="800"
             >
-              <div className="text-4xl mb-4">{activity.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <div
+                className="text-4xl mb-4"
+                data-aos="zoom-in"
+                data-aos-delay={index * 200 + 200}
+              >
+                {activity.icon}
+              </div>
+              <h3
+                className="text-xl font-bold text-white mb-2"
+                data-aos="fade-up"
+                data-aos-delay={index * 200 + 300}
+              >
                 {activity.title}
               </h3>
-              <p className="text-gray-300">{activity.description}</p>
+              <p
+                className="text-gray-300"
+                data-aos="fade-left"
+                data-aos-delay={index * 200 + 400}
+              >
+                {activity.description}
+              </p>
             </div>
           ))}
         </div>
