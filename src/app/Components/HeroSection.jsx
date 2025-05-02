@@ -24,7 +24,7 @@ const HeroSection = () => {
             data-aos-duration="800"
           >
             <Image
-              className="w-[40vw] mt-[27vh] mb-12"
+              className="w-[70vw] md:w-[40vw] mt-[27vh] mb-12"
               src={Logo}
               alt="Logo"
               width={500}
@@ -35,18 +35,17 @@ const HeroSection = () => {
             Where curiosity meets the cosmos
           </p> */}
           <p
-            className="text-3xl text-white"
+            className="text-2xl sm:text-3xl text-white"
             data-aos="fade-down"
-            
             data-aos-duration="800"
           >
             Inspire | Educate | Engage
           </p>
 
-          <div className="mt-16 flex gap-6 md:gap-[8vw] text-center justify-center">
+          <div className="mt-16 flex flex-row gap-4 sm:gap-6 md:gap-[8vw] text-center justify-center items-center">
             <Link href="/join">
               <button
-                className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+                className="w-[140px] sm:w-[180px] bg-[#f65d2a] text-white rounded-full py-4 font-semibold hover:bg-[#e54d1a] transition-colors duration-300 text-sm sm:text-base"
                 data-aos="fade-left"
                 data-aos-duration="800"
               >
@@ -55,7 +54,7 @@ const HeroSection = () => {
             </Link>
             <Link href="/donate">
               <button
-                className="bg-[#f65d2a] text-white rounded-full py-4 w-[14vw] font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+                className="w-[140px] sm:w-[180px] bg-[#f65d2a] text-white rounded-full py-4 font-semibold hover:bg-[#e54d1a] transition-colors duration-300 text-sm sm:text-base"
                 data-aos="fade-right"
                 data-aos-duration="800"
               >
