@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <section className="mt-72 p-[4vw]">
+      <section className="mt-40 p-[4vw]">
         <div className="p-4 mb-8"
         >
           <div className="max-w-4xl mx-auto">

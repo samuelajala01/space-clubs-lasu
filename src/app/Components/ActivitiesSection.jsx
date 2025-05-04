@@ -15,7 +15,7 @@ const ActivitiesSection = () => {
     {
       title: "Project building",
       description:
-        "Phases where members to design and build model rockets, and other space-related projects.",
+        "Phases where members to design and build space-related projects, and other space-related projects.",
       icon: "🚀",
     },
     {
@@ -27,7 +27,7 @@ const ActivitiesSection = () => {
     {
       title: "Bootcamps",
       description:
-        "Hands-on workshops covering topics like simulation, satellite communication, and robotics.",
+        "Hands-on workshops covering topics like simulation: On Fluids and even CAD.",
       icon: "👨🏽‍💻",
     },
   ];

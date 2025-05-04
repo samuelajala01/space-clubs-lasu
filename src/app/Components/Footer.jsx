@@ -72,9 +72,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2">
-              <li><a href="mailto:spaceclubslasu@gmail.com">spaceclubslasu@gmail.com</a></li>
+              <li><a href="mailto:spaceclublasu@gmail.com">spaceclublasu@gmail.com</a></li>
               <li>Phone: <a href='tel:+2349071820601'>+234 907 182 0601</a></li>
-              <li>Address: Lagos State University, Epe, Lagos</li>
+              <li>Address: Lagos State University, Epe</li>
             </ul>
           </div>
 
