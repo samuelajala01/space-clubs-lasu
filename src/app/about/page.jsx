@@ -7,8 +7,6 @@ import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import sa from "../public/SylvesterAgose_.jpg"
-// import dm from "../public/KehindeFodunrin_.png"
 
 const AboutPage = () => {
   useEffect(() => {
@@ -44,14 +42,25 @@ const AboutPage = () => {
       },
     },
     {
-      name: "Kehinde Fodurin",
-      role: "Outreach and PR Lead",
+      name: "Kehinde Fodunrin",
+      role: "PR Lead",
       image: "/images/team/KehindeFodunrin_.png",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
         twitter: "https://twitter.com/mayapatel",
         email: "maya.patel@university.edu",
+      },
+    },
+    {
+      name: "Favour Akinsiku",
+      role: "General Secretary",
+      image: "/images/team/FAVOURAKINSIKU.jpg",
+      bio: "Aspiring astronaut and Aerospace Engineering Major fueled by curiosity and a passion for space exploration.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/favourakinsiku/",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
       },
     },
     {
@@ -66,6 +75,17 @@ const AboutPage = () => {
       },
     },
     {
+      name: "Abraham Fakorede",
+      role: "Projects Lead II",
+      image: "/images/team/AbrahamFakorede_.jpg",
+      bio: "An Aerospace Engineer passionate in making space exploration accessible through engaging projects",
+      social: {
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
       name: "Samuel Adebanjo",
       role: "Learning and Dev Co-ordinator",
       image: "/images/team/Adebanjo_Samuel.jpg",
@@ -77,13 +97,25 @@ const AboutPage = () => {
         email: "emma.rodriguez@university.edu",
       },
     },
+   
     {
-      name: "Favour Akinsiku",
-      role: "General Secretary",
-      image: "/images/team/FAVOURAKINSIKU.jpg",
-      bio: "Aspiring astronaut and Aerospace Engineering Major fueled by curiosity and a passion for space exploration.",
+      name: "Abdullah Saliu",
+      role: "Programs Manager I",
+      image: "/images/team/ABDULLAHSALIU.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
-        linkedin: "https://www.linkedin.com/in/favourakinsiku/",
+        linkedin: "https://linkedin.com/in/james-wilson",
+        twitter: "https://twitter.com/jameswilson",
+        email: "james.wilson@university.edu",
+      },
+    },
+    {
+      name: "Emmanuel Akinyemi",
+      role: "Programs Manager II",
+      image: "/images/team/AkinyemiEmmanuel_.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
         twitter: "https://twitter.com/jameswilson",
         email: "james.wilson@university.edu",
       },
@@ -110,39 +142,8 @@ const AboutPage = () => {
         email: "james.wilson@university.edu",
       },
     },
-    {
-      name: "Abdullah Saliu",
-      role: "Programs Manager I",
-      image: "/images/team/ABDULLAHSALIU.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
-      social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
-        twitter: "https://twitter.com/jameswilson",
-        email: "james.wilson@university.edu",
-      },
-    },
-    {
-      name: "Emmanuel Akinyemi",
-      role: "Programs Manager II",
-      image: "/images/team/AkinyemiEmmanuel_.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
-        twitter: "https://twitter.com/jameswilson",
-        email: "james.wilson@university.edu",
-      },
-    },
-    {
-      name: "Abraham Fakorede",
-      role: "Projects Lead II",
-      image: "/images/team/AbrahamFakorede_.jpg",
-      bio: "An Aerospace Engineer passionate in making space exploration accessible through engaging projects",
-      social: {
-        linkedin: "https://linkedin.com/in/james-wilson",
-        twitter: "https://twitter.com/jameswilson",
-        email: "james.wilson@university.edu",
-      },
-    },
+   
+    
   ];
 
   return (
