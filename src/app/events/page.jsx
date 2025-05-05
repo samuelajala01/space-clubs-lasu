@@ -5,23 +5,43 @@ import JoinMailList from "../Components/JoinMailList";
 
 const EventsPage = () => {
   const allEvents = [
-    
     {
-      title: "Astrophotography Workshop",
+      title: "CosmoPi",
+      date: "June 15, 2025",
+      time: "7:00 PM",
+      location: "Aerospace lab",
+      description: "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      category: "Workshop",
+      image: "/images/events/cosmopi.jpg",
+      status: "upcoming",
+    },
+    {
+      title: "Under The Epe Sky",
+      date: "June 12, 2025",
+      time: "7:00 PM",
+      location: "Aerospace lab",
+      description: "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      category: "Observation",
+      image: "/images/events/under_the_epe_sky.jpg",
+      status: "upcoming",
+    },
+    {
+      title: "InterPlanetary travel",
       date: "April 20, 2024",
       time: "7:00 PM",
-      location: "Photography Studio",
+      location: "Virtual",
       description: "Learn how to capture stunning images of the night sky.",
-      category: "Workshop",
-      image: "/images/astrophotography.jpg",
+      category: "Discussion",
+      image: "/images/events/interplanetary.jpg",
       status: "upcoming",
-    },{
+    },
+    {
       title: "Nigeria and Our Space Race Webinar",
       date: "January 25, 2025",
       time: "5:00 PM",
       location: "Virtual",
       description:
-        "Together, we’ll dive into the role of technology, innovation, and policy in shaping the future of space exploration in Nigeria.",
+        "Together, we'll dive into the role of technology, innovation, and policy in shaping the future of space exploration in Nigeria.",
       category: "Webinar",
       image: "/images/rover-challenge.jpg",
       status: "past",
@@ -38,28 +58,29 @@ const EventsPage = () => {
       status: "past",
     },
     {
-      title: "The future of climate-smart agriculture: Leveraging drones for sustainable farming",
+      title:
+        "The future of climate-smart agriculture: Leveraging drones for sustainable farming",
       date: "October 8, 2024",
       time: "6:00 PM",
       location: "Virtual",
       description:
         "Dive into the innovative world of drone technology and discover how it is revolutionizing sustainable farming practices across the globe.",
       category: "Webinar",
-      image: "/images/stargazing.jpg",
+      image: "/images/events/climate_agric.jpg",
       status: "past",
     },
     {
-      title: "Monitoring the Planet: How Satellites are Combating Climate Change",
+      title:
+        "Monitoring the Planet: How Satellites are Combating Climate Change",
       date: "October 4, 2024",
       time: "6:00 PM",
       location: "Virtual",
       description:
         "From tracking deforestation to disaster management, this webinar will showcase how space technology is shaping the future of environmental sustainability.",
       category: "Webinar",
-      image: "/images/rocket-workshop.jpg",
+      image: "/images/events/monitoring_the_planet.jpg",
       status: "past",
-    }
-    
+    },
   ];
 
   const categories = [
@@ -68,6 +89,7 @@ const EventsPage = () => {
     "Workshop",
     "Webinar",
     "Competition",
+    "Discussion"
   ];
 
   const statuses = ["All", "Past", "Ongoing", "Upcoming"];
@@ -204,6 +226,19 @@ const EventsPage = () => {
                   className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="aspect-video bg-gray-800 relative">
+                    {event.image ? (
+                      <img
+                        src={event.image}
+                        alt={event.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                        <span className="text-gray-400">
+                          No Image Available
+                        </span>
+                      </div>
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 flex gap-2">
                       <span className="bg-[#f65d2a] text-white px-3 py-1 rounded-full text-sm">
@@ -256,7 +291,7 @@ const EventsPage = () => {
           </div>
 
           {/* Newsletter Signup */}
-          <JoinMailList/>
+          <JoinMailList />
         </div>
       </main>
     </div>
