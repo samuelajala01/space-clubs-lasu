@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useEffect } from "react";
-import Logo from "../../../public/images/Logo-light.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
@@ -23,26 +22,18 @@ const HeroSection = () => {
             data-aos="fade-up"
             data-aos-duration="800"
           >
-            {/* <Image
-              className="w-[70vw] md:w-[40vw] mt-[25vh] mb-12"
-              src={Logo}
-              alt="Logo"
-              width={500}
-              height={100}
-            /> */}
           </div>
-          {/* <p className="text-2xl mb-8 text-white">
-            Where curiosity meets the cosmos
-          </p> */}
+         
           <h1
-            className="mt-[12vh] md:mt-[20vh] mb-8 text-4xl sm:text-[1.5rem] md:text-7xl text-white sm:p-4 font-semibold"
+            className="mt-[12vh] md:mt-[15vh] mb-8 text-4xl sm:text-[1.5rem] md:text-5xl lg:text-7xl text-white lg:px-32 font-medium"
             data-aos="fade-down"
             data-aos-duration="800"
           >
-            We are on a mission to Inspire, Educate, and Empower students
+            We are on a mission to Inspire, Educate, and Engage students.
           </h1>
           <p className="text-[1.1rem] sm:text-2xl">
-            to lead Africa's journey into space and advanced technology
+            Empowering them to lead Africa's journey into space and advanced
+            technology
           </p>
 
           <div className="mt-16 flex flex-row gap-4 sm:gap-6 md:gap-[8vw] text-center justify-center items-center">
