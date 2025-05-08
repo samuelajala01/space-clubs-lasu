@@ -142,7 +142,7 @@ const Navbar = () => {
             />
           </div>
 
-          <ul className="flex gap-[4vw] items-center px-10 py-6 rounded-2xl text-white shadow-md bg-white/5 backdrop-blur-md">
+          <ul className="flex gap-[4vw] items-center px-10 py-6 rounded-2xl text-white shadow-md bg-white/5 backdrop-blur-md font-medium">
             <li>
               <Link href="/" className="hover:text-[#f65d2a] transition-colors">
                 Home

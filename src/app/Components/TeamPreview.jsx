@@ -152,11 +152,13 @@ const TeamPreview = () => {
                        ))}
      </div>
         
-          <Link href="/about#core-team">
-            <button className="bg-[#f65d2a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
-              View All Members
-            </button>
-          </Link>
+     <div className="flex justify-center">
+  <Link href="/about#core-team">
+    <button className="bg-[#f65d2a] text-white px-8 py-3 rounded-2xl font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
+      View All Members
+    </button>
+  </Link>
+</div>
     </div>
     </section>
   );

@@ -36,7 +36,7 @@ const HeroSection = () => {
             technology
           </p>
 
-          <div className="mt-16 flex flex-row gap-4 sm:gap-6 md:gap-[8vw] text-center justify-center items-center">
+          <div className="mt-16 flex flex-row gap-4 sm:gap-6 md:gap-[6vw] text-center justify-center items-center">
             <Link href="/join">
               <button
                 className="w-[140px] sm:w-[180px] bg-[#f65d2a] text-white rounded-full py-4 font-semibold hover:bg-[#e54d1a] transition-colors duration-300 text-sm sm:text-base"
