@@ -3,42 +3,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../public/images/Logo-light.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect(() => {
-    const controlNavbar = () => {
-      const currentScrollY = window.scrollY;
+  const controlNavbar = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      setIsVisible(false);
+    } else if (currentScrollY < 10) {
+      setIsVisible(true);
+    }
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else if (currentScrollY < 10) {
-        setIsVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    const handleMouseHover = (e) => {
+  const handleMouseHover = useCallback(
+    (e) => {
       if (e.clientY < 40) {
         setIsVisible(true);
       } else if (!isVisible && window.scrollY > 100) {
         setIsVisible(false);
       }
-    };
+    },
+    [isVisible]
+  );
 
-    window.addEventListener("scroll", controlNavbar);
-    window.addEventListener("mousemove", handleMouseHover);
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar, { passive: true });
+    window.addEventListener("mousemove", handleMouseHover, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", controlNavbar);
       window.removeEventListener("mousemove", handleMouseHover);
     };
-  }, [lastScrollY, isVisible]);
+  }, [controlNavbar, handleMouseHover]);
 
   return (
     <div
@@ -132,7 +133,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex justify-around items-center w-full">
+        <div className="hidden md:flex justify-around items-center w-full ">
           <div className="flex items-center">
             <Image
               alt="Logo"

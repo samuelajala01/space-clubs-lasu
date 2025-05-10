@@ -1,36 +1,38 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const ActivitiesSection = () => {
-
-  const activities = [
-    {
-      title: "Stargazing Sessions",
-      description:
-        "Regular stargazing events where members can observe celestial objects through telescopes.",
-      icon: "🔭",
-    },
-    {
-      title: "Project building",
-      description:
-        "Phases where members to design and build space-related projects, and other space-related projects.",
-      icon: "🚀",
-    },
-    {
-      title: "Webinars",
-      description:
-        "Guest lectures from experts in Astronomy and Aeronautics. Learn about propulsion and aerodynamics",
-      icon: "🎓",
-    },
-    {
-      title: "Bootcamps",
-      description:
-        "Hands-on workshops covering topics like simulation: On Fluids and even CAD.",
-      icon: "👨🏽‍💻",
-    },
-  ];
+  const activities = useMemo(
+    () => [
+      {
+        title: "Stargazing Sessions",
+        description:
+          "Regular stargazing events where members can observe celestial objects through telescopes.",
+        icon: "🔭",
+      },
+      {
+        title: "Project building",
+        description:
+          "Phases where members to design and build space-related projects, and other space-related projects.",
+        icon: "🚀",
+      },
+      {
+        title: "Webinars",
+        description:
+          "Guest lectures from experts in Astronomy and Aeronautics. Learn about propulsion and aerodynamics",
+        icon: "🎓",
+      },
+      {
+        title: "Bootcamps",
+        description:
+          "Hands-on workshops covering topics like simulation: On Fluids and even CAD.",
+        icon: "👨🏽‍💻",
+      },
+    ],
+    []
+  );
 
   return (
     <section className="py-16">
@@ -44,7 +46,7 @@ const ActivitiesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {activities.map((activity, index) => (
             <div
-              key={index}
+              key={activity.title}
               className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
               data-aos="fade-up"
               data-aos-delay={index * 200}
@@ -79,4 +81,4 @@ const ActivitiesSection = () => {
   );
 };
 
-export default ActivitiesSection;
+export default React.memo(ActivitiesSection);

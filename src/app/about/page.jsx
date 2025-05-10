@@ -7,7 +7,6 @@ import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const AboutPage = () => {
   useEffect(() => {
     AOS.init({
@@ -26,7 +25,7 @@ const AboutPage = () => {
       bio: "Aerospace Engineering Major, interested in Space education and innovation.",
       social: {
         linkedin: "https://www.linkedin.com/in/sylvesteragose/",
-        twitter: "https://twitter.com/sarahjohnson",
+        twitter: "https://twitter.com/vester_agose",
         email: "sarah.johnson@university.edu",
       },
     },
@@ -37,7 +36,7 @@ const AboutPage = () => {
       bio: "a computer science graduate passionate about the use of space science and tech for the benefit of humanity",
       social: {
         linkedin: "https://www.linkedin.com/in/muraina-david-017b51157/",
-        twitter: "https://twitter.com/alexchen",
+        twitter: "https://twitter.com/_CodeNerd_",
         email: "alex.chen@university.edu",
       },
     },
@@ -48,7 +47,7 @@ const AboutPage = () => {
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
-        twitter: "https://twitter.com/mayapatel",
+        twitter: "https://twitter.com/KFodunrin6986",
         email: "maya.patel@university.edu",
       },
     },
@@ -93,11 +92,11 @@ const AboutPage = () => {
       social: {
         linkedin:
           "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
-        twitter: "https://twitter.com/emmarodriguez",
+        twitter: "https://twitter.com/samuelAdebanj19",
         email: "emma.rodriguez@university.edu",
       },
     },
-   
+
     {
       name: "Abdullah Saliu",
       role: "Programs Manager I",
@@ -138,12 +137,10 @@ const AboutPage = () => {
       bio: "Connecting with schools and communities to spread space science awareness.",
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
-        twitter: "https://twitter.com/jameswilson",
+        twitter: "https://twitter.com/EMPERORS_0001",
         email: "james.wilson@university.edu",
       },
     },
-   
-    
   ];
 
   return (
