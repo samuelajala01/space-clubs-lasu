@@ -16,7 +16,6 @@
 }
 
 body {
-  background: url("../../public/images/home-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -24,6 +23,7 @@ body {
   background-origin: content-box;
   color: white;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ResourcesPage = () => {
   const learningResources = [
@@ -93,12 +94,20 @@ const ResourcesPage = () => {
   };
 
   return (
-    <div className="inset-0 backdrop-blur-sm -z-10 pt-20">
+    <div className="">
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/home-bg.png"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+      </div>
       <div className="mx-[7vw] px-4 pb-16 pt-32">
         {/* Hero Section */}
-        <div
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Space Resources
           </h1>

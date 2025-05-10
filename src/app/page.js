@@ -30,7 +30,17 @@ export default function Home() {
           className="w-full h-full object-cover"
         />
       </div> */}
-      <main>
+      <main className="min-h-screen relative">
+        <div className="fixed inset-0 -z-10">
+          <Image
+            src="/images/home-bg.png"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+        </div>
         <HeroSection />
         <section className="mt-28 flex justify-center">
           <Image
@@ -148,25 +158,19 @@ export default function Home() {
             >
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
                 {[
+                  { src: "/images/partners/NASRDA-Logo_N2.png", alt: "NASRDA" },
                   { src: "/images/partners/wsw_naija.png", alt: "WSW Naija" },
-                  { src: "/images/partners/SpaceClub3.png", alt: "Space Club" },
+                  { src: "/images/partners/unisec.png", alt: "UNISEC" },
                   { src: "/images/partners/sgac.png", alt: "SGAC" },
                   { src: "/images/partners/spacebar.png", alt: "Space Bar" },
-                  { src: "/images/partners/rainin.png", alt: "Rainin" },
+                  { src: "/images/partners/spacehubs.png", alt: "Space Hubs" },
                   { src: "/images/partners/cydata.png", alt: "CyData" },
-                  { src: "/images/partners/nimeche.png", alt: "NIMECHE" },
-                  { src: "/images/partners/bans.png", alt: "BANS" },
+                  { src: "/images/partners/rainin.png", alt: "Rainin" },
                   {
                     src: "/images/partners/Milsat_Logo_White_0096effeda.png",
                     alt: "Milsat",
                   },
-                  { src: "/images/partners/NASRDA-Logo_N2.png", alt: "NASRDA" },
-                  { src: "/images/partners/AESA LOGO-1.png", alt: "AESA" },
-                  {
-                    src: "/images/partners/spaceclubfuta.png",
-                    alt: "Space Club FUTA",
-                  },
-                  { src: "/images/partners/spacehubs.png", alt: "Space Hubs" },
+                  { src: "/images/partners/bans.png", alt: "BANS" },
                 ].map((logo, index) => (
                   <Image
                     key={index}

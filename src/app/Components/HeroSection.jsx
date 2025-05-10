@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, memo } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";

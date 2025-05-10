@@ -2,10 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import JoinMailList from "../Components/JoinMailList";
+import { useRef } from "react";
 
 const JoinPage = () => {
+  const mailListRef = useRef(null);
   // Set this to true when accepting applications
-  const isAcceptingApplications = true;
+  const isAcceptingApplications = false;
+
+  const scrollToMailList = () => {
+    mailListRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const NotAcceptingMessage = () => (
     <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
@@ -30,7 +36,10 @@ const JoinPage = () => {
             Back to Home
           </button>
         </Link>
-        <button className="bg-white/10 backdrop-blur-md text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-colors duration-300">
+        <button
+          onClick={scrollToMailList}
+          className="bg-white/10 backdrop-blur-md text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-colors duration-300"
+        >
           Join Newsletter
         </button>
       </div>
@@ -299,7 +308,16 @@ const JoinPage = () => {
 
   return (
     <div className="" id="join-page">
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/join-bg.jpg"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      </div>
 
       {/* Content */}
       <div className="">
@@ -313,7 +331,9 @@ const JoinPage = () => {
           </div>
         </div>
       </div>
-      <JoinMailList />
+      <div ref={mailListRef}>
+        <JoinMailList />
+      </div>
     </div>
   );
 };

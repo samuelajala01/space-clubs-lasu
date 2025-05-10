@@ -141,19 +141,31 @@ const AboutPage = () => {
         email: "james.wilson@university.edu",
       },
     },
+    {
+      name: "Adekunle Adjoto",
+      role: "Graphics Designer",
+      image: "/images/team/kunart.jpg",
+      bio: "Connecting with schools and communities to spread space science awareness.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
+        twitter: "https://twitter.com/EMPERORS_0001",
+        email: "james.wilson@university.edu",
+      },
+    },
   ];
 
   return (
     <div className="min-h-screen">
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10">
-        <Image
-          src="/images/about-bg.jpg"
-          alt="About background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+      <div className="fixed inset-0 -z-10">
+          <Image
+            src="/images/about-bg.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        </div>
 
       {/* Content */}
       <div className="relative min-h-screen">
