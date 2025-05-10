@@ -174,7 +174,7 @@ export default function Home() {
                     alt={logo.alt}
                     width={500}
                     height={500}
-                    className="w-[12rem] h-[12rem] object-contain"
+                    className="w-[13rem] h-[13rem] object-contain"
                     data-aos="zoom-in"
                     quality={100}
                   />
