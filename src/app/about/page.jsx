@@ -123,7 +123,7 @@ const AboutPage = () => {
       name: "Rukayat Seriki",
       role: "Editorial Lead",
       image: "/images/team/RukayatSeriki.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
+      bio: "Emabinu Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
       social: {
         linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
         twitter: "https://twitter.com/jameswilson",
@@ -134,7 +134,7 @@ const AboutPage = () => {
       name: "Esike Peace",
       role: "Community manager",
       image: "/images/team/EsikePeace_.jpg",
-      bio: "Connecting with schools and communities to spread space science awareness.",
+      bio: "Igniting dreams of space through education, community building, and engineering ambition.",
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
         twitter: "https://twitter.com/EMPERORS_0001",

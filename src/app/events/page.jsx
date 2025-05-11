@@ -10,22 +10,26 @@ const EventsPage = () => {
       date: "June 13, 2025",
       time: "7:00 PM",
       location: "Aerospace lab",
-      description: "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      description:
+        "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
       category: "Workshop",
       image: "/images/events/cosmopi.jpg",
       status: "upcoming",
+      registerLink: "https://forms.gle/cosmopi2025",
     },
     {
       title: "Under The Epe Sky",
       date: "June 12, 2025",
       time: "8:00 PM",
       location: "Helipad, LASU EPE",
-      description: "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      description:
+        "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
       category: "Observation",
       image: "/images/events/under_the_epe_sky.jpg",
       status: "upcoming",
+      registerLink: "https://tix.africa/spaceclubslasu",
     },
-   
+
     {
       title: "The Yuri's Flight",
       date: "April 27, 2025",
@@ -72,7 +76,8 @@ const EventsPage = () => {
       date: "January (15,17,22,24), 2025",
       time: "3:00 PM - 5:00 PM",
       location: "ECE Classroom",
-      description: "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      description:
+        "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
       category: "Bootcamp",
       image: "/images/events/comm_bootcamp.jpg",
       status: "past",
@@ -124,8 +129,7 @@ const EventsPage = () => {
       status: "past",
     },
     {
-      title:
-        "Space Clubs Onboarding session",
+      title: "Space Clubs Onboarding session",
       date: "21 April, 2024",
       time: "6:00 PM",
       location: "Virtual",
@@ -143,7 +147,7 @@ const EventsPage = () => {
     "Workshop",
     "Webinar",
     "Competition",
-    "Discussion"
+    "Discussion",
   ];
 
   const statuses = ["All", "Past", "Ongoing", "Upcoming"];
@@ -323,9 +327,14 @@ const EventsPage = () => {
                     </div>
                     <p className="text-gray-200 mb-4">{event.description}</p>
                     {event.status !== "past" && (
-                      <button className="bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
+                      <a
+                        href={event.registerLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+                      >
                         Register Now
-                      </button>
+                      </a>
                     )}
                     {event.status === "past" && (
                       <button className="bg-gray-500 text-white rounded-full py-2 px-6 font-semibold cursor-not-allowed opacity-70">
