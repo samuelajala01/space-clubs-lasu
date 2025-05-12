@@ -23,7 +23,7 @@ const HeroSection = () => {
       ></div>
 
       <h1
-        className="mt-[12vh] md:mt-[15vh] mb-8 text-4xl sm:text-[1.5rem] md:text-5xl lg:text-7xl text-white lg:px-32 font-medium"
+        className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl text-white lg:px-32 font-medium"
         data-aos="fade-down"
         data-aos-duration="800"
       >

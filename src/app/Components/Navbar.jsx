@@ -49,7 +49,7 @@ const Navbar = () => {
     >
       <div className="flex justify-center w-full mt-4">
         {/* Mobile Nav */}
-        <div className="md:hidden flex justify-between items-center px-4 py-3 w-[95%] rounded-3xl text-white shadow-md bg-white/5 backdrop-blur-md">
+        <div className="md:hidden flex justify-between items-center px-4 py-3 w-[95%] rounded-3xl text-white shadow-md bg-white/5 backdrop-blur-custom">
           {/* Mobile layout with separated elements */}
           <button
             className="text-2xl hover:text-[#f65d2a] transition-colors"
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="w-8">{/* Empty div to balance the layout */}</div>
 
           {isMenuOpen && (
-            <div className="absolute top-full left-0 w-full bg-white/10 backdrop-blur-lg rounded-b-2xl shadow-lg z-50 mt-2 py-4 px-6">
+            <div className="absolute top-full left-0 w-full bg-white/10 backdrop-blur-md rounded-b-2xl shadow-lg z-50 mt-2 py-4 px-6">
               <ul className="space-y-4">
                 <li className="w-full">
                   <Link

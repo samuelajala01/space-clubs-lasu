@@ -17,6 +17,9 @@ export const metadata = {
   icons: {
     icon: [{ url: "/images/ARCH 1080.png", type: "image/png" }],
   },
+};
+
+export const viewport = {
   themeColor: "#000000",
 };
 

@@ -22,7 +22,7 @@ const AboutPage = () => {
       name: "Sylvester Agose",
       role: "President",
       image: "/images/team/SylvesterAgose_.jpg",
-      bio: "Aerospace Engineering Major, interested in Space education and innovation.",
+      bio: "Driven by a passion for space education, innovation, and empowering the next generation of explorers and problem-solvers",
       social: {
         linkedin: "https://www.linkedin.com/in/sylvesteragose/",
         twitter: "https://twitter.com/vester_agose",

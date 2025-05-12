@@ -27,7 +27,6 @@ body {
   background-origin: content-box;
   color: white;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   -moz-touch-callout: none !important;
   -webkit-touch-callout: none !important;
   -webkit-user-zoom: none !important;
@@ -41,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Archivo', sans-serif;
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   width: 0.7rem;
   background-color: #1a1a1a;
   border-radius: 0.7rem;
@@ -51,4 +50,4 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f65d2a;
   border-radius: 0.7rem;
   height: 3rem;
-}
+} */

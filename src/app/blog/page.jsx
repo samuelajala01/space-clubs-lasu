@@ -20,14 +20,14 @@ const articles = [
   },
   {
     id: 2,
-    title: "SUSTAINABLE AGRICULTURE WITH SPACE TECHNOLOGY",
+    title: "Sustainable Agriculture with Space Technology",
     description:
       "Space technology has become a powerful tool in transforming agriculture, helping farmers monitor and manage crops with greater efficiency. By utilizing satellite data, farmers can track soil moisture, weather patterns, and crop health, improving sustainability and reducing environmental impact. However, challenges like cost and access to technology remain, especially for smallholder farmers in developing regions. As we look to the future, the integration of AI, drones, and miniaturized satellites offers exciting possibilities for more sustainable farming practices worldwide.",
     banner: "/images/blog/space-future.jpg",
     authors: ["Olawale Olaitan"],
     date: "December 20, 2024",
     readTime: "8 min read",
-    link: "https://medium.com/space-club/future-of-space-exploration",
+    link: "https://www.linkedin.com/pulse/sustainable-agriculture-space-technology-space-clubs-lasu-yczkf/?trackingId=HIq7cQL2vbfNbHlnH0ZTww%3D%3D",
   },
   {
     id: 3,
@@ -38,18 +38,7 @@ const articles = [
     authors: ["By Soefllah Idris"],
     date: "August 10, 2024",
     readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
-  },
-  {
-    id: 8,
-    title: "Plasma Propulsion Systems for Aircraft: The Future of Aviation",
-    description:
-      "The future of aviation is in jeopardy due to the environmental toll caused by traditional jet engines, which significantly contribute to carbon emissions. Plasma propulsion systems, which are already used in space, could be the solution to reducing air travel's environmental impact. These systems offer cleaner, quieter, and more efficient alternatives by utilizing ionized gases for thrust instead of fossil fuels. While challenges such as high power consumption and material limitations remain, ongoing research shows great promise for transforming aviation, making it more sustainable and energy-efficient.",
-    banner: "/images/blog/mars-colony.jpg",
-    authors: ["Soefllah Idris"],
-    date: "August 10, 2024",
-    readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
+    link: "https://www.linkedin.com/pulse/plasma-propulsion-systems-aircraft-future-aviation-sylvester-agose-trz1f/?trackingId=gOELh7Kj8EIGmz9zbks2dA%3D%3D",
   },
   {
     id: 4,
@@ -60,7 +49,7 @@ const articles = [
     authors: ["Kehinde Fodunrin", "Gbolahan Balogun"],
     date: "June 7, 2024",
     readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
+    link: "https://www.linkedin.com/pulse/alternative-propulsion-systems-what-space-clubs-lasu-punoc/?trackingId=m5DlbRUUPJj6ZiVgkAR3zw%3D%3D",
   },
   {
     id: 5,
@@ -71,7 +60,7 @@ const articles = [
     authors: ["Esther Obasi", "Rahmat Alade"],
     date: "June 4, 2024",
     readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
+    link: "https://www.linkedin.com/pulse/what-moon-phases-space-clubs-lasu-fvi4c/?trackingId=DICT6HP7vuUvMuSn8lqgXw%3D%3D",
   },
   {
     id: 6,
@@ -82,7 +71,7 @@ const articles = [
     authors: ["Abdulganiyy Fashola", "Omotolani Nusirat Ige"],
     date: "May 17, 2024",
     readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
+    link: "https://www.linkedin.com/pulse/africa-space-achievable-goal-space-clubs-lasu-shzpf/?trackingId=qZw49n4OgBbGJqkarH9Yhg%3D%3D",
   },
   {
     id: 7,
@@ -94,7 +83,7 @@ const articles = [
     authors: ["Seriki Rukayat", "Olaitan Olawale"],
     date: "May 17, 2024",
     readTime: "12 min read",
-    link: "https://medium.com/space-club/mars-colonization",
+    link: "https://www.linkedin.com/pulse/what-sustainability-space-clubs-lasu-oqtif/?trackingId=yjTT89zYnBQx5fDI8O2Nxw%3D%3D",
   },
   
 ];

@@ -15,7 +15,7 @@ const EventsPage = () => {
       category: "Workshop",
       image: "/images/events/cosmopi.jpg",
       status: "upcoming",
-      registerLink: "https://forms.gle/cosmopi2025",
+      registerLink: "https://lu.ma/3ujv2y4p",
     },
     {
       title: "Under The Epe Sky",
@@ -39,6 +39,7 @@ const EventsPage = () => {
       category: "Discussion",
       image: "/images/events/yuri.jpg",
       status: "past",
+      registerLink: "https://tix.africa/spaceclubslasu",
     },
     {
       title: "InterPlanetary travel",
