@@ -103,11 +103,11 @@ const Navbar = () => {
                 </li>
                 <li className="w-full">
                   <Link
-                    href="/gallery"
+                    href="/blog"
                     className="block py-2 hover:text-[#f65d2a] transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Gallery
+                    Blog
                   </Link>
                 </li>
                 <li className="w-full">
@@ -167,10 +167,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/gallery"
+                href="/blog"
                 className="hover:text-[#f65d2a] transition-colors"
               >
-                Gallery
+                Blog
               </Link>
             </li>
             <li>

@@ -15,6 +15,10 @@
   overflow-x: hidden;
 }
 
+html{
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-repeat: no-repeat;
   background-position: center;
@@ -24,6 +28,13 @@ body {
   color: white;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -moz-touch-callout: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-zoom: none !important;
+  -moz-user-zoom: none !important;
+  scroll-behavior: smooth !important;
+  -moz-osx-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
