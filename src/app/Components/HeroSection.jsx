@@ -30,8 +30,8 @@ const HeroSection = () => {
         We are on a mission to Inspire, Educate, and Engage students.
       </h1>
       <p className="text-[1.1rem] sm:text-2xl">
-        Empowering them to lead Africa's journey into space and advanced
-        technology
+        Empowering them to lead Africa's journey into Space and Advanced
+        Technology
       </p>
 
       <div className="mt-16 flex flex-row gap-4 sm:gap-6 md:gap-[6vw] text-center justify-center items-center">

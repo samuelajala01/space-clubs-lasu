@@ -17,7 +17,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">About Space Clubs</h3>
             <p className="text-sm">
               Empowering the next generation of space explorers through
-              education, innovation, and hands-on experiences.
+              Education, Innovation, and hands-on experiences.
             </p>
           </div>
 
@@ -35,10 +35,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/programs"
+                  href="/join"
                   className="hover:text-orange-200 transition-colors"
                 >
-                  Programs
+                  Join Us
                 </Link>
               </li>
               <li>

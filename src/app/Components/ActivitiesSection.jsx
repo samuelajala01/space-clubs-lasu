@@ -15,7 +15,7 @@ const ActivitiesSection = () => {
       {
         title: "Project building",
         description:
-          "Phases where members to design and build space-related projects, and other space-related projects.",
+          "Phases where members get to collaborate to design and build space-related projects, and Learn in the process.",
         icon: "🚀",
       },
       {

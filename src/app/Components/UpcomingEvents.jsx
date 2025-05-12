@@ -2,32 +2,42 @@ import React from "react";
 import Link from "next/link";
 
 const UpcomingEvents = () => {
-  const events = [
+  const allEvents = [
     {
-      title: "New Moon Stargazing",
-      date: "March 15, 2024",
+      title: "CosmoPi",
+      date: "June 13, 2025",
+      time: "7:00 PM",
+      location: "Aerospace lab",
+      description:
+        "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      status: "upcoming",
+      registerLink: "https://lu.ma/3ujv2y4p",
+    },
+    {
+      title: "Under The Epe Sky",
+      date: "June 12, 2025",
       time: "8:00 PM",
-      location: "University Observatory",
+      location: "Helipad, LASU EPE",
       description:
-        "Join us for a special stargazing session during the new moon phase, perfect for observing deep-sky objects.",
+        "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+      status: "upcoming",
+      registerLink: "https://tix.africa/spaceclubslasu",
     },
     {
-      title: "Rocket Building Workshop",
-      date: "March 20, 2024",
-      time: "2:00 PM",
-      location: "Engineering Lab 101",
-      description:
-        "Learn the basics of rocket design and construction in this hands-on workshop.",
-    },
-    {
-      title: "Space Science Symposium",
-      date: "April 5, 2024",
-      time: "10:00 AM",
-      location: "Main Auditorium",
-      description:
-        "Annual symposium featuring guest speakers from NASA and SpaceX.",
+      title: "The Yuri's Flight",
+      date: "April 27, 2025",
+      time: "7:00 PM",
+      location: "Virtual",
+      description: "Learn how to capture stunning images of the night sky.",
+      status: "upcoming",
+      registerLink: "https://tix.africa/spaceclubslasu",
     },
   ];
+
+  const events = allEvents
+    .filter((event) => event.status === "upcoming")
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3);
 
   return (
     <section className="py-16 relative">
@@ -36,7 +46,7 @@ const UpcomingEvents = () => {
         <h2 className="text-4xl md:text-[3vw] mb-12 text-center text-white">
           Upcoming Events
         </h2>
-        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, index) => (
             <div
               key={index}
@@ -50,7 +60,15 @@ const UpcomingEvents = () => {
                 <p>⏰ {event.time}</p>
                 <p>📍 {event.location}</p>
               </div>
-              <p className="text-gray-200">{event.description}</p>
+              <p className="text-gray-200 mb-4">{event.description}</p>
+              <a
+                href={event.registerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+              >
+                Register Now
+              </a>
             </div>
           ))}
         </div>
