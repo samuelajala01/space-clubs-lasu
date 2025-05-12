@@ -11,7 +11,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "Space Club | Community of Space Enthusiasts",
+  title: "Space Clubs LASU | Community of Space Enthusiasts",
   description:
     "Join our community of space enthusiasts and explore the cosmos together. Discover events, resources, and connect with fellow space lovers.",
   icons: {
