@@ -29,8 +29,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/ARCH 1080.png" type="image/png" />
+        <link rel="preload" href="/images/home-bg.png" as="image" />
+        <link rel="preload" href="/images/about-bg.jpg" as="image" />
+        <link rel="preload" href="/images/join-bg.jpg" as="image" />
+        <link rel="preload" href="/images/event-bg.jpg" as="image" />
       </head>
-      <body className="">
+      <body className="bg-black">
         <Navbar />
         <main className="pt-24">{children}</main>
         <Footer />

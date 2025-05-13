@@ -38,6 +38,9 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            quality={75}
+            loading="eager"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
         </div>
