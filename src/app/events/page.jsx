@@ -39,7 +39,6 @@ const EventsPage = () => {
       category: "Discussion",
       image: "/images/events/yuri.jpg",
       status: "past",
-      registerLink: "https://tix.africa/spaceclubslasu",
     },
     {
       title: "InterPlanetary travel",
@@ -206,10 +205,6 @@ const EventsPage = () => {
         />
       </div>
 
-      {/* Glass Effect Overlay - Commented out to make background more visible */}
-      {/* <div className="fixed inset-0 bg-black/30 backdrop-blur-sm -z-10"></div> */}
-
-      {/* New minimal overlay for better background visibility */}
       <div className="fixed inset-0 bg-black/10 -z-10"></div>
 
       <main className="relative z-0">

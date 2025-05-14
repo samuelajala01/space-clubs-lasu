@@ -30,7 +30,7 @@ const AboutPage = () => {
       },
     },
     {
-      name: "David M",
+      name: "David Muraina",
       role: "Vice President",
       image: "/images/team/DavidMuraina.jpg",
       bio: "Computer Science graduate dedicated to harnessing the power of space science and technology to drive meaningful impact for humanity",

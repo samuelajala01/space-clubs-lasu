@@ -29,13 +29,13 @@ const UpcomingEvents = () => {
       time: "7:00 PM",
       location: "Virtual",
       description: "Learn how to capture stunning images of the night sky.",
-      status: "upcoming",
+      status: "past",
       registerLink: "https://tix.africa/spaceclubslasu",
     },
   ];
 
   const events = allEvents
-    .filter((event) => event.status === "upcoming")
+    .filter((event) => event.status === "upcoming" || event.status === "past")
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3);
 
@@ -61,14 +61,21 @@ const UpcomingEvents = () => {
                 <p>📍 {event.location}</p>
               </div>
               <p className="text-gray-200 mb-4">{event.description}</p>
-              <a
-                href={event.registerLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
-              >
-                Register Now
-              </a>
+              {event.status !== "past" && (
+                      <a
+                        href={event.registerLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+                      >
+                        Register Now
+                      </a>
+                    )}
+                    {event.status === "past" && (
+                      <button className="bg-gray-500 text-white rounded-full py-2 px-6 font-semibold cursor-not-allowed opacity-70">
+                        Event Ended
+                      </button>
+                    )}
             </div>
           ))}
         </div>

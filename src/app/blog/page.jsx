@@ -17,7 +17,7 @@ const articles = [
     authors: [
       {
         name: "Praise Omgbrumaye",
-        linkedin: "https://www.linkedin.com/in/praise-omgbrumaye",
+        linkedin: "https://www.linkedin.com/in/praise-omgbrumaye-76b9aa2a8/",
       },
     ],
     date: "May 13, 2025",
@@ -32,7 +32,7 @@ const articles = [
     authors: [
       {
         name: "Samuel Adebanjo",
-        linkedin: "https://www.linkedin.com/in/samuel-adebanjo",
+        linkedin: "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
       },
     ],
     date: "January 10, 2025",
@@ -47,7 +47,7 @@ const articles = [
     authors: [
       {
         name: "Olawale Olaitan",
-        linkedin: "https://www.linkedin.com/in/olawale-olaitan",
+        linkedin: "https://www.linkedin.com/in/olawale-olaitan-389bb2228/",
       },
     ],
     date: "December 20, 2024",
@@ -62,7 +62,7 @@ const articles = [
     authors: [
       {
         name: "Soefllah Idris",
-        linkedin: "https://www.linkedin.com/in/soefllah-idris",
+        linkedin: "https://www.linkedin.com/in/soefllah-idris/",
       },
     ],
     date: "August 10, 2024",
@@ -77,11 +77,11 @@ const articles = [
     authors: [
       {
         name: "Kehinde Fodunrin",
-        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin",
+        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
       },
       {
         name: "Gbolahan Balogun",
-        linkedin: "https://www.linkedin.com/in/gbolahan-balogun",
+        linkedin: "",
       },
     ],
     date: "June 7, 2024",
@@ -96,11 +96,11 @@ const articles = [
     authors: [
       {
         name: "Esther Obasi",
-        linkedin: "https://www.linkedin.com/in/esther-obasi",
+        linkedin: "https://www.linkedin.com/in/obasi-esther-65b55928b/",
       },
       {
         name: "Rahmat Alade",
-        linkedin: "https://www.linkedin.com/in/rahmat-alade",
+        linkedin: "https://www.linkedin.com/in/rahmat-alade/",
       },
     ],
     date: "June 4, 2024",
@@ -115,11 +115,11 @@ const articles = [
     authors: [
       {
         name: "Abdulganiyy Fashola",
-        linkedin: "https://www.linkedin.com/in/abdulganiyy-fashola",
+        linkedin: "https://www.linkedin.com/in/fashola-ridwan-a634242b4/",
       },
       {
         name: "Omotolani Nusirat Ige",
-        linkedin: "https://www.linkedin.com/in/omotolani-nusirat-ige",
+        linkedin: "https://www.linkedin.com/in/nusirat-ige-9b706130a/",
       },
     ],
     date: "May 17, 2024",
@@ -134,11 +134,11 @@ const articles = [
     authors: [
       {
         name: "Seriki Rukayat",
-        linkedin: "https://www.linkedin.com/in/seriki-rukayat",
+        linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
       },
       {
         name: "Olaitan Olawale",
-        linkedin: "https://www.linkedin.com/in/olaitan-olawale",
+        linkedin: "https://www.linkedin.com/in/olawale-olaitan-389bb2228/",
       },
     ],
     date: "May 17, 2024",
