@@ -88,7 +88,7 @@ const AboutPage = () => {
       name: "Samuel Adebanjo",
       role: "Learning and Dev Co-ordinator",
       image: "/images/team/Adebanjo_Samuel.jpg",
-      bio: "Leading our space research initiatives and data analysis projects.",
+      bio: "Leading Space Research initiatives for Learning and development.",
       social: {
         linkedin:
           "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",

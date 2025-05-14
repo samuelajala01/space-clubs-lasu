@@ -20,6 +20,7 @@ html{
 }
 
 body {
+  scroll-behavior: smooth !important;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -27,13 +28,13 @@ body {
   background-origin: content-box;
   color: white;
   overflow-x: hidden;
-  -moz-touch-callout: none !important;
+  /* -moz-touch-callout: none !important;
   -webkit-touch-callout: none !important;
   -webkit-user-zoom: none !important;
   -moz-user-zoom: none !important;
   scroll-behavior: smooth !important;
   -moz-osx-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; */
 }
 
 h1, h2, h3, h4, h5, h6 {

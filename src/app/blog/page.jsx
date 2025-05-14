@@ -32,7 +32,8 @@ const articles = [
     authors: [
       {
         name: "Samuel Adebanjo",
-        linkedin: "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
+        linkedin:
+          "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
       },
     ],
     date: "January 10, 2025",
@@ -115,7 +116,7 @@ const articles = [
     authors: [
       {
         name: "Abdulganiyy Fashola",
-        linkedin: "https://www.linkedin.com/in/fashola-ridwan-a634242b4/",
+        linkedin: "",
       },
       {
         name: "Omotolani Nusirat Ige",
@@ -194,27 +195,27 @@ const Blog = () => {
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              <div className="flex flex-col sm:flex-row">
-                <div className="relative h-48 md:h-64 md:w-1/3">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center">
+                <div className="relative h-64 w-full sm:h-48 md:h-72 sm:w-1/3 mb-4 sm:mb-0">
                   <Image
                     src={article.banner}
                     alt={article.title}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-lg sm:rounded-none"
                   />
                 </div>
-                <div className="p-6 md:w-2/3 flex flex-col h-full">
-                  <h2 className="text-3xl font-bold mb-6">{article.title}</h2>
-                  <p className="text-gray-300 mb-6 flex-grow text-sm md:text-base">
+                <div className="px-0 sm:px-6 sm:mt-2 w-full sm:w-2/3 flex flex-col h-full">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+                    {article.title}
+                  </h2>
+                  <p className="text-gray-300 mb-4 md:mb-6 flex-grow text-sm md:text-base line-clamp-4">
                     {article.description}
                   </p>
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span>{article.date}</span>
-                      <span>•</span>
-                      <span>{article.readTime}</span>
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <div className="text-sm text-gray-400">
                         By{" "}
                         {article.authors.map((author, index) => (
@@ -235,7 +236,7 @@ const Blog = () => {
                         href={article.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-orange-500 hover:text-orange-400 transition-colors"
+                        className="text-orange-500 hover:text-orange-400 transition-colors text-sm font-medium"
                       >
                         Read More →
                       </Link>
