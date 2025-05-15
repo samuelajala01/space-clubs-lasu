@@ -21,16 +21,8 @@ export default function Home() {
   }, []);
   return (
     <>
-      {/* <div className="fixed inset-0 backdrop-blur-sm -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/10 z-10"></div>
-        <img
-          // src="/images/event-bg.jpg"
-          src="/images/home-bg.png"
-          alt="Space Events Background"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
-      <main className="min-h-screen relative">
+      
+      <main className="relative">
         <div className="fixed inset-0 -z-10">
           <Image
             src="/images/home-bg.png"
@@ -61,7 +53,7 @@ export default function Home() {
           <div className="p-4 mb-8">
             <div className="max-w-4xl mx-auto">
               <h2
-                className="text-4xl md:text-[4vw] mb-8"
+                className="text-4xl font-bold md:text-[4vw] mb-8"
                 data-aos="fade-right"
                 data-aos-delay="100"
                 data-aos-offset="100"
@@ -89,7 +81,7 @@ export default function Home() {
           <div className="p-4 mb-8">
             <div className="max-w-4xl mx-auto">
               <h2
-                className="text-4xl md:text-[4vw] mb-8"
+                className="text-4xl font-bold md:text-[4vw] mb-8"
                 data-aos="fade-left"
                 data-aos-delay="100"
                 data-aos-offset="100"
@@ -117,7 +109,7 @@ export default function Home() {
           <div className="p-4 mb-8">
             <div className="max-w-4xl mx-auto">
               <h2
-                className="text-4xl md:text-[4vw] mb-8"
+                className="text-4xl font-bold md:text-[4vw] mb-8"
                 data-aos="fade-right"
                 data-aos-delay="100"
                 data-aos-offset="100"
@@ -131,7 +123,7 @@ export default function Home() {
                 data-aos-offset="100"
               >
                 We envision a future where space exploration is accessible to
-                everyone. Our mission is to inspire, EDUCATE, and ENGAGE
+                everyone. Our mission is to INSPIRE, EDUCATE, and ENGAGE
                 students in the wonders of space. Through hands-on projects,
                 workshops, and events, we aim to foster a community where the
                 fascination with the universe becomes a catalyst for learning

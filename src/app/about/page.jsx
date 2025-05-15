@@ -134,7 +134,7 @@ const AboutPage = () => {
       name: "Esike Peace",
       role: "Community manager",
       image: "/images/team/EsikePeace_.jpg",
-      bio: "Mechanical Engineering student driving space awareness through education and community building. How is this",
+      bio: "Mechanical Engineering student driving space awareness through education and community building.",
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
         twitter: "https://twitter.com/EMPERORS_0001",
@@ -143,9 +143,9 @@ const AboutPage = () => {
     },
     {
       name: "Adekunle Adjoto",
-      role: "Graphics Designer",
+      role: "Design Lead",
       image: "/images/team/kunart.jpg",
-      bio: "Creative visionary and problem-solver, shaping impactful designs that communicate and elevate the mission of Space Clubs",
+      bio: "Creative visionary and problem-solver, shaping impactful designs that communicate and elevate the mission of Space Clubs.",
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
         twitter: "https://twitter.com/kingkun251",
@@ -254,7 +254,7 @@ const AboutPage = () => {
               data-aos="zoom-in"
               data-aos-duration="1200"
             >
-              Core Team
+              Meet the Team
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {coreTeam.map((member, index) => (
