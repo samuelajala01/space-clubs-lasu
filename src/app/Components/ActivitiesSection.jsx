@@ -7,11 +7,12 @@ const ActivitiesSection = () => {
   const activities = useMemo(
     () => [
       {
-        title: "Stargazing Sessions",
+        title: "Bootcamps",
         description:
-          "Regular stargazing events where members can observe celestial objects through telescopes.",
-        icon: "🔭",
+          "Hands-on workshops covering topics like simulation: On Fluids and even CAD.",
+        icon: "👨🏽‍💻",
       },
+      
       {
         title: "Project building",
         description:
@@ -25,10 +26,10 @@ const ActivitiesSection = () => {
         icon: "🎓",
       },
       {
-        title: "Bootcamps",
+        title: "Trivia Nights",
         description:
-          "Hands-on workshops covering topics like simulation: On Fluids and even CAD.",
-        icon: "👨🏽‍💻",
+          "Regular social events where members can get to test their knowledge on Space and win prizes too.",
+        icon: "🎮",
       },
     ],
     []
