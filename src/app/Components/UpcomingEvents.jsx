@@ -20,7 +20,7 @@ const UpcomingEvents = () => {
       location: "Helipad, LASU EPE",
       description:
         "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
-      status: "upcoming",
+      status: "past",
       registerLink: "https://tix.africa/spaceclubslasu",
     },
     {
