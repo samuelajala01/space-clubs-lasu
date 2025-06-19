@@ -1,27 +1,105 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "../../Components/Navbar";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Navbar from "@/app/Components/Navbar";
 
-const AdminDashboard = () => {
+export default function AdminDashboard() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState("overview");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
+  // Check authentication on mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        console.log("Checking authentication...");
+        console.log("All cookies:", document.cookie);
+        
+        // First check if token exists in cookies
+        const cookies = document.cookie.split(';');
+        console.log("Parsed cookies:", cookies);
+        
+        const tokenCookie = cookies.find(cookie => 
+          cookie.trim().startsWith('admin_token=')
+        );
+        
+        console.log("Token cookie found:", !!tokenCookie);
+        
+        if (!tokenCookie) {
+          console.log("No token cookie found, redirecting to login");
+          router.push("/admin/login");
+          return;
+        }
+
+        const tokenValue = tokenCookie.split('=')[1];
+        if (!tokenValue || tokenValue === '') {
+          console.log("Token cookie exists but is empty, redirecting to login");
+          router.push("/admin/login");
+          return;
+        }
+
+        console.log("Token found, verifying with server...");
+
+        // Verify token with server
+        const response = await fetch('/api/admin/verify', {
+          method: 'GET',
+          credentials: 'include'
+        });
+
+        console.log("Verification response status:", response.status);
+
+        if (response.ok) {
+          console.log("Authentication successful");
+          setIsAuthenticated(true);
+        } else {
+          console.log("Token verification failed, redirecting to login");
+          router.push("/admin/login");
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+        router.push("/admin/login");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkAuth();
+  }, [router]);
+
+  // Handle logout
   const handleLogout = async () => {
     try {
-      await fetch("/api/admin/logout", {
+      await fetch("/api/admin/logout", { 
         method: "POST",
+        credentials: 'include'
       });
-      window.location.href = "/admin/login";
     } catch (error) {
-      console.error("Logout error:", error);
+      console.error('Logout error:', error);
+    } finally {
+      router.push("/admin/login");
     }
   };
 
+  // Show loading while checking authentication
+  if (loading) {
+    return (
+      <div className="min-h-screen relative flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Don't render dashboard content until authenticated
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen relative">
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm -z-10"></div>
 
       {/* Content */}
       <div className="relative z-10">
@@ -62,59 +140,15 @@ const AdminDashboard = () => {
               <div className="space-y-6">
                 {activeTab === "overview" && (
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        Total Members
-                      </h3>
-                      <p className="text-3xl text-[#f65d2a]">150</p>
-                    </div>
-                    <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        Upcoming Events
-                      </h3>
-                      <p className="text-3xl text-[#f65d2a]">5</p>
-                    </div>
-                    <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        Pending Applications
-                      </h3>
-                      <p className="text-3xl text-[#f65d2a]">12</p>
-                    </div>
+                    <StatCard title="Total Members" count={150} />
+                    <StatCard title="Upcoming Events" count={5} />
+                    <StatCard title="Pending Applications" count={12} />
                   </div>
                 )}
 
-                {activeTab === "members" && (
-                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                    <h2 className="text-2xl font-bold text-white mb-4">
-                      Member Management
-                    </h2>
-                    <p className="text-gray-300">
-                      Member management interface coming soon...
-                    </p>
-                  </div>
-                )}
-
-                {activeTab === "events" && (
-                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                    <h2 className="text-2xl font-bold text-white mb-4">
-                      Event Management
-                    </h2>
-                    <p className="text-gray-300">
-                      Event management interface coming soon...
-                    </p>
-                  </div>
-                )}
-
-                {activeTab === "settings" && (
-                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                    <h2 className="text-2xl font-bold text-white mb-4">
-                      Settings
-                    </h2>
-                    <p className="text-gray-300">
-                      Settings interface coming soon...
-                    </p>
-                  </div>
-                )}
+                {activeTab === "members" && <Placeholder title="Member Management" />}
+                {activeTab === "events" && <Placeholder title="Event Management" />}
+                {activeTab === "settings" && <Placeholder title="Settings" />}
               </div>
             </div>
           </div>
@@ -122,6 +156,22 @@ const AdminDashboard = () => {
       </div>
     </div>
   );
-};
+}
 
-export default AdminDashboard;
+function StatCard({ title, count }) {
+  return (
+    <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+      <p className="text-3xl text-[#f65d2a]">{count}</p>
+    </div>
+  );
+}
+
+function Placeholder({ title }) {
+  return (
+    <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+      <h2 className="text-2xl font-bold text-white mb-4">{title}</h2>
+      <p className="text-gray-300">{title} interface coming soon...</p>
+    </div>
+  );
+}

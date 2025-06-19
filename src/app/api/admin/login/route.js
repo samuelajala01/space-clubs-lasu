@@ -1,51 +1,61 @@
 import { NextResponse } from "next/server";
 import { SignJWT } from "jose";
 
-// This would typically come from your database
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@spaceclubs.org";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "admin123"; // In production, use a strong password
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "your-secret-key"
-);
+const ADMIN_CODE = process.env.ADMIN_CODE;
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET);
 
-export async function POST(request) {
+export async function POST(req) {
   try {
-    const { email, password } = await request.json();
-
-    // Validate credentials
-    if (email !== ADMIN_EMAIL || password !== ADMIN_PASSWORD) {
-      return NextResponse.json(
-        { message: "Invalid credentials" },
-        { status: 401 }
-      );
+    const { code } = await req.json();
+    
+    // Debug logging
+    console.log("Received code:", JSON.stringify(code));
+    console.log("Expected ADMIN_CODE:", JSON.stringify(ADMIN_CODE));
+    console.log("Code length:", code?.length);
+    console.log("ADMIN_CODE length:", ADMIN_CODE?.length);
+    console.log("Codes match:", code === ADMIN_CODE);
+    console.log("ADMIN_CODE exists:", !!ADMIN_CODE);
+    console.log("JWT_SECRET exists:", !!process.env.JWT_SECRET);
+    
+    if (!ADMIN_CODE) {
+      console.error("ADMIN_CODE environment variable is not set");
+      return NextResponse.json({ message: "Server configuration error" }, { status: 500 });
+    }
+    
+    if (!process.env.JWT_SECRET) {
+      console.error("JWT_SECRET environment variable is not set");
+      return NextResponse.json({ message: "Server configuration error" }, { status: 500 });
+    }
+    
+    if (code !== ADMIN_CODE) {
+      console.log("Code mismatch - received:", code, "expected:", ADMIN_CODE);
+      return NextResponse.json({ message: "Invalid code" }, { status: 401 });
     }
 
-    // Generate JWT token using jose
-    const token = await new SignJWT({ email, role: "admin" })
+    const token = await new SignJWT({ role: "admin" })
       .setProtectedHeader({ alg: "HS256" })
       .setIssuedAt()
       .setExpirationTime("1d")
       .sign(JWT_SECRET);
 
-    // Set the token in an HTTP-only cookie
-    const response = NextResponse.json(
-      { message: "Login successful" },
-      { status: 200 }
-    );
-
-    response.cookies.set("admin_token", token, {
+    const res = NextResponse.json({ message: "OK" });
+    
+    // More permissive cookie settings for debugging
+    res.cookies.set("admin_token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
-      maxAge: 60 * 60 * 24, // 1 day
+      secure: false, 
+      sameSite: "lax", 
+      maxAge: 86400,
+      path: "/",
     });
-
-    return response;
+    
+    console.log("Login successful, token generated");
+    console.log("Cookie set with token length:", token.length);
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+    return res;
+    
   } catch (error) {
     console.error("Login error:", error);
-    return NextResponse.json(
-      { message: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 }

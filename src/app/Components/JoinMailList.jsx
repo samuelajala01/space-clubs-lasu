@@ -20,7 +20,7 @@ const JoinMailList = () => {
     e.preventDefault();
     setStatus("sending");
 
-    const formUrl = `https://docs.google.com/forms/d/e/${process.env.NEXT_PUBLIC_GOOGLE_FORM_ID}/formResponse`;
+    const formUrl = `https://docs.google.com/forms/d/e/${process.env.GOOGLE_FORM_ID}/formResponse`;
 
     try {
       const response = await fetch(formUrl, {
@@ -30,7 +30,7 @@ const JoinMailList = () => {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `entry.${
-          process.env.NEXT_PUBLIC_GOOGLE_FORM_ENTRY_ID
+          process.env.GOOGLE_FORM_ENTRY_ID
         }=${encodeURIComponent(email)}`,
       });
 

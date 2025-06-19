@@ -7,8 +7,8 @@ const EventsPage = () => {
   const allEvents = [
     {
       title: "CosmoPi",
-      date: "June 13, 2025",
-      time: "7:00 PM",
+      date: "TBA",
+      time: "",
       location: "TBD",
       description:
         "CosmoPi is a hands-on, immersive space workshop designed to ignite your passion for space exploration and technology.",
@@ -21,7 +21,7 @@ const EventsPage = () => {
       title: "Under The Epe Sky",
       date: "June 12, 2025",
       time: "8:00 PM",
-      location: "Helipad, LASU EPE",
+      location: "Lecture Theatre, LASU EPE",
       description:
         "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
       category: "Observation",
