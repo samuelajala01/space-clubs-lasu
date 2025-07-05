@@ -18,14 +18,15 @@ export default function AdminDashboard() {
         console.log("All cookies:", document.cookie);
         
         // First check if token exists in cookies
-        const cookies = document.cookie.split(';');
+        const cookies = document.cookie.split(';').map(cookie => cookie.trim());
         console.log("Parsed cookies:", cookies);
         
         const tokenCookie = cookies.find(cookie => 
-          cookie.trim().startsWith('admin_token=')
+          cookie.startsWith('admin_token=')
         );
         
         console.log("Token cookie found:", !!tokenCookie);
+        console.log("Token cookie value:", tokenCookie);
         
         if (!tokenCookie) {
           console.log("No token cookie found, redirecting to login");
@@ -34,6 +35,8 @@ export default function AdminDashboard() {
         }
 
         const tokenValue = tokenCookie.split('=')[1];
+        console.log("Token value extracted:", tokenValue ? "exists" : "empty");
+        
         if (!tokenValue || tokenValue === '') {
           console.log("Token cookie exists but is empty, redirecting to login");
           router.push("/admin/login");
@@ -45,16 +48,22 @@ export default function AdminDashboard() {
         // Verify token with server
         const response = await fetch('/api/admin/verify', {
           method: 'GET',
-          credentials: 'include'
+          credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json',
+          }
         });
 
         console.log("Verification response status:", response.status);
-
+        
         if (response.ok) {
-          console.log("Authentication successful");
+          const data = await response.json();
+          console.log("Authentication successful, response:", data);
           setIsAuthenticated(true);
         } else {
-          console.log("Token verification failed, redirecting to login");
+          const errorData = await response.json().catch(() => ({ message: 'Unknown error' }));
+          console.log("Token verification failed:", errorData);
+          console.log("Redirecting to login");
           router.push("/admin/login");
         }
       } catch (error) {
@@ -71,13 +80,21 @@ export default function AdminDashboard() {
   // Handle logout
   const handleLogout = async () => {
     try {
-      await fetch("/api/admin/logout", { 
+      const response = await fetch("/api/admin/logout", { 
         method: "POST",
         credentials: 'include'
       });
+      
+      if (response.ok) {
+        console.log("Logout successful");
+      } else {
+        console.log("Logout request failed, but proceeding anyway");
+      }
     } catch (error) {
       console.error('Logout error:', error);
     } finally {
+      // Clear the cookie manually as backup
+      document.cookie = "admin_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       router.push("/admin/login");
     }
   };

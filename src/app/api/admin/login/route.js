@@ -40,14 +40,21 @@ export async function POST(req) {
 
     const res = NextResponse.json({ message: "OK" });
     
-    // More permissive cookie settings for debugging
+    // FIXED: Set httpOnly to false so client-side JavaScript can read it
+    // This is needed because your dashboard code uses document.cookie
     res.cookies.set("admin_token", token, {
-      httpOnly: true,
-      secure: false, 
+      httpOnly: false, // Changed from true to false
+      secure: process.env.NODE_ENV === "production", // Use secure in production
       sameSite: "lax", 
       maxAge: 86400,
       path: "/",
     });
+
+    // Remove the test cookie since it's not needed
+    // res.cookies.set("test_cookie", "hello", {
+    //   httpOnly: false,
+    //   maxAge: 86400,
+    // });
     
     console.log("Login successful, token generated");
     console.log("Cookie set with token length:", token.length);

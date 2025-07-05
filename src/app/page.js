@@ -21,15 +21,6 @@ export default function Home() {
   }, []);
   return (
     <>
-      {/* <div className="fixed inset-0 backdrop-blur-sm -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/10 z-10"></div>
-        <img
-          // src="/images/event-bg.jpg"
-          src="/images/home-bg.png"
-          alt="Space Events Background"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
       <main className="min-h-screen relative">
         <div className="fixed inset-0 -z-10">
           <Image
