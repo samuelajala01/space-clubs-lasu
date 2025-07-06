@@ -7,56 +7,43 @@ const Reports = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-
   const reports = [
     {
       id: 1,
-      title: "Annual Space Club Activities Report 2023",
+      title: "SPACE CLUBS LASU Annual Report 2024",
       category: "annual",
       description:
-        "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2023.",
-      fileSize: "2.4 MB",
+        "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2024.",
+      fileSize: "3.6 MB",
       fileType: "PDF",
-      downloadCount: 156,
-      date: "2023-12-31",
-      thumbnail: "/images/reports/annual-2023.jpg",
+      downloadCount: 15,
+      date: "2024-12-31",
+      fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
     },
     {
       id: 2,
-      title: "Space Week Event Report",
+      title: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU",
       category: "events",
       description:
         "Detailed report covering the successful Space Week celebration including workshops, competitions, and community engagement.",
-      fileSize: "1.8 MB",
+      fileSize: "2.0 MB",
       fileType: "PDF",
       downloadCount: 89,
-      date: "2023-10-15",
-      thumbnail: "/images/reports/space-week-2023.jpg",
+      date: "2024-10-15",
+      fileName: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU.pdf",
     },
     {
       id: 3,
-      title: "Rocket Propulsion Workshop Analysis",
-      category: "workshops",
+      title: "Under The Epe Sky Impact Report",
+      category: "events",
       description:
-        "Technical analysis and outcomes from the rocket propulsion workshop conducted with industry experts.",
-      fileSize: "3.2 MB",
+        "Impact report from the Under The Epe Sky event showcasing community engagement and educational outcomes.",
+      fileSize: "10 MB",
       fileType: "PDF",
-      downloadCount: 234,
-      date: "2023-09-20",
-      thumbnail: "/images/reports/rocket-workshop.jpg",
+      downloadCount: 25,
+      date: "2025-07-03",
+      fileName: "Under The Epe Sky Impact Report.pdf",
     },
-    {
-      id: 5,
-      title: "Interplanetary Mission Simulation Results",
-      category: "research",
-      description:
-        "Results and findings from our interplanetary mission simulation project conducted with partner institutions.",
-      fileSize: "4.1 MB",
-      fileType: "PDF",
-      downloadCount: 312,
-      date: "2023-07-25",
-      thumbnail: "/images/reports/mission-simulation.jpg",
-    }
   ];
 
   const categories = [
@@ -70,7 +57,7 @@ const Reports = () => {
       id: "events",
       name: "Event Reports",
       count: reports.filter((r) => r.category === "events").length,
-    }
+    },
   ];
 
   const filteredReports = reports.filter((report) => {
@@ -83,10 +70,12 @@ const Reports = () => {
   });
 
   const handleDownload = (report) => {
-    // Simulate download - replace with actual download logic
-    console.log(`Downloading: ${report.title}`);
-    // You can implement actual file download logic here
-    alert(`Download started for: ${report.title}`);
+    const link = document.createElement("a");
+    link.href = `/reports/${report.fileName}`;
+    link.download = report.fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const formatDate = (dateString) => {

@@ -97,8 +97,7 @@ export default function Home() {
                 educate, inspire, and prepare the next generation of space
                 explorers. From hands-on rocket building workshops to deep-space
                 observation sessions, we provide opportunities for both learning
-                and practical experience. We collaborate with industry partners,
-                participate in national competitions, and organize regular
+                and practical experience. We collaborate with industry partners, and organize regular
                 events that bring together space enthusiasts from all
                 backgrounds.
               </p>
@@ -181,6 +180,35 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Reports Section */}
+        <section className="py-16 px-4 bg-black/20 backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2
+              className="text-3xl md:text-4xl mb-6 text-white"
+              data-aos="fade-up"
+            >
+              Read our Reports
+            </h2>
+            <p
+              className="text-lg text-gray-300 mb-8"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Access our comprehensive reports, research findings, and
+              publications from Space Clubs LASU activities and events.
+            </p>
+            <a
+              href="/reports"
+              className="inline-block bg-[#f65d2a] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              View All Reports →
+            </a>
+          </div>
+        </section>
+
         <JoinMailList />
       </main>
     </>

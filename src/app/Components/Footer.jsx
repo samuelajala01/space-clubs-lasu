@@ -38,7 +38,15 @@ const Footer = () => {
                   href="/join"
                   className="hover:text-orange-200 transition-colors"
                 >
-                  Join Us
+                  Become a Member
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/reports"
+                  className="hover:text-orange-200 transition-colors"
+                >
+                  Read our Reports
                 </Link>
               </li>
               <li>
@@ -95,7 +103,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />
               </Link>
               <Link
-                href="https://instagram.com/spaceclubs"
+                href="https://instagram.com/lasu_space"
                 className="hover:text-orange-200 transition-colors"
               >
                 <FontAwesomeIcon icon={faInstagram} className="w-6 h-6" />
