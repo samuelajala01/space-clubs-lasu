@@ -1,11 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Reports = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 50,
+      easing: "ease-out-cubic",
+      delay: 0,
+      anchorPlacement: "top-bottom",
+    });
+  }, []);
 
   const reports = [
     {
@@ -25,10 +38,10 @@ const Reports = () => {
       title: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU",
       category: "events",
       description:
-        "Detailed report covering the successful Space Week celebration including workshops, competitions, and community engagement.",
+        "Detailed report covering the successful Space Week celebration including workshops, webinars, and community engagement.",
       fileSize: "2.0 MB",
       fileType: "PDF",
-      downloadCount: 89,
+      downloadCount: 45,
       date: "2024-10-15",
       fileName: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU.pdf",
     },
@@ -93,7 +106,7 @@ const Reports = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/about-bg.jpg"
+            src="/images/report-bg.jpg"
             alt="Reports Background"
             fill
             className="object-cover"
@@ -104,15 +117,30 @@ const Reports = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6 text-white"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             Reports & Publications
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             Access comprehensive reports, research findings, and publications
             from Space Clubs LASU. Download detailed insights into our
             activities, events, and contributions to space education.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
             <div className="bg-white/10 backdrop-blur-md rounded-full px-6 py-3">
               <span className="text-white font-medium">
                 {reports.length} Reports Available
@@ -136,8 +164,13 @@ const Reports = () => {
         <div className="max-w-7xl mx-auto">
           {/* Search and Filter Section */}
           <div className="mb-12">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
-              {/* Search Bar */}
+            <div
+              className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+          
               <div className="relative w-full lg:w-96">
                 <input
                   type="text"
@@ -161,15 +194,20 @@ const Reports = () => {
                 </svg>
               </div>
 
-              {/* Results Count */}
+              
               <div className="text-gray-400">
                 {filteredReports.length} of {reports.length} reports found
               </div>
             </div>
 
             {/* Category Filters */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-              {categories.map((category) => (
+            <div
+              className="flex flex-wrap gap-3 justify-center lg:justify-start"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="400"
+            >
+              {categories.map((category, index) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -178,6 +216,9 @@ const Reports = () => {
                       ? "bg-[#f65d2a] text-white"
                       : "bg-white/10 backdrop-blur-md text-gray-300 hover:bg-white/20"
                   }`}
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay={600 + index * 100}
                 >
                   {category.name} ({category.count})
                 </button>
@@ -188,16 +229,25 @@ const Reports = () => {
           {/* Reports Grid */}
           {filteredReports.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredReports.map((report) => (
+              {filteredReports.map((report, index) => (
                 <div
                   key={report.id}
-                  className="bg-white/5 backdrop-blur-md rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20"
+                  className="bg-white/5 backdrop-blur-md rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 transform hover:scale-105"
+                  data-aos="flip-up"
+                  data-aos-duration="1000"
+                  data-aos-delay={800 + index * 150}
+                  data-aos-easing="ease-out-cubic"
                 >
-                  {/* Report Thumbnail */}
-                  <div className="relative h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-[#f65d2a]/20 to-purple-500/20">
+                
+                  <div
+                    className="relative h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-[#f65d2a]/20 to-purple-500/20"
+                    data-aos="zoom-in"
+                    data-aos-duration="800"
+                    data-aos-delay={1000 + index * 150}
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
                       <svg
-                        className="w-16 h-16 text-[#f65d2a]"
+                        className="w-16 h-16 text-[#f65d2a] animate-pulse"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -212,7 +262,12 @@ const Reports = () => {
 
                   {/* Report Info */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2">
+                    <div
+                      className="flex items-center gap-2"
+                      data-aos="fade-right"
+                      data-aos-duration="600"
+                      data-aos-delay={1200 + index * 150}
+                    >
                       <span className="px-2 py-1 bg-[#f65d2a]/20 text-[#f65d2a] text-xs font-medium rounded-full">
                         {report.category.charAt(0).toUpperCase() +
                           report.category.slice(1)}
@@ -222,16 +277,31 @@ const Reports = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white line-clamp-2">
+                    <h3
+                      className="text-xl font-bold text-white line-clamp-2"
+                      data-aos="fade-up"
+                      data-aos-duration="600"
+                      data-aos-delay={1400 + index * 150}
+                    >
                       {report.title}
                     </h3>
 
-                    <p className="text-gray-400 text-sm line-clamp-3">
+                    <p
+                      className="text-gray-400 text-sm line-clamp-3"
+                      data-aos="fade-up"
+                      data-aos-duration="600"
+                      data-aos-delay={1600 + index * 150}
+                    >
                       {report.description}
                     </p>
 
                     {/* File Details */}
-                    <div className="flex items-center justify-between text-sm text-gray-400">
+                    <div
+                      className="flex items-center justify-between text-sm text-gray-400"
+                      data-aos="fade-left"
+                      data-aos-duration="600"
+                      data-aos-delay={1800 + index * 150}
+                    >
                       <div className="flex items-center gap-4">
                         <span>{report.fileSize}</span>
                         <span className="bg-white/10 px-2 py-1 rounded text-xs">
@@ -244,10 +314,13 @@ const Reports = () => {
                     {/* Download Button */}
                     <button
                       onClick={() => handleDownload(report)}
-                      className="w-full bg-[#f65d2a] text-white py-3 px-4 rounded-xl font-medium hover:bg-[#e04c1a] transition-colors flex items-center justify-center gap-2"
+                      className="w-full bg-[#f65d2a] text-white py-3 px-4 rounded-xl font-medium hover:bg-[#e04c1a] transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                      data-aos="zoom-in"
+                      data-aos-duration="600"
+                      data-aos-delay={2000 + index * 150}
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-5 h-5 animate-bounce"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -267,10 +340,20 @@ const Reports = () => {
             </div>
           ) : (
             /* No Results State */
-            <div className="text-center py-16">
-              <div className="w-24 h-24 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center">
+            <div
+              className="text-center py-16"
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="200"
+            >
+              <div
+                className="w-24 h-24 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center"
+                data-aos="zoom-in"
+                data-aos-duration="600"
+                data-aos-delay="400"
+              >
                 <svg
-                  className="w-12 h-12 text-gray-400"
+                  className="w-12 h-12 text-gray-400 animate-pulse"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -283,10 +366,20 @@ const Reports = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3
+                className="text-2xl font-bold text-white mb-2"
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="600"
+              >
                 No reports found
               </h3>
-              <p className="text-gray-400 mb-6">
+              <p
+                className="text-gray-400 mb-6"
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="800"
+              >
                 Try adjusting your search terms or filter criteria
               </p>
               <button
@@ -294,7 +387,10 @@ const Reports = () => {
                   setSearchQuery("");
                   setSelectedCategory("all");
                 }}
-                className="bg-[#f65d2a] text-white px-6 py-3 rounded-xl hover:bg-[#e04c1a] transition-colors"
+                className="bg-[#f65d2a] text-white px-6 py-3 rounded-xl hover:bg-[#e04c1a] transition-all duration-300 transform hover:scale-105"
+                data-aos="zoom-in"
+                data-aos-duration="600"
+                data-aos-delay="1000"
               >
                 Clear Filters
               </button>
