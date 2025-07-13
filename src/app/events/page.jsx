@@ -6,16 +6,16 @@ import JoinMailList from "../Components/JoinMailList";
 const EventsPage = () => {
   const allEvents = [
     {
-      title: "CosmoPi",
-      date: "TBA",
-      time: "",
-      location: "TBD",
+      title: "Byte and Build",
+      date: "July 15 & 16, 2025",
+      time: "2:30 PM",
+      location: "Electronics Lab",
       description:
-        "CosmoPi is a hands-on, immersive space workshop designed to ignite your passion for space exploration and technology.",
+        "Byte and Build is a two-day technical workshop designed to introduce hardware enthusiasts to the exciting world of hardware and robotics.",
       category: "Workshop",
-      image: "/images/events/cosmopi.jpg",
+      image: "/images/events/byte_and_build.jpg",
       status: "upcoming",
-      registerLink: "https://lu.ma/3ujv2y4p",
+      registerLink: "https://lu.ma/7g4u8f6z",
     },
     {
       title: "Under The Epe Sky",

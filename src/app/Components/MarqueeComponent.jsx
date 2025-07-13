@@ -11,7 +11,7 @@ const MarqueeComponent = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-[#f65d2a5f] text-white py-3 overflow-hidden relative">
+    <div className="bg-[#7194ee16] text-white py-3 overflow-hidden relative">
      
       <button
         onClick={handleClose}
