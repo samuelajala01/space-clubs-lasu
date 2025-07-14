@@ -8,7 +8,7 @@ const EventsPage = () => {
     {
       title: "Byte and Build",
       date: "July 15 & 16, 2025",
-      time: "2:30 PM",
+      time: "2:00 PM",
       location: "Electronics Lab",
       description:
         "Byte and Build is a two-day technical workshop designed to introduce hardware enthusiasts to the exciting world of hardware and robotics.",
