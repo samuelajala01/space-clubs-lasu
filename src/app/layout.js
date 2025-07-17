@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { Open_Sans } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
 
 // Configure the font for better performance
 const openSans = Open_Sans({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="pt-24">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
