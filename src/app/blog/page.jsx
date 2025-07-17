@@ -8,6 +8,21 @@ import "aos/dist/aos.css";
 
 const articles = [
   {
+    id: 100,
+    title:
+      "Nigeria's Trillion-Dollar Opportunity: Why Space Education in Universities is Non-Negotiable",
+    description:
+      "This article explores the urgent need to integrate space education into Nigerian universities as a critical step toward national development and participation in the global space economy. Drawing from real case studies and global models, the piece outlines key challenges and offers a practical roadmap for policymakers, educators, and students alike. It’s a bold call to action—written for the next generation of African space leaders.",
+    authors: [
+      {
+        name: "Sylvester Agose",
+        linkedin: "https://www.linkedin.com/in/sylvesteragose",
+      },
+    ],
+    date: "July 17, 2025",
+    link: "https://www.linkedin.com/posts/space-clubs-lasu_theorbit-spaceeducation-nigeriainspace-activity-7351362506323329027-zUXh?utm_source=share&utm_medium=member_android&rcm=ACoAADqED0QBNdIb5JahcQKdTsrUQBS4Ikq5mPQ",
+  },
+  {
     id: 1,
     title:
       "There is Enough Room in Space: The Uprising of the New Space Race and Africa's Ascent",
