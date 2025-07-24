@@ -6,6 +6,18 @@ import JoinMailList from "../Components/JoinMailList";
 const EventsPage = () => {
   const allEvents = [
     {
+      title: "Space Jam",
+      date: "July 26, 2025",
+      time: "2:00 PM",
+      location: "Engineering Lecture Theatre",
+      description:
+        "Chill vibes, Space Trivia(with rewards), games, photo ops, recognitions and free snacks...interested in any, come have fun and vibe with other communnity members.",
+      category: "Meetup",
+      image: "/images/events/space-jam-2025.jpg",
+      status: "upcoming",
+      registerLink: "https://lu.ma/jd0eb5kf",
+    },
+    {
       title: "Byte and Build",
       date: "July 15 & 16, 2025",
       time: "2:00 PM",
@@ -14,7 +26,7 @@ const EventsPage = () => {
         "Byte and Build is a two-day technical workshop designed to introduce hardware enthusiasts to the exciting world of hardware and robotics.",
       category: "Workshop",
       image: "/images/events/byte_and_build.jpg",
-      status: "upcoming",
+      status: "past",
       registerLink: "https://lu.ma/7g4u8f6z",
     },
     {
@@ -146,7 +158,7 @@ const EventsPage = () => {
     "Observation",
     "Workshop",
     "Webinar",
-    "Competition",
+    "Meetup",
     "Discussion",
   ];
 
