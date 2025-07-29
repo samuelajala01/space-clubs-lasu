@@ -6,6 +6,18 @@ import JoinMailList from "../Components/JoinMailList";
 const EventsPage = () => {
   const allEvents = [
     {
+      title:
+        "Hello From The Future: A conversation with Dr. Claire A. Nelson, founder of Space Futures Forum.",
+      date: "July 31, 2025",
+      time: "4:00 PM",
+      location: "Virtual",
+      description: "Join us for a special encounter with renowned futurist and engineer, Dr. Claire A. Nelson, as she shares visionary insights on space development, sustainable innovation, and the future of Africa’s cities.",
+      category: "Webinar",
+      image: "/images/events/futures_event.jpg",
+      status: "upcoming",
+      registerLink: "https://lu.ma/jyys9w66",
+    },
+    {
       title: "Space Jam",
       date: "July 26, 2025",
       time: "2:00 PM",
@@ -14,7 +26,7 @@ const EventsPage = () => {
         "Chill vibes, Space Trivia(with rewards), games, photo ops, recognitions and free snacks...interested in any, come have fun and vibe with other communnity members.",
       category: "Meetup",
       image: "/images/events/space-jam-2025.jpg",
-      status: "upcoming",
+      status: "past",
       registerLink: "https://lu.ma/jd0eb5kf",
     },
     {
@@ -47,7 +59,8 @@ const EventsPage = () => {
       date: "April 27, 2025",
       time: "7:00 PM",
       location: "Virtual",
-      description: "Get to know about the life of the first man that went to space, the challenges he faced and the mission.",
+      description:
+        "Get to know about the life of the first man that went to space, the challenges he faced and the mission.",
       category: "Discussion",
       image: "/images/events/yuri.jpg",
       status: "past",
@@ -57,7 +70,8 @@ const EventsPage = () => {
       date: "April 20, 2025",
       time: "7:00 PM",
       location: "Virtual",
-      description: "Join us for our amazing discussion series to learn about Interplanetary travel, and also get to share your thoughts.",
+      description:
+        "Join us for our amazing discussion series to learn about Interplanetary travel, and also get to share your thoughts.",
       category: "Discussion",
       image: "/images/events/interplanetary.jpg",
       status: "past",
@@ -67,7 +81,8 @@ const EventsPage = () => {
       date: "April 6, 2025",
       time: "7:00 PM",
       location: "Virtual",
-      description: "Learn the Science behind what makes rockets launching into space possible.",
+      description:
+        "Learn the Science behind what makes rockets launching into space possible.",
       category: "Discussion",
       image: "/images/events/rocket_propulsion.jpg",
       status: "past",
