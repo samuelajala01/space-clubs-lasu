@@ -1,0 +1,162 @@
+export const allEvents = [
+  {
+    title:
+      "Hello From The Future: A conversation with Dr. Claire A. Nelson, founder of Space Futures Forum.",
+    date: "July 31, 2025",
+    time: "4:00 PM",
+    location: "Virtual",
+    description:
+      "Join us for a special encounter with renowned futurist and engineer, Dr. Claire A. Nelson, as she shares visionary insights on space development, sustainable innovation, and the future of Africa's cities.",
+    category: "Webinar",
+    image: "/images/events/futures_event.jpg",
+    status: "past",
+    registerLink: "https://lu.ma/jyys9w66",
+  },
+  {
+    title: "Space Jam",
+    date: "July 26, 2025",
+    time: "2:00 PM",
+    location: "Engineering Lecture Theatre",
+    description:
+      "Chill vibes, Space Trivia(with rewards), games, photo ops, recognitions and free snacks...interested in any, come have fun and vibe with other communnity members.",
+    category: "Meetup",
+    image: "/images/events/space-jam-2025.jpg",
+    status: "past",
+    registerLink: "https://lu.ma/jd0eb5kf",
+  },
+  {
+    title: "Byte and Build",
+    date: "July 15 & 16, 2025",
+    time: "2:00 PM",
+    location: "Electronics Lab",
+    description:
+      "Byte and Build is a two-day technical workshop designed to introduce hardware enthusiasts to the exciting world of hardware and robotics.",
+    category: "Workshop",
+    image: "/images/events/byte_and_build.jpg",
+    status: "past",
+    registerLink: "https://lu.ma/7g4u8f6z",
+  },
+  {
+    title: "Under The Epe Sky",
+    date: "June 12, 2025",
+    time: "8:00 PM",
+    location: "Lecture Theatre, LASU EPE",
+    description:
+      "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+    category: "Observation",
+    image: "/images/events/under_the_epe_sky.jpg",
+    status: "past",
+    registerLink: "https://tix.africa/spaceclubslasu",
+  },
+  {
+    title: "The Yuri's Flight",
+    date: "April 27, 2025",
+    time: "7:00 PM",
+    location: "Virtual",
+    description:
+      "Get to know about the life of the first man that went to space, the challenges he faced and the mission.",
+    category: "Discussion",
+    image: "/images/events/yuri.jpg",
+    status: "past",
+  },
+  {
+    title: "InterPlanetary travel",
+    date: "April 20, 2025",
+    time: "7:00 PM",
+    location: "Virtual",
+    description:
+      "Join us for our amazing discussion series to learn about Interplanetary travel, and also get to share your thoughts.",
+    category: "Discussion",
+    image: "/images/events/interplanetary.jpg",
+    status: "past",
+  },
+  {
+    title: "Rocket Propulsion Systems",
+    date: "April 6, 2025",
+    time: "7:00 PM",
+    location: "Virtual",
+    description:
+      "Learn the Science behind what makes rockets launching into space possible.",
+    category: "Discussion",
+    image: "/images/events/rocket_propulsion.jpg",
+    status: "past",
+  },
+  {
+    title: "Nigeria and Our Space Race Webinar",
+    date: "January 25, 2025",
+    time: "5:00 PM",
+    location: "Virtual",
+    description:
+      "Together, we'll dive into the role of technology, innovation, and policy in shaping the future of space exploration in Nigeria.",
+    category: "Webinar",
+    image: "/images/events/space_race.jpg",
+    status: "past",
+  },
+  {
+    title: "Learning how to communicate like an Engineer",
+    date: "January (15,17,22,24), 2025",
+    time: "3:00 PM - 5:00 PM",
+    location: "ECE Classroom",
+    description:
+      "Bringing students together to explore the night sky through telescopes, talks, and cosmic wonder.",
+    category: "Bootcamp",
+    image: "/images/events/comm_bootcamp.jpg",
+    status: "past",
+  },
+  {
+    title: "End of The Year Club Mixer",
+    date: "December 29, 2024",
+    time: "5:00 PM",
+    location: "Virtual",
+    description:
+      "A movie night event where you watch a movie to mark the end of space week 2024.",
+    category: "Meetup",
+    image: "/images/events/club_mixer.jpg",
+    status: "past",
+  },
+  {
+    title: "Space Week Movie Night",
+    date: "October 8, 2024",
+    time: "8:00 PM",
+    location: "LASU EPE Campus buttery",
+    description:
+      "A movie night event where you watch a movie to mark the end of space week 2024.",
+    category: "Meetup",
+    image: "/images/events/space_week.jpg",
+    status: "past",
+  },
+  {
+    title:
+      "The future of climate-smart agriculture: Leveraging drones for sustainable farming",
+    date: "October 8, 2024",
+    time: "6:00 PM",
+    location: "Virtual",
+    description:
+      "Dive into the innovative world of drone technology and discover how it is revolutionizing sustainable farming practices across the globe.",
+    category: "Webinar",
+    image: "/images/events/climate_agric.jpg",
+    status: "past",
+  },
+  {
+    title: "Monitoring the Planet: How Satellites are Combating Climate Change",
+    date: "October 4, 2024",
+    time: "6:00 PM",
+    location: "Virtual",
+    description:
+      "From tracking deforestation to disaster management, this webinar will showcase how space technology is shaping the future of environmental sustainability.",
+    category: "Webinar",
+    image: "/images/events/monitoring_the_planet.jpg",
+    status: "past",
+  },
+  {
+    title: "Space Clubs Onboarding session",
+    date: "21 April, 2024",
+    time: "6:00 PM",
+    location: "Virtual",
+    description:
+      "From tracking deforestation to disaster management, this webinar will showcase how space technology is shaping the future of environmental sustainability.",
+    category: "Webinar",
+    image: "/images/events/sc_onboard.jpg",
+    status: "past",
+  },
+];

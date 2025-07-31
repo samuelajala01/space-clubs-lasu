@@ -16,11 +16,12 @@
 }
 
 html{
-  scroll-behavior: smooth !important;
+  /* scroll-behavior: smooth !important; */
 }
 
 body {
-  scroll-behavior: smooth !important;
+  /* scroll-behavior: smooth !important; */
+  scroll-behavior: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
