@@ -27,10 +27,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/about"
+                  href="/donate"
                   className="hover:text-orange-200 transition-colors"
                 >
-                  About Us
+                  Support Us
                 </Link>
               </li>
               <li>

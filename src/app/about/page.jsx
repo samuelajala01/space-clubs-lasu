@@ -85,7 +85,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/muraina-david-017b51157/",
         twitter: "https://twitter.com/_CodeNerd_",
-        email: "alex.chen@university.edu",
+        email: "murainadavidabisoye@gmail.com",
       },
     },
     {
@@ -96,7 +96,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
         twitter: "https://twitter.com/KFodunrin6986",
-        email: "maya.patel@university.edu",
+        email: "kehindefodunrin@gmail.com",
       },
     },
     {
@@ -107,7 +107,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/favourakinsiku/",
         twitter: "https://twitter.com/Astronautfavour",
-        email: "james.wilson@university.edu",
+        email: "favourakinsiku@gmail.com",
       },
     },
     {
@@ -129,7 +129,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/abraham-fakorede-436658255/",
         twitter: "https://twitter.com/abraham_fakored",
-        email: "james.wilson@university.edu",
+        email: "abrahamfakorede541@gmail.com",
       },
     },
     {
@@ -139,9 +139,9 @@ const AboutPage = () => {
       bio: "Leading Space Research initiatives for Learning and development.",
       social: {
         linkedin:
-          "https://www.linkedin.com/in/samuel-adebanjo-%F0%9F%94%A5-60256825b/",
+          "https://www.linkedin.com/in/samuel-adebanjo-60256825b/",
         twitter: "https://twitter.com/samuelAdebanj19",
-        email: "emma.rodriguez@university.edu",
+        email: "samueloluola.a@gmail.com",
       },
     },
 
@@ -153,7 +153,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/saliu-abdullah-591312301/",
         twitter: "https://twitter.com/cy63rx_",
-        email: "james.wilson@university.edu",
+        email: "saliuabdullahakinlabi@gmail.com",
       },
     },
     {
@@ -164,7 +164,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/emmanuel-akinyemi-867240344/",
         twitter: "https://twitter.com/jameswilson",
-        email: "james.wilson@university.edu",
+        email: "akinyemieniola718@gmail.com",
       },
     },
     {
@@ -175,7 +175,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
         twitter: "https://twitter.com/RSayrikey",
-        email: "james.wilson@university.edu",
+        email: "serikirukayat45@gmail.com",
       },
     },
     {
@@ -186,7 +186,7 @@ const AboutPage = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
         twitter: "https://twitter.com/EMPERORS_0001",
-        email: "james.wilson@university.edu",
+        email: "esikepeace81@gmail.com",
       },
     },
     {

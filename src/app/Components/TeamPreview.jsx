@@ -35,7 +35,7 @@ const TeamPreview = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
         twitter: "https://twitter.com/KFodunrin6986",
-        email: "maya.patel@university.edu",
+        email: "kehindefodunrin@gmail.com",
       },
     },
     {
@@ -46,7 +46,7 @@ const TeamPreview = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/favourakinsiku/",
         twitter: "https://twitter.com/Astronautfavour",
-        email: "james.wilson@university.edu",
+        email: "favourakinsiku@gmail.com",
       },
     },
     {
