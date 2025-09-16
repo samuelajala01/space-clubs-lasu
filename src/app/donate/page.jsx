@@ -1,5 +1,5 @@
 const Donate = () => {
-  const donateLink = "https://paystack.shop/pay/qgpgtyp8cy";
+  const donateLink = "https://paystack.shop/pay/jfspl56fa3";
 
   return (
     <div className="min-h-screen bg-black relative">
