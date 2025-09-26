@@ -73,3 +73,18 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+/* Custom styles for dropdown options */
+select option {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
+  padding: 8px !important;
+}
+
+select option:hover {
+  background-color: rgba(246, 93, 42, 0.2) !important;
+}
+
+select option:checked {
+  background-color: rgba(246, 93, 42, 0.5) !important;
+}

@@ -84,7 +84,7 @@ const JoinPage = () => {
               <input
                 type="text"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -92,7 +92,7 @@ const JoinPage = () => {
               <input
                 type="text"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -100,7 +100,7 @@ const JoinPage = () => {
               <input
                 type="email"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -108,7 +108,7 @@ const JoinPage = () => {
               <input
                 type="tel"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -116,17 +116,23 @@ const JoinPage = () => {
               <input
                 type="date"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
               <label className="block text-white mb-2">Gender</label>
-              <select className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]">
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-                <option value="prefer-not-to-say">Prefer not to say</option>
+              <select 
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }}
+              >
+                <option value="" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Select Gender</option>
+                <option value="male" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Male</option>
+                <option value="female" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Female</option>
+                <option value="other" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Other</option>
+                <option value="prefer-not-to-say" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Prefer not to say</option>
               </select>
             </div>
           </div>
@@ -139,35 +145,91 @@ const JoinPage = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">Institution *</label>
-              <input
-                type="text"
+              <label className="block text-white mb-2">Campus *</label>
+              <select 
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
-              />
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }}
+              >
+                <option value="LASU MAIN CAMPUS" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASU Ojo Main Campus</option>
+                <option value="LASUCOM" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASUCOM</option>
+                <option value="LASU EPE" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASU EPE</option>
+              </select>
             </div>
             <div>
               <label className="block text-white mb-2">Department *</label>
-              <input
-                type="text"
+              <select
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
-              />
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }}
+              >
+                {[
+                  { value: "", label: "Select Department" },
+                  { value: "Accounting", label: "Accounting" },
+                  { value: "Agricultural Science", label: "Agricultural Science" },
+                  { value: "Architecture", label: "Architecture" },
+                  { value: "Biochemistry", label: "Biochemistry" },
+                  { value: "Biology", label: "Biology" },
+                  { value: "Business Administration", label: "Business Administration" },
+                  { value: "Chemical Engineering", label: "Chemical Engineering" },
+                  { value: "Chemistry", label: "Chemistry" },
+                  { value: "Civil Engineering", label: "Civil Engineering" },
+                  { value: "Computer Engineering", label: "Computer Engineering" },
+                  { value: "Computer Science", label: "Computer Science" },
+                  { value: "Dentistry", label: "Dentistry" },
+                  { value: "Economics", label: "Economics" },
+                  { value: "Electrical Engineering", label: "Electrical Engineering" },
+                  { value: "English", label: "English" },
+                  { value: "Environmental Science", label: "Environmental Science" },
+                  { value: "Geography", label: "Geography" },
+                  { value: "Geology", label: "Geology" },
+                  { value: "History", label: "History" },
+                  { value: "Law", label: "Law" },
+                  { value: "Mass Communication", label: "Mass Communication" },
+                  { value: "Mathematics", label: "Mathematics" },
+                  { value: "Mechanical Engineering", label: "Mechanical Engineering" },
+                  { value: "Medicine", label: "Medicine" },
+                  { value: "Microbiology", label: "Microbiology" },
+                  { value: "Nursing", label: "Nursing" },
+                  { value: "Pharmacy", label: "Pharmacy" },
+                  { value: "Physics", label: "Physics" },
+                  { value: "Political Science", label: "Political Science" },
+                  { value: "Sociology", label: "Sociology" }
+                ].map((dept) => (
+                  <option 
+                    key={dept.value} 
+                    value={dept.value} 
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}
+                  >
+                    {dept.label}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label className="block text-white mb-2">Level *</label>
               <select
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: 'white'
+                }}
               >
-                <option value="">Select Level</option>
-                <option value="100">100 Level</option>
-                <option value="200">200 Level</option>
-                <option value="300">300 Level</option>
-                <option value="400">400 Level</option>
-                <option value="500">500 Level</option>
-                <option value="postgraduate">Postgraduate</option>
-                <option value="diploma">Diploma</option>
+                <option value="" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Select Level</option>
+                <option value="100" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>100 Level</option>
+                <option value="200" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>200 Level</option>
+                <option value="300" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>300 Level</option>
+                <option value="400" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>400 Level</option>
+                <option value="500" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>500 Level</option>
+                <option value="postgraduate" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Postgraduate</option>
+                <option value="diploma" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Diploma</option>
               </select>
             </div>
             <div>
@@ -177,7 +239,7 @@ const JoinPage = () => {
               <input
                 type="text"
                 required
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
@@ -197,7 +259,7 @@ const JoinPage = () => {
                 type="url"
                 required
                 placeholder="https://linkedin.com/in/your-profile"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -207,7 +269,7 @@ const JoinPage = () => {
               <input
                 type="url"
                 placeholder="https://twitter.com/your-profile"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -217,7 +279,7 @@ const JoinPage = () => {
               <input
                 type="url"
                 placeholder="https://github.com/your-profile"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
@@ -231,10 +293,12 @@ const JoinPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "Astronomy",
+              "Space Advocacy",
               "Rocketry",
               "Space Science",
               "Robotics",
               "Astrophysics",
+              "Astrophotography",
               "Space Engineering",
               "Satellite Technology",
               "Space Policy",
@@ -262,12 +326,12 @@ const JoinPage = () => {
           <div className="space-y-4">
             <div>
               <label className="block text-white mb-2">
-                Why do you want to join Space Clubs? *
+                Why do you want to join Space Clubs LASU? *
               </label>
               <textarea
                 required
                 rows="4"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Tell us about your motivation for joining..."
               ></textarea>
             </div>
@@ -278,23 +342,33 @@ const JoinPage = () => {
               <textarea
                 required
                 rows="4"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Describe your relevant skills and experiences..."
               ></textarea>
             </div>
             <div>
               <label className="block text-white mb-2">
-                What are your future aspirations in space science/technology? *
+                What are your future aspirations in space *
               </label>
               <textarea
                 required
                 rows="4"
-                className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Share your future goals and aspirations..."
               ></textarea>
             </div>
           </div>
         </div>
+         
+         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10">
+          <input
+            type="checkbox"
+            required
+            className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
+          />
+          <span className="text-white text-sm">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
+        </div>
+
 
         <button
           type="submit"
