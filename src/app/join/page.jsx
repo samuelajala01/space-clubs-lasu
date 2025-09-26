@@ -172,10 +172,12 @@ const JoinPage = () => {
                 {[
                   { value: "", label: "Select Department" },
                   { value: "Accounting", label: "Accounting" },
+                  { value: "Aerospace Engineering", label: "Aerospace Engineering" },
                   { value: "Agricultural Science", label: "Agricultural Science" },
                   { value: "Architecture", label: "Architecture" },
+                  { value: "Banking and Finance", label: "Banking and Finance" },
                   { value: "Biochemistry", label: "Biochemistry" },
-                  { value: "Biology", label: "Biology" },
+                  
                   { value: "Business Administration", label: "Business Administration" },
                   { value: "Chemical Engineering", label: "Chemical Engineering" },
                   { value: "Chemistry", label: "Chemistry" },
@@ -184,22 +186,31 @@ const JoinPage = () => {
                   { value: "Computer Science", label: "Computer Science" },
                   { value: "Dentistry", label: "Dentistry" },
                   { value: "Economics", label: "Economics" },
-                  { value: "Electrical Engineering", label: "Electrical Engineering" },
+                  { value: "Electronics and Computer Engineering", label: "Electrical Engineering" },
                   { value: "English", label: "English" },
                   { value: "Environmental Science", label: "Environmental Science" },
+                  { value: "Estate Management", label: "Estate Management" },
+                  { value: "Fisheries and Aquatic Science", label: "Fisheries and Aquatic Science" },
                   { value: "Geography", label: "Geography" },
-                  { value: "Geology", label: "Geology" },
+
                   { value: "History", label: "History" },
+                  { value: "Human Kinetics", label: "Human Kinetics" },
+                  { value: "Industrial Engineering", label: "Industrial Engineering" },
+                  { value: "Insurance", label: "Insurance" },
+
                   { value: "Law", label: "Law" },
                   { value: "Mass Communication", label: "Mass Communication" },
+                  { value: "Marketing", label: "Marketing" },
                   { value: "Mathematics", label: "Mathematics" },
                   { value: "Mechanical Engineering", label: "Mechanical Engineering" },
-                  { value: "Medicine", label: "Medicine" },
+                  { value: "Medicine and Surgery", label: "Medicine and Surgery" },
                   { value: "Microbiology", label: "Microbiology" },
                   { value: "Nursing", label: "Nursing" },
                   { value: "Pharmacy", label: "Pharmacy" },
+                  { value: "Philosophy", label: "Philosophy" },
                   { value: "Physics", label: "Physics" },
                   { value: "Political Science", label: "Political Science" },
+                  { value: "Science Laboratory Technology", label: "Science Laboratory Technology" },
                   { value: "Sociology", label: "Sociology" }
                 ].map((dept) => (
                   <option 
