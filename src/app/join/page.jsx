@@ -370,7 +370,50 @@ const JoinPage = () => {
             </div>
           </div>
         </div>
-         
+
+        {/* Pitch Yourself */}
+        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+          <h2 className="text-2xl font-bold text-white mb-6">
+            Pitch Yourself
+          </h2>
+          <p>This section is for you to pitch yourself, Why you should be selected. Space Clubs LASU is a community of very exceptional and skilled individuals. We accept very few members, so it's important to make your application stand out.</p>
+          <div className="space-y-4">
+            <div>
+              <label className="block text-white mb-2">
+                Why do you want to join Space Clubs LASU? *
+              </label>
+              <textarea
+                required
+                rows="4"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                placeholder="Tell us about your motivation for joining..."
+              ></textarea>
+            </div>
+            <div>
+              <label className="block text-white mb-2">
+                What skills or experiences can you bring to the club? *
+              </label>
+              <textarea
+                required
+                rows="4"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                placeholder="Describe your relevant skills and experiences..."
+              ></textarea>
+            </div>
+            <div>
+              <label className="block text-white mb-2">
+                What are your future aspirations in space *
+              </label>
+              <textarea
+                required
+                rows="4"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                placeholder="Share your future goals and aspirations..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
          <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10">
           <input
             type="checkbox"
