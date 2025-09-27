@@ -3,14 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import JoinMailList from "../Components/JoinMailList";
 import CountdownTimer from "../Components/CountdownTimer";
+import SuccessModal from "../Components/SuccessModal";
 import { useRef, useState, useEffect } from "react";
 import { useForm } from "@formspree/react";
+
 
 const JoinPage = () => {
   const mailListRef = useRef(null);
   const formRef = useRef(null);
   const [state, handleFormSubmit] = useForm("mdkwaloa"); // your Formspree form ID
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // Set this to true when accepting applications
   const isAcceptingApplications = true;
@@ -22,14 +25,14 @@ const JoinPage = () => {
   // show success UI and reset form after submission
   useEffect(() => {
     if (state.succeeded) {
-      setShowSuccess(true);
-      const t = setTimeout(() => {
-        setShowSuccess(false);
-        formRef.current?.reset();
-      }, 5000);
-      return () => clearTimeout(t);
+      setShowSuccessModal(true);
+      formRef.current?.reset();
     }
   }, [state.succeeded]);
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
 
   const NotAcceptingMessage = () => (
     <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
@@ -99,18 +102,7 @@ const JoinPage = () => {
         <p>We receive many outstanding applications for limited spots, but We carefully review all applications 
           and select members who demonstrate strong potential and genuine enthusiasm for our mission. We encourage you 
           to put your best foot forward.</p>
-      </div>      
-      {showSuccess && (
-        <div className="bg-green-500/20 backdrop-blur-md rounded-xl p-6 border border-green-500/30 mb-8">
-          <div className="flex items-center justify-center text-center">
-            <div className="text-green-400 mr-3">✅</div>
-            <div>
-              <h3 className="text-green-400 font-semibold text-lg">Application Submitted Successfully!</h3>
-              <p className="text-green-300">Thank you for your application. We'll review it and get back to you soon.</p>
-            </div>
-          </div>
-        </div>
-      )}
+      </div>
 
       <form
         ref={formRef}
@@ -516,6 +508,12 @@ const JoinPage = () => {
       <div ref={mailListRef}>
         <JoinMailList />
       </div>
+      
+      {/* Success Modal */}
+      <SuccessModal 
+        isOpen={showSuccessModal} 
+        onClose={handleCloseModal} 
+      />
     </div>
   );
 };
