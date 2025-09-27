@@ -25,10 +25,9 @@ const JoinPage = () => {
         Applications Currently Closed
       </h1>
       <p className="text-gray-200 text-lg mb-8 leading-relaxed max-w-2xl">
-        We're currently not accepting new members for this term. Our next
-        application window will open at the start of the next academic semester.
+        Application Window will Open today by 4:30pm GMT+1 today.
         Follow us on social media or join our newsletter to be notified when
-        applications reopen!
+        applications are open!
       </p>
       <div className="flex flex-col sm:flex-row gap-4 mt-4">
         <Link href="/">
