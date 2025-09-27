@@ -85,6 +85,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">First Name *</label>
               <input
                 type="text"
+                name="entry.1430393006"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -93,6 +94,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Last Name *</label>
               <input
                 type="text"
+                name="entry.328248255"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
