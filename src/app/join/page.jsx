@@ -238,6 +238,7 @@ const JoinPage = () => {
                   { value: "Human Kinetics", label: "Human Kinetics" },
                   { value: "Industrial Design", label: "Industrial Design" },
                   { value: "Industrial Engineering", label: "Industrial Engineering" },
+                  { value: "Industrial Relations", label: "Industrial Relations" },
                   { value: "Insurance", label: "Insurance" },
                   { value: "Law", label: "Law" },
                   { value: "Mass Communication", label: "Mass Communication" },
@@ -255,7 +256,9 @@ const JoinPage = () => {
                   { value: "Physics", label: "Physics" },
                   { value: "Physics Education", label: "Physics Education" },
                   { value: "Political Science", label: "Political Science" },
+                  
                   { value: "Physiology and Medical Biochemistry", label: "Physiology and Medical Biochemistry" },
+                  { value: "Psychology", label: "Psychology" },
                   { value: "Quantity Surveying", label: "Quantity Surveying" },
                   { value: "Radiology", label: "Radiology" },
                   { value: "Restorative Dentistry", label: "Restorative Dentistry" },
@@ -287,8 +290,10 @@ const JoinPage = () => {
                 <option value="300">300 Level</option>
                 <option value="400">400 Level</option>
                 <option value="500">500 Level</option>
+                <option value="600">600 Level</option>
                 <option value="Postgraduate">Postgraduate</option>
                 <option value="Diploma">Diploma</option>
+                <option value="Pre-Degree">Pre-Degree</option>
               </select>
             </div>
             <div>
