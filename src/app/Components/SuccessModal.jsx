@@ -83,7 +83,7 @@ const SuccessModal = ({ isOpen, onClose }) => {
 
                 {/* LinkedIn Icon */}
                 <a 
-                  href="https://linkedin.com/company/lasu-space" 
+                  href="https://linkedin.com/company/space-clubs-lasu" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group bg-blue-600 p-2 rounded-lg hover:scale-110 transition-transform duration-300 hover:bg-blue-700"
