@@ -172,8 +172,6 @@ const JoinPage = () => {
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
-                <option value="Other">Other</option>
-                <option value="Prefer not to say">Prefer not to say</option>
               </select>
             </div>
           </div>
@@ -216,25 +214,30 @@ const JoinPage = () => {
                   { value: "Accounting", label: "Accounting" },
                   { value: "Aerospace Engineering", label: "Aerospace Engineering" },
                   { value: "Agricultural Science", label: "Agricultural Science" },
+                  { value: "Anaesthesia", label: "Anaesthesia" },
+                  {value: "Anatomy", label: "Anatomy" },
                   { value: "Architecture", label: "Architecture" },
                   { value: "Banking and Finance", label: "Banking and Finance" },
                   { value: "Biochemistry", label: "Biochemistry" },
+                  { value: "Building", label: "Building" },
                   { value: "Business Administration", label: "Business Administration" },
                   { value: "Chemical Engineering", label: "Chemical Engineering" },
+                  { value: "Chemical Pathology", label: "Chemical Pathology" },
                   { value: "Chemistry", label: "Chemistry" },
                   { value: "Civil Engineering", label: "Civil Engineering" },
-                  { value: "Computer Engineering", label: "Computer Engineering" },
+          
                   { value: "Computer Science", label: "Computer Science" },
                   { value: "Dentistry", label: "Dentistry" },
                   { value: "Economics", label: "Economics" },
                   { value: "Electronics and Computer Engineering", label: "Electronics and Computer Engineering" },
                   { value: "English", label: "English" },
-                  { value: "Environmental Science", label: "Environmental Science" },
+                  { value: "Environmental Management", label: "Environmental Management" },
                   { value: "Estate Management", label: "Estate Management" },
                   { value: "Fisheries and Aquatic Science", label: "Fisheries and Aquatic Science" },
                   { value: "Geography", label: "Geography" },
                   { value: "History", label: "History" },
                   { value: "Human Kinetics", label: "Human Kinetics" },
+                  { value: "Industrial Design", label: "Industrial Design" },
                   { value: "Industrial Engineering", label: "Industrial Engineering" },
                   { value: "Insurance", label: "Insurance" },
                   { value: "Law", label: "Law" },
@@ -243,15 +246,24 @@ const JoinPage = () => {
                   { value: "Mathematics", label: "Mathematics" },
                   { value: "Mechanical Engineering", label: "Mechanical Engineering" },
                   { value: "Medicine and Surgery", label: "Medicine and Surgery" },
+                  { value: "Medical Microbiology", label: "Medical Microbiology" },
                   { value: "Microbiology", label: "Microbiology" },
                   { value: "Nursing", label: "Nursing" },
-                  { value: "Pharmacy", label: "Pharmacy" },
+                  { value: "Obstetrics and Gynaecology", label: "Obstetrics and Gynaecology" },
+                  { value: "Pathology and Forensic Medicine", label: "Pathology and Forensic Medicine" },
+                  { value: "Pharmacology", label: "Pharmacology" },
                   { value: "Philosophy", label: "Philosophy" },
                   { value: "Physics", label: "Physics" },
                   { value: "Physics Education", label: "Physics Education" },
                   { value: "Political Science", label: "Political Science" },
+                  { value: "Physiology and Medical Biochemistry", label: "Physiology and Medical Biochemistry" },
+                  { value: "Quantity Surveying", label: "Quantity Surveying" },
+                  { value: "Radiology", label: "Radiology" },
+                  { value: "Restorative Dentistry", label: "Restorative Dentistry" },
                   { value: "Science Laboratory Technology", label: "Science Laboratory Technology" },
-                  { value: "Sociology", label: "Sociology" }
+                  { value: "Sociology", label: "Sociology" },
+                  { value: "Survey and Geoinformatics", label: "Survey and Geoinformatics" },
+                  { value: "Urban and Regional Planning", label: "Urban and Regional Planning" },
                 ].map((dept) => (
                   <option key={dept.value || dept.label} value={dept.value}>
                     {dept.label}
