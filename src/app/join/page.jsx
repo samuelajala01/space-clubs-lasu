@@ -70,8 +70,10 @@ const JoinPage = () => {
   const ApplicationForm = () => (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
-        Join Our Space Community
+        Join Our Community
       </h1>
+      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16"><p>Applications are Open! Note that applications are highly competitive. We encourage you to put your best foot forward.</p>
+      </div>
       <form className="space-y-8">
         {/* Personal Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
@@ -368,59 +370,52 @@ const JoinPage = () => {
                 placeholder="Share your future goals and aspirations..."
               ></textarea>
             </div>
-          </div>
-        </div>
-
-        {/* Pitch Yourself */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Pitch Yourself
-          </h2>
-          <p>This section is for you to pitch yourself, Why you should be selected. Space Clubs LASU is a community of very exceptional and skilled individuals. We accept very few members, so it's important to make your application stand out.</p>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-white mb-2">
-                Why do you want to join Space Clubs LASU? *
+            
+            <div className="space-y-4 my-8">
+            <p>Pick one or more of the following skills you are proficient in</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+              {[
+              "Programming",
+              "Simulation and Modeling",
+              "Electronics and Circuit Design",
+              "Computer-Aided Design (CAD)",
+              "Project Management",
+              "Web development",
+              "Research and Technical Writing",
+              "Data Analysis",
+              
+            ].map((interest) => (
+              <label key={interest} className="flex items-center space-x-3">
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
+                />
+                <span className="text-white">{interest}</span>
               </label>
-              <textarea
-                required
-                rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
-                placeholder="Tell us about your motivation for joining..."
-              ></textarea>
+            ))}
+              
             </div>
-            <div>
-              <label className="block text-white mb-2">
-                What skills or experiences can you bring to the club? *
-              </label>
-              <textarea
-                required
-                rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
-                placeholder="Describe your relevant skills and experiences..."
-              ></textarea>
-            </div>
-            <div>
-              <label className="block text-white mb-2">
-                What are your future aspirations in space *
-              </label>
-              <textarea
-                required
-                rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
-                placeholder="Share your future goals and aspirations..."
-              ></textarea>
             </div>
           </div>
         </div>
 
-         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10">
+        {/* Disclaimer */}
+         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-4 border border-white/10 items-center flex">
           <input
             type="checkbox"
             required
             className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
           />
-          <span className="text-white text-sm">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
+          <span className="text-white text-xs">By submitting this application, I confirm that the information provided is accurate, and I agree to abide by the rules and regulations of SPACE CLUBS LASU.</span>
+        </div>
+         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10  items-center flex">
+          <input
+            type="checkbox"
+            required
+            className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
+          />
+          <span className="text-white text-xs">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
         </div>
 
 
