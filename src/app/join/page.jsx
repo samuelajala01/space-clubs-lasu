@@ -74,7 +74,9 @@ const JoinPage = () => {
       </h1>
       <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16"><p>Applications are Open! Note that applications are highly competitive. We encourage you to put your best foot forward.</p>
       </div>
-      <form className="space-y-8">
+      <form 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdGvDqZKPEM8wiPA9ovi0mOTBLJnEaRgXcziWfBaXsCBDtRjw/viewform?usp=dialog"
+      className="space-y-8">
         {/* Personal Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6">
@@ -110,6 +112,7 @@ const JoinPage = () => {
             <div>
               <label className="block text-white mb-2">Phone *</label>
               <input
+                name="entry.1882106957"
                 type="tel"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -119,6 +122,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Date of Birth *</label>
               <input
                 type="date"
+                name="entry.177171992"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -131,6 +135,7 @@ const JoinPage = () => {
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
                   color: 'white'
                 }}
+                name="entry.1038652447"
               >
                 <option value="" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Select Gender</option>
                 <option value="male" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Male</option>
@@ -152,6 +157,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Campus *</label>
               <select 
                 required
+                name="entry.421028268"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -272,6 +278,7 @@ const JoinPage = () => {
               </label>
               <input
                 type="url"
+                name="entry.1643217750"
                 required
                 placeholder="https://linkedin.com/in/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -282,6 +289,7 @@ const JoinPage = () => {
                 Twitter Profile (Optional)
               </label>
               <input
+              name="entry.1814299209"
                 type="url"
                 placeholder="https://twitter.com/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -292,6 +300,7 @@ const JoinPage = () => {
                 GitHub Profile (Optional)
               </label>
               <input
+              name="entry.2006737993"
                 type="url"
                 placeholder="https://github.com/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -325,6 +334,7 @@ const JoinPage = () => {
               <label key={interest} className="flex items-center space-x-3">
                 <input
                   type="checkbox"
+
                   className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
                 />
                 <span className="text-white">{interest}</span>
