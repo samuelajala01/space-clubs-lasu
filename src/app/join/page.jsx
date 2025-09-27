@@ -2,16 +2,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import JoinMailList from "../Components/JoinMailList";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useForm } from "@formspree/react";
 
 const JoinPage = () => {
   const mailListRef = useRef(null);
+  const formRef = useRef(null);
+  const [state, handleFormSubmit] = useForm("mdkwaloa"); // your Formspree form ID
+  const [showSuccess, setShowSuccess] = useState(false);
+
   // Set this to true when accepting applications
-  const isAcceptingApplications = false;
+  const isAcceptingApplications = true;
 
   const scrollToMailList = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  // show success UI and reset form after submission
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowSuccess(true);
+      const t = setTimeout(() => {
+        setShowSuccess(false);
+        formRef.current?.reset();
+      }, 5000);
+      return () => clearTimeout(t);
+    }
+  }, [state.succeeded]);
 
   const NotAcceptingMessage = () => (
     <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
@@ -71,22 +88,37 @@ const JoinPage = () => {
       <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
         Join Our Community
       </h1>
-      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16"><p>Applications are Open! Note that applications are highly competitive. We encourage you to put your best foot forward.</p>
+      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
+        <p>Applications are Open! Note that applications are highly competitive. We encourage you to put your best foot forward.</p>
       </div>
-      <form 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSdGvDqZKPEM8wiPA9ovi0mOTBLJnEaRgXcziWfBaXsCBDtRjw/viewform?usp=dialog"
-      className="space-y-8">
+
+      {/* Success Message */}
+      {showSuccess && (
+        <div className="bg-green-500/20 backdrop-blur-md rounded-xl p-6 border border-green-500/30 mb-8">
+          <div className="flex items-center justify-center text-center">
+            <div className="text-green-400 mr-3">✅</div>
+            <div>
+              <h3 className="text-green-400 font-semibold text-lg">Application Submitted Successfully!</h3>
+              <p className="text-green-300">Thank you for your application. We'll review it and get back to you soon.</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <form
+        ref={formRef}
+        onSubmit={handleFormSubmit}
+        className="space-y-8"
+      >
         {/* Personal Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Personal Information
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Personal Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-white mb-2">First Name *</label>
               <input
                 type="text"
-                name="entry.1430393006"
+                name="firstName"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -95,7 +127,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Last Name *</label>
               <input
                 type="text"
-                name="entry.328248255"
+                name="lastName"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -104,6 +136,7 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Email *</label>
               <input
                 type="email"
+                name="email"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -111,7 +144,7 @@ const JoinPage = () => {
             <div>
               <label className="block text-white mb-2">Phone *</label>
               <input
-                name="entry.1882106957"
+                name="phone"
                 type="tel"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -121,26 +154,26 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Date of Birth *</label>
               <input
                 type="date"
-                name="entry.177171992"
+                name="dateOfBirth"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
               <label className="block text-white mb-2">Gender</label>
-              <select 
+              <select
+                name="gender"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white'
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
                 }}
-                name="entry.1038652447"
               >
-                <option value="" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Select Gender</option>
-                <option value="male" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Male</option>
-                <option value="female" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Female</option>
-                <option value="other" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Other</option>
-                <option value="prefer-not-to-say" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Prefer not to say</option>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer not to say">Prefer not to say</option>
               </select>
             </div>
           </div>
@@ -148,34 +181,34 @@ const JoinPage = () => {
 
         {/* Academic Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Academic Information
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Academic Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label className="block text-white mb-2">Campus *</label>
-              <select 
+              <select
                 required
-                name="entry.421028268"
+                name="campus"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white'
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
                 }}
               >
-                <option value="LASU MAIN CAMPUS" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASU Ojo Main Campus</option>
-                <option value="LASUCOM" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASUCOM</option>
-                <option value="LASU EPE" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>LASU EPE</option>
+                <option value="">Select Campus</option>
+                <option value="LASU Ojo Main Campus">LASU Ojo Main Campus</option>
+                <option value="LASUCOM">LASUCOM</option>
+                <option value="LASU EPE">LASU EPE</option>
               </select>
             </div>
             <div>
               <label className="block text-white mb-2">Department *</label>
               <select
                 required
+                name="department"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white'
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
                 }}
               >
                 {[
@@ -186,7 +219,6 @@ const JoinPage = () => {
                   { value: "Architecture", label: "Architecture" },
                   { value: "Banking and Finance", label: "Banking and Finance" },
                   { value: "Biochemistry", label: "Biochemistry" },
-                  
                   { value: "Business Administration", label: "Business Administration" },
                   { value: "Chemical Engineering", label: "Chemical Engineering" },
                   { value: "Chemistry", label: "Chemistry" },
@@ -195,18 +227,16 @@ const JoinPage = () => {
                   { value: "Computer Science", label: "Computer Science" },
                   { value: "Dentistry", label: "Dentistry" },
                   { value: "Economics", label: "Economics" },
-                  { value: "Electronics and Computer Engineering", label: "Electrical Engineering" },
+                  { value: "Electronics and Computer Engineering", label: "Electronics and Computer Engineering" },
                   { value: "English", label: "English" },
                   { value: "Environmental Science", label: "Environmental Science" },
                   { value: "Estate Management", label: "Estate Management" },
                   { value: "Fisheries and Aquatic Science", label: "Fisheries and Aquatic Science" },
                   { value: "Geography", label: "Geography" },
-
                   { value: "History", label: "History" },
                   { value: "Human Kinetics", label: "Human Kinetics" },
                   { value: "Industrial Engineering", label: "Industrial Engineering" },
                   { value: "Insurance", label: "Insurance" },
-
                   { value: "Law", label: "Law" },
                   { value: "Mass Communication", label: "Mass Communication" },
                   { value: "Marketing", label: "Marketing" },
@@ -218,15 +248,12 @@ const JoinPage = () => {
                   { value: "Pharmacy", label: "Pharmacy" },
                   { value: "Philosophy", label: "Philosophy" },
                   { value: "Physics", label: "Physics" },
+                  { value: "Physics Education", label: "Physics Education" },
                   { value: "Political Science", label: "Political Science" },
                   { value: "Science Laboratory Technology", label: "Science Laboratory Technology" },
                   { value: "Sociology", label: "Sociology" }
                 ].map((dept) => (
-                  <option 
-                    key={dept.value} 
-                    value={dept.value} 
-                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}
-                  >
+                  <option key={dept.value || dept.label} value={dept.value}>
                     {dept.label}
                   </option>
                 ))}
@@ -236,28 +263,28 @@ const JoinPage = () => {
               <label className="block text-white mb-2">Level *</label>
               <select
                 required
+                name="level"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white'
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  color: "white",
                 }}
               >
-                <option value="" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Select Level</option>
-                <option value="100" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>100 Level</option>
-                <option value="200" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>200 Level</option>
-                <option value="300" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>300 Level</option>
-                <option value="400" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>400 Level</option>
-                <option value="500" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>500 Level</option>
-                <option value="postgraduate" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Postgraduate</option>
-                <option value="diploma" style={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>Diploma</option>
+                <option value="">Select Level</option>
+                <option value="100">100 Level</option>
+                <option value="200">200 Level</option>
+                <option value="300">300 Level</option>
+                <option value="400">400 Level</option>
+                <option value="500">500 Level</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="Diploma">Diploma</option>
               </select>
             </div>
             <div>
-              <label className="block text-white mb-2">
-                Matriculation/Student ID *
-              </label>
+              <label className="block text-white mb-2">Matriculation/Student ID *</label>
               <input
                 type="text"
+                name="matricNumber"
                 required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
@@ -267,39 +294,31 @@ const JoinPage = () => {
 
         {/* Social Media Links */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Social Media Links
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Social Media Links</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">
-                LinkedIn Profile *
-              </label>
+              <label className="block text-white mb-2">LinkedIn Profile *</label>
               <input
                 type="url"
-                name="entry.1643217750"
+                name="linkedin"
                 required
                 placeholder="https://linkedin.com/in/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">
-                Twitter Profile (Optional)
-              </label>
+              <label className="block text-white mb-2">Twitter Profile (Optional)</label>
               <input
-              name="entry.1814299209"
+                name="twitter"
                 type="url"
                 placeholder="https://twitter.com/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">
-                GitHub Profile (Optional)
-              </label>
+              <label className="block text-white mb-2">GitHub Profile (Optional)</label>
               <input
-              name="entry.2006737993"
+                name="github"
                 type="url"
                 placeholder="https://github.com/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
@@ -308,11 +327,9 @@ const JoinPage = () => {
           </div>
         </div>
 
-        {/* Areas of Interest */}
+        {/* Areas of Interest (checkboxes) */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Areas of Interest
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Areas of Interest</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "Astronomy",
@@ -331,9 +348,11 @@ const JoinPage = () => {
               "Space Education",
             ].map((interest) => (
               <label key={interest} className="flex items-center space-x-3">
+                {/* Use the same name so multiple checked values are submitted as repeated fields */}
                 <input
                   type="checkbox"
-
+                  name="areasOfInterest"
+                  value={interest}
                   className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
                 />
                 <span className="text-white">{interest}</span>
@@ -344,97 +363,107 @@ const JoinPage = () => {
 
         {/* Personal Statement */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">
-            Personal Statement
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Personal Statement</h2>
           <div className="space-y-4">
             <div>
-              <label className="block text-white mb-2">
-                Why do you want to join Space Clubs LASU? *
-              </label>
+              <label className="block text-white mb-2">Why do you want to join Space Clubs LASU? *</label>
               <textarea
                 required
+                name="motivation"
                 rows="4"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Tell us about your motivation for joining..."
               ></textarea>
             </div>
             <div>
-              <label className="block text-white mb-2">
-                What skills or experiences can you bring to the club? *
-              </label>
+              <label className="block text-white mb-2">What skills or experiences can you bring to the club? *</label>
               <textarea
                 required
+                name="skillsExperience"
                 rows="4"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Describe your relevant skills and experiences..."
               ></textarea>
             </div>
             <div>
-              <label className="block text-white mb-2">
-                What are your future aspirations in space *
-              </label>
+              <label className="block text-white mb-2">What are your future aspirations in space *</label>
               <textarea
                 required
+                name="aspirations"
                 rows="4"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Share your future goals and aspirations..."
               ></textarea>
             </div>
-            
+
             <div className="space-y-4 my-8">
-            <p>Pick one or more of the following skills you are proficient in</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-              {[
-              "Programming",
-              "Simulation and Modeling",
-              "Electronics and Circuit Design",
-              "Computer-Aided Design (CAD)",
-              "Project Management",
-              "Web development",
-              "Research and Technical Writing",
-              "Data Analysis",
-              
-            ].map((interest) => (
-              <label key={interest} className="flex items-center space-x-3">
-                <input
-                  type="checkbox"
-                  className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
-                />
-                <span className="text-white">{interest}</span>
-              </label>
-            ))}
-              
-            </div>
+              <p>Pick one or more of the following skills you are proficient in</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  "Programming",
+                  "Simulation and Modeling",
+                  "Electronics and Circuit Design",
+                  "Computer-Aided Design (CAD)",
+                  "Project Management",
+                  "Web development",
+                  "Research and Technical Writing",
+                  "Data Analysis",
+                ].map((skill) => (
+                  <label key={skill} className="flex items-center space-x-3">
+                    <input
+                      type="checkbox"
+                      name="skills"
+                      value={skill}
+                      className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
+                    />
+                    <span className="text-white">{skill}</span>
+                  </label>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Disclaimer */}
-         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-4 border border-white/10 items-center flex">
+        <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-4 border border-white/10 items-center flex">
           <input
             type="checkbox"
+            name="agreeRules"
+            value="yes"
             required
             className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
           />
           <span className="text-white text-xs">By submitting this application, I confirm that the information provided is accurate, and I agree to abide by the rules and regulations of SPACE CLUBS LASU.</span>
         </div>
-         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10  items-center flex">
+        <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10 items-center flex">
           <input
             type="checkbox"
+            name="agreeFee"
+            value="yes"
             required
             className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
           />
           <span className="text-white text-xs">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
         </div>
 
-
         <button
           type="submit"
-          className="w-full bg-[#f65d2a] text-white py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+          disabled={state.submitting}
+          className="w-full bg-[#f65d2a] text-white py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
-          Submit Application
+          {state.submitting ? (
+            <>
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Submitting...
+            </>
+          ) : state.succeeded ? (
+            "Submitted Successfully ✓"
+          ) : (
+            "Submit Application"
+          )}
         </button>
       </form>
     </div>
