@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import JoinMailList from "../Components/JoinMailList";
+import CountdownTimer from "../Components/CountdownTimer";
 import { useRef, useState, useEffect } from "react";
 import { useForm } from "@formspree/react";
 
@@ -85,14 +86,20 @@ const JoinPage = () => {
 
   const ApplicationForm = () => (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
-        Join Our Community
+      <div>
+        <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
+        Applications are Open
       </h1>
-      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
-        <p>Applications are Open! Note that applications are highly competitive. We encourage you to put your best foot forward.</p>
       </div>
 
-      {/* Success Message */}
+      {/* Countdown Timer */}
+      <CountdownTimer targetDate="October 17, 2025 23:59:59 GMT+0100" />
+
+      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
+        <p>We receive many outstanding applications for limited spots, but We carefully review all applications 
+          and select members who demonstrate strong potential and genuine enthusiasm for our mission. We encourage you 
+          to put your best foot forward.</p>
+      </div>      
       {showSuccess && (
         <div className="bg-green-500/20 backdrop-blur-md rounded-xl p-6 border border-green-500/30 mb-8">
           <div className="flex items-center justify-center text-center">
