@@ -14,6 +14,7 @@ const JoinPage = () => {
   const [state, handleFormSubmit] = useForm("mdkwaloa"); // your Formspree form ID
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [socialMediaError, setSocialMediaError] = useState("");
 
   // Set this to true when accepting applications
   const isAcceptingApplications = true;
@@ -22,13 +23,65 @@ const JoinPage = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Custom form submission handler with social media validation
+  const handleCustomFormSubmit = (e) => {
+    // Clear previous error
+    setSocialMediaError("");
+    
+    // Get form data
+    const formData = new FormData(e.target);
+    const linkedin = formData.get("linkedin")?.trim();
+    const twitter = formData.get("twitter")?.trim(); 
+    const github = formData.get("github")?.trim();
+    
+    // Check if at least one social media field is filled
+    if (!linkedin && !twitter && !github) {
+      e.preventDefault();
+      setSocialMediaError("Please provide at least one social media profile (LinkedIn, Twitter, or GitHub)");
+      
+      // Scroll to social media section
+      const socialMediaSection = document.querySelector('[data-section="social-media"]');
+      if (socialMediaSection) {
+        socialMediaSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      return;
+    }
+    
+    // If validation passes, proceed with original form submission
+    handleFormSubmit(e);
+  };
+
   // show success UI and reset form after submission
   useEffect(() => {
     if (state.succeeded) {
       setShowSuccessModal(true);
       formRef.current?.reset();
+      setSocialMediaError(""); // Clear error on success
     }
   }, [state.succeeded]);
+
+  // Clear social media error when user starts typing
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+
+    const handleInputChange = () => {
+      if (socialMediaError) {
+        setSocialMediaError("");
+      }
+    };
+
+    const socialMediaInputs = form.querySelectorAll('input[name="linkedin"], input[name="twitter"], input[name="github"]');
+    socialMediaInputs.forEach(input => {
+      input.addEventListener('input', handleInputChange);
+    });
+
+    return () => {
+      socialMediaInputs.forEach(input => {
+        input.removeEventListener('input', handleInputChange);
+      });
+    };
+  }, [socialMediaError]);
 
   const handleCloseModal = () => {
     setShowSuccessModal(false);
@@ -106,7 +159,7 @@ const JoinPage = () => {
 
       <form
         ref={formRef}
-        onSubmit={handleFormSubmit}
+        onSubmit={handleCustomFormSubmit}
         className="space-y-8"
       >
         {/* Personal Information */}
@@ -159,9 +212,10 @@ const JoinPage = () => {
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Gender</label>
+              <label className="block text-white mb-2">Gender *</label>
               <select
                 name="gender"
+                required
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -309,21 +363,33 @@ const JoinPage = () => {
         </div>
 
         {/* Social Media Links */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10" data-section="social-media">
           <h2 className="text-2xl font-bold text-white mb-6">Social Media Links</h2>
+          <p className="text-gray-300 text-sm mb-4">
+            <span className="text-[#f65d2a]">*</span> Please provide at least one social media profile
+          </p>
+          
+          {socialMediaError && (
+            <div className="bg-red-500/20 backdrop-blur-md rounded-lg p-3 border border-red-500/30 mb-4">
+              <p className="text-red-400 text-sm flex items-center">
+                <span className="mr-2">⚠️</span>
+                {socialMediaError}
+              </p>
+            </div>
+          )}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">LinkedIn Profile *</label>
+              <label className="block text-white mb-2">LinkedIn Profile</label>
               <input
                 type="url"
                 name="linkedin"
-                required
                 placeholder="https://linkedin.com/in/your-profile"
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Twitter Profile (Optional)</label>
+              <label className="block text-white mb-2">Twitter Profile</label>
               <input
                 name="twitter"
                 type="url"
@@ -332,7 +398,7 @@ const JoinPage = () => {
               />
             </div>
             <div>
-              <label className="block text-white mb-2">GitHub Profile (Optional)</label>
+              <label className="block text-white mb-2">GitHub Profile</label>
               <input
                 name="github"
                 type="url"
@@ -346,6 +412,7 @@ const JoinPage = () => {
         {/* Areas of Interest (checkboxes) */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6">Areas of Interest</h2>
+          <p className="text-gray-300 text-sm mb-4">We recommend picking at most 3</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "Astronomy",
@@ -418,12 +485,17 @@ const JoinPage = () => {
                 {[
                   "Programming",
                   "Simulation and Modeling",
+                  "Graphics Design",
+
                   "Electronics and Circuit Design",
                   "Computer-Aided Design (CAD)",
+                  "UI/UX Design",
                   "Project Management",
                   "Web development",
                   "Research and Technical Writing",
                   "Data Analysis",
+                  "Photography or Videography",
+
                 ].map((skill) => (
                   <label key={skill} className="flex items-center space-x-3">
                     <input
