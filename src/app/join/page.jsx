@@ -11,7 +11,7 @@ import { useForm } from "@formspree/react";
 const JoinPage = () => {
   const mailListRef = useRef(null);
   const formRef = useRef(null);
-  const [state, handleFormSubmit] = useForm("mdkwaloa"); // your Formspree form ID
+  const [state, handleFormSubmit] = useForm("myznerza");
   const [showSuccess, setShowSuccess] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [socialMediaError, setSocialMediaError] = useState("");
@@ -23,9 +23,8 @@ const JoinPage = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Custom form submission handler with social media validation
   const handleCustomFormSubmit = (e) => {
-    // Clear previous error
+    
     setSocialMediaError("");
     
     // Get form data
@@ -60,7 +59,7 @@ const JoinPage = () => {
     }
   }, [state.succeeded]);
 
-  // Clear social media error when user starts typing
+
   useEffect(() => {
     const form = formRef.current;
     if (!form) return;

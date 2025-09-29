@@ -36,36 +36,26 @@ const MarqueeComponent = () => {
       <div className="flex animate-marquee whitespace-nowrap pr-12">
         <div className="flex items-center mx-4">
           <span className="text-lg font-semibold">
-            📊 Check out our latest reports and insights now!!!
+           World Space Week is Coming!!!           World Space Week is Coming!!!
           </span>
           <Link
-            href="/reports"
+            href="/"
             className="ml-4 text-sm font-semibold underline hover:text-orange-200 transition-colors"
           >
-            View Reports →
+            Watch Out →
           </Link>
         </div>
-        {/* <div className="flex items-center mx-4">
-          <span className="text-sm font-semibold">
-            🚀 New space technology research published
-          </span>
-          <Link
-            href="/reports"
-            className="ml-4 text-sm font-semibold underline hover:text-orange-200 transition-colors"
-          >
-            Read More →
-          </Link>
-        </div> */}
+      
   
         <div className="flex items-center mx-4">
-          <span className="text-lg font-semibold">
-            📈 Annual impact report now available
+          <span className="text-lg font-semibold ">
+            World Space Week is Coming!!!  World Space Week is Coming!!! 
           </span>
           <Link
-            href="/reports"
+            href="/"
             className="ml-4 text-sm font-semibold underline hover:text-orange-200 transition-colors"
           >
-            Download →
+            Watch Out →
           </Link>
         </div>
       </div>
