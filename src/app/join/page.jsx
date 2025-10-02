@@ -33,12 +33,11 @@ const JoinPage = () => {
     const twitter = formData.get("twitter")?.trim(); 
     const github = formData.get("github")?.trim();
     
-    // Check if at least one social media field is filled
+    
     if (!linkedin && !twitter && !github) {
       e.preventDefault();
       setSocialMediaError("Please provide at least one social media profile (LinkedIn, Twitter, or GitHub)");
       
-      // Scroll to social media section
       const socialMediaSection = document.querySelector('[data-section="social-media"]');
       if (socialMediaSection) {
         socialMediaSection.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -46,16 +45,16 @@ const JoinPage = () => {
       return;
     }
     
-    // If validation passes, proceed with original form submission
+    
     handleFormSubmit(e);
   };
 
-  // show success UI and reset form after submission
+ 
   useEffect(() => {
     if (state.succeeded) {
       setShowSuccessModal(true);
       formRef.current?.reset();
-      setSocialMediaError(""); // Clear error on success
+      setSocialMediaError(""); 
     }
   }, [state.succeeded]);
 
