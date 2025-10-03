@@ -7,10 +7,10 @@ export const allEvents = [
     location: "Virtual",
     description:
       "AstroVate Virtual Hackathon is part of our World Space Week 2025 Celebrations, themed “Living in Space.” It’s a platform for innovators and enthusiasts to design solutions for real-world space challenges.Join us on October 7th to showcase creativity, collaboration, and innovation for the future of space.",
-    category: "Webinar",
+    category: "Competition",
     image: "/images/events/astro.jpg",
     status: "upcoming",
-    registerLink: "https://lu.ma/jyys9w66",
+    registerLink: "https://lu.ma/q1m9m9ru",
   },
   {
     title:"Space for All: Why Living in Space matters to life on earth ",
@@ -19,7 +19,7 @@ export const allEvents = [
     location: "Virtual",
     description:"Living in space pushes us to develop new technologies for health, energy, and sustainability. The solutions we create for survival beyond Earth often improve daily life right here at home. Exploring how we live in space is ultimately about building a better future for life on Earth.",
     category: "Webinar",
-    image: "/images/events/astro.jpg",
+    image: "/images/events/space4all.jpg",
     status: "upcoming",
     registerLink: "https://luma.com/x8t4mphe",
   },
