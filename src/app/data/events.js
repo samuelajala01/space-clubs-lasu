@@ -1,4 +1,28 @@
 export const allEvents = [
+  
+  {
+    title:"Astrovate Virtual Hackathon.",
+    date: "October 7th, 2025",
+    time: "10:00 AM",
+    location: "Virtual",
+    description:
+      "AstroVate Virtual Hackathon is part of our World Space Week 2025 Celebrations, themed “Living in Space.” It’s a platform for innovators and enthusiasts to design solutions for real-world space challenges.Join us on October 7th to showcase creativity, collaboration, and innovation for the future of space.",
+    category: "Webinar",
+    image: "/images/events/astro.jpg",
+    status: "upcoming",
+    registerLink: "https://lu.ma/jyys9w66",
+  },
+  {
+    title:"Space for All: Why Living in Space matters to life on earth ",
+    date: "October 4th, 2025",
+    time: "4:00 PM",
+    location: "Virtual",
+    description:"Living in space pushes us to develop new technologies for health, energy, and sustainability. The solutions we create for survival beyond Earth often improve daily life right here at home. Exploring how we live in space is ultimately about building a better future for life on Earth.",
+    category: "Webinar",
+    image: "/images/events/astro.jpg",
+    status: "upcoming",
+    registerLink: "https://luma.com/x8t4mphe",
+  },
   {
     title:
       "Hello From The Future: A conversation with Dr. Claire A. Nelson, founder of Space Futures Forum.",
