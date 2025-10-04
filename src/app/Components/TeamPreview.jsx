@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TeamPreview = () => {
+  const [isClient, setIsClient] = useState(false);
+
   const coreTeam = [
     {
       name: "Sylvester Agose",
@@ -73,19 +79,39 @@ const TeamPreview = () => {
     },
   ];
 
+  useEffect(() => {
+    setIsClient(true);
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      mirror: true,
+      disable: "mobile",
+    });
+  }, []);
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 max-w-7xl">
-        <h2 className="text-4xl text-white mb-12 text-center">Meet Our Team</h2>
+        <h2
+          className="text-4xl text-white mb-12 text-center"
+          {...(isClient && {
+            "data-aos": "fade-up",
+          })}
+        >
+          Meet Our Team
+        </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {coreTeam.map((member, index) => (
             <div
               key={index}
               className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={index * 100}
-              data-aos-offset="100"
-              data-aos-mirror="true"
+              {...(isClient && {
+                "data-aos": index % 2 === 0 ? "fade-right" : "fade-left",
+                "data-aos-delay": index * 100,
+                "data-aos-offset": "100",
+                "data-aos-mirror": "true",
+              })}
             >
               <div className="relative h-64">
                 {member.image ? (
@@ -93,8 +119,8 @@ const TeamPreview = () => {
                     src={member.image}
                     alt={member.name}
                     className="absolute inset-0 w-full h-full object-cover"
-                    width="500"
-                    height="500"
+                    width={500}
+                    height={500}
                     quality={100}
                   />
                 ) : (

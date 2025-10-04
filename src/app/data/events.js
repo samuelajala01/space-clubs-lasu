@@ -20,7 +20,7 @@ export const allEvents = [
     description:"Living in space pushes us to develop new technologies for health, energy, and sustainability. The solutions we create for survival beyond Earth often improve daily life right here at home. Exploring how we live in space is ultimately about building a better future for life on Earth.",
     category: "Webinar",
     image: "/images/events/space4all.jpg",
-    status: "upcoming",
+    status: "past",
     registerLink: "https://luma.com/x8t4mphe",
   },
   {

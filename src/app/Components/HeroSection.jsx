@@ -1,11 +1,16 @@
-import { useEffect, memo } from "react";
+"use client";
+
+import { useEffect, memo, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import MarqueeComponent from "./MarqueeComponent";
 
 const HeroSection = () => {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
     AOS.init({
       duration: 1000,
       once: true,
@@ -19,22 +24,18 @@ const HeroSection = () => {
     <>
       {/* Marquee Component */}
       <MarqueeComponent />
-      
-      <section className="mx-[4vw] text-center relative">
-        <div
-          className="flex justify-center"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        ></div>
 
+      <section className="mx-[4vw] text-center relative">
         <h1
           className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl text-white lg:px-32 font-medium"
-          data-aos="fade-down"
-          data-aos-duration="800"
+          {...(isClient && {
+            "data-aos": "fade-down",
+            "data-aos-duration": "800",
+          })}
         >
           We are on a mission to Inspire, Educate, and Engage students.
         </h1>
-        <p className="text-[1.1rem] sm:text-2xl">
+        <p className="text-[1.1rem] sm:text-2xl text-gray-300">
           Empowering them to lead Africa's journey into Space and Advanced
           Technology
         </p>
@@ -43,8 +44,10 @@ const HeroSection = () => {
           <Link href="/join" prefetch={false}>
             <button
               className="w-[140px] sm:w-[180px] bg-[#f65d2a] text-white rounded-full py-4 font-semibold hover:bg-[#e54d1a] transition-colors duration-300 text-sm sm:text-base"
-              data-aos="fade-left"
-              data-aos-duration="800"
+              {...(isClient && {
+                "data-aos": "fade-left",
+                "data-aos-duration": "800",
+              })}
             >
               Join our community
             </button>
@@ -52,8 +55,10 @@ const HeroSection = () => {
           <Link href="/donate" prefetch={false}>
             <button
               className="w-[140px] sm:w-[180px] bg-transparent border-2 border-[#f65d2a] text-[#f65d2a] rounded-full py-4 font-semibold hover:bg-[#f65d2a]/10 transition-colors duration-300 text-sm sm:text-base"
-              data-aos="fade-right"
-              data-aos-duration="800"
+              {...(isClient && {
+                "data-aos": "fade-right",
+                "data-aos-duration": "800",
+              })}
             >
               Donate
             </button>
@@ -63,8 +68,10 @@ const HeroSection = () => {
         {/* Side Scroll Cue */}
         <div
           className="absolute right-8 bottom-2/5 -translate-y-1/2 hidden md:flex flex-col items-center gap-2"
-          data-aos="fade-left"
-          data-aos-delay="1000"
+          {...(isClient && {
+            "data-aos": "fade-left",
+            "data-aos-delay": "1000",
+          })}
         >
           <span className="text-white/60 text-sm rotate-90 whitespace-nowrap mb-2">
             Scroll
