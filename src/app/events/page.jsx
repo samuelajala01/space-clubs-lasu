@@ -121,7 +121,7 @@ EventCard.displayName = "EventCard";
 
 const EventsPage = () => {
   const categories = useMemo(
-    () => ["All", "Observation", "Workshop", "Webinar", "Meetup", "Discussion", "Competition"],
+    () => ["All", "Observation", "Workshop", "Webinar", "Meetup", "Discussion", "Competition", "Outreach"],
     []
   );
   const statuses = useMemo(() => ["All", "Past", "Ongoing", "Upcoming"], []);

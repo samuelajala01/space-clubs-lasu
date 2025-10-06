@@ -1,5 +1,32 @@
 export const allEvents = [
   
+
+ 
+  
+  {
+    title:"Space Robotics & AI: How Robotics & AI help astronauts perform tasks",
+    date: "October 9th, 2025",
+    time: "4:00 PM",
+    location: "Virtual",
+    description:
+      "Join us for a technical webinar on how robotics & AI help astronauts perform tasks in Space.",
+    category: "Webinar",
+    image: "/images/events/robotics_wsw.jpg",
+    status: "upcoming",
+    registerLink: "https://luma.com/4c67u6uo",
+  },
+   {
+    title:"WSW 25 School Outreach(2)",
+    date: "October 8th, 2025",
+    time: "10:00 AM",
+    location: "Temmrej College, Epe",
+    description:
+      "As part of World Space Week 2025, Space Clubs LASU will visit Temrej College  to inspire and educate students about space science, technology, and exploration. Join us as we nurture the next generation of young innovators and space leaders!",
+    category: "Outreach",
+    image: "/images/events/temrej.jpg",
+    status: "upcoming",
+    registerLink: "",
+  },
   {
     title:"Astrovate Virtual Hackathon.",
     date: "October 7th, 2025",
@@ -11,6 +38,30 @@ export const allEvents = [
     image: "/images/events/astro.jpg",
     status: "upcoming",
     registerLink: "https://lu.ma/q1m9m9ru",
+  },
+  {
+    title:"WSW 25 School Outreach(1)",
+    date: "October 6th, 2025",
+    time: "12:00 PM",
+    location: "Rosenik Private School, Epe",
+    description:
+      "As part of World Space Week 2025, Space Clubs LASU will visit Rosenik Schools to inspire and educate students about space science, technology, and exploration. Join us as we nurture the next generation of young innovators and space leaders!",
+    category: "Outreach",
+    image: "/images/events/rosenik.jpg",
+    status: "ongoing",
+    registerLink: "",
+  },
+    {
+    title:"WSW 25 Article Competition",
+    date: "October 5th - 13th, 2025",
+    time: "-",
+    location: "Virtual",
+    description:
+      "Space Clubs LASU invites students and space enthusiasts to submit insightful articles on futuristic space themes including habitats, healthcare, and energy systems beyond Earth. Join us in celebrating World Space Week by sharing your ideas.",
+    category: "Webinar",
+    image: "/images/events/articles_wsw.jpg",
+    status: "ongoing",
+    registerLink: "https://www.linkedin.com/posts/space-clubs-lasu_wsw2025-spaceclubslasu-callforarticles-activity-7379900084903292928-In7p",
   },
   {
     title:"Space for All: Why Living in Space matters to life on earth ",

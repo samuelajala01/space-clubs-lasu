@@ -36,26 +36,26 @@ const MarqueeComponent = () => {
       <div className="flex animate-marquee whitespace-nowrap pr-12">
         <div className="flex items-center mx-4">
           <span className="text-lg font-semibold">
-           World Space Week is Coming!!!           World Space Week is Coming!!!
+           It's World Space Week !!!   It's World Space Week!!!
           </span>
           <Link
-            href="/"
+            href="/events"
             className="ml-4 text-sm font-semibold underline hover:text-orange-200 transition-colors"
           >
-            Watch Out →
+            Our Events →
           </Link>
         </div>
       
   
         <div className="flex items-center mx-4">
           <span className="text-lg font-semibold ">
-            World Space Week is Coming!!!  World Space Week is Coming!!! 
+            It's World Space Week !!!   It's World Space Week!!!
           </span>
           <Link
-            href="/"
+            href="/events"
             className="ml-4 text-sm font-semibold underline hover:text-orange-200 transition-colors"
           >
-            Watch Out →
+            Our events →
           </Link>
         </div>
       </div>
