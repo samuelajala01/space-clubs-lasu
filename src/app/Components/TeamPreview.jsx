@@ -106,12 +106,6 @@ const TeamPreview = () => {
             <div
               key={index}
               className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
-              {...(isClient && {
-                "data-aos": index % 2 === 0 ? "fade-right" : "fade-left",
-                "data-aos-delay": index * 100,
-                "data-aos-offset": "100",
-                "data-aos-mirror": "true",
-              })}
             >
               <div className="relative h-64">
                 {member.image ? (
