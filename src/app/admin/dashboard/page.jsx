@@ -63,7 +63,7 @@ export default function AdminDashboard() {
       {/* Content */}
       <div className="relative z-10">
         <Navbar />
-        <div className="pt-48 pb-16">
+        <div className="pt-2 pb-16">
           <div className="mx-[4vw] px-4">
             <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
               <div className="flex justify-between items-center mb-8">

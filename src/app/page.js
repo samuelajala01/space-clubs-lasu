@@ -30,6 +30,7 @@ export default function Home() {
     { src: "/images/partners/sgac.png", alt: "SGAC" },
     { src: "/images/partners/spacebar.png", alt: "Space Bar" },
     { src: "/images/partners/spacehubs.png", alt: "Space Hubs" },
+    { src: "/images/partners/desci.png", alt: "Desci" },
     { src: "/images/partners/cydata.png", alt: "CyData" },
     { src: "/images/partners/rainin.png", alt: "Rainin" },
     { src: "/images/partners/Milsat_Logo_White_0096effeda.png", alt: "Milsat" },
