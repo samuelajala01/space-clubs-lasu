@@ -1,6 +1,158 @@
-export const allEvents = [
+// Utility function to determine event status based on date
+const getEventStatus = (dateString) => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Set to start of today
+
+  // Clean up the date string and handle different formats
+  let cleanDateString = dateString.trim();
+
+  // Parse the date string - handle different formats
+  let eventStartDate, eventEndDate;
+
+  try {
+    // Handle date ranges with " - " (e.g., "October 5th - 13th, 2025")
+    if (cleanDateString.includes(" - ")) {
+      const parts = cleanDateString.split(" - ");
+      const startPart = parts[0].trim();
+      const endPart = parts[1].trim();
+
+      // Extract year (could be in either part)
+      const yearMatch = cleanDateString.match(/\b(20\d{2})\b/);
+      const year = yearMatch
+        ? yearMatch[0]
+        : new Date().getFullYear().toString();
+
+      // Get month from start part
+      const monthMatch = startPart.match(
+        /(January|February|March|April|May|June|July|August|September|October|November|December)/i
+      );
+      const month = monthMatch ? monthMatch[0] : "";
+
+      // Get start day
+      const startDayMatch = startPart.match(/(\d+)(?:st|nd|rd|th)?/);
+      const startDay = startDayMatch ? startDayMatch[1] : "";
+
+      // Get end day
+      const endDayMatch = endPart.match(/(\d+)(?:st|nd|rd|th)?/);
+      const endDay = endDayMatch ? endDayMatch[1] : "";
+
+      if (month && startDay && endDay) {
+        eventStartDate = new Date(`${month} ${startDay}, ${year}`);
+        eventEndDate = new Date(`${month} ${endDay}, ${year}`);
+      }
+    }
+    // Handle dates with " & " (e.g., "July 15 & 16, 2025")
+    else if (cleanDateString.includes(" & ")) {
+      const parts = cleanDateString.split(" & ");
+      const startPart = parts[0].trim();
+      const endPart = parts[1].trim();
+
+      // Extract year
+      const yearMatch = cleanDateString.match(/\b(20\d{2})\b/);
+      const year = yearMatch
+        ? yearMatch[0]
+        : new Date().getFullYear().toString();
+
+      // Get month from start part
+      const monthMatch = startPart.match(
+        /(January|February|March|April|May|June|July|August|September|October|November|December)/i
+      );
+      const month = monthMatch ? monthMatch[0] : "";
+
+      // Get start day
+      const startDayMatch = startPart.match(/(\d+)(?:st|nd|rd|th)?/);
+      const startDay = startDayMatch ? startDayMatch[1] : "";
+
+      // Get end day (might include year and comma)
+      const endDayMatch = endPart.match(/(\d+)(?:st|nd|rd|th)?/);
+      const endDay = endDayMatch ? endDayMatch[1] : "";
+
+      if (month && startDay && endDay) {
+        eventStartDate = new Date(`${month} ${startDay}, ${year}`);
+        eventEndDate = new Date(`${month} ${endDay}, ${year}`);
+      }
+    }
+    // Handle date ranges like "January (15,17,22,24), 2025"
+    else if (cleanDateString.includes("(") && cleanDateString.includes(")")) {
+      const yearMatch = cleanDateString.match(/\b(20\d{2})\b/);
+      const year = yearMatch
+        ? yearMatch[0]
+        : new Date().getFullYear().toString();
+
+      const monthMatch = cleanDateString.match(
+        /(January|February|March|April|May|June|July|August|September|October|November|December)/i
+      );
+      const month = monthMatch ? monthMatch[0] : "";
+
+      // Get all days in parentheses
+      const daysMatch = cleanDateString.match(/\(([^)]+)\)/);
+      if (daysMatch && month) {
+        const days = daysMatch[1]
+          .split(",")
+          .map((day) => day.trim().replace(/(?:st|nd|rd|th)/, ""));
+        const firstDay = days[0];
+        const lastDay = days[days.length - 1];
+
+        eventStartDate = new Date(`${month} ${firstDay}, ${year}`);
+        eventEndDate = new Date(`${month} ${lastDay}, ${year}`);
+      }
+    }
+    // Handle single dates (e.g., "October 9th, 2025" or "21 April, 2024")
+    else {
+      // Remove ordinal suffixes and parse
+      const normalizedDate = cleanDateString.replace(
+        /(\d+)(st|nd|rd|th)/g,
+        "$1"
+      );
+      eventStartDate = new Date(normalizedDate);
+      eventEndDate = eventStartDate;
+    }
+
+    // If parsing failed, try alternative parsing
+    if (!eventStartDate || isNaN(eventStartDate)) {
+      // Try direct parsing after removing ordinals
+      const normalizedDate = cleanDateString.replace(
+        /(\d+)(st|nd|rd|th)/g,
+        "$1"
+      );
+      eventStartDate = new Date(normalizedDate);
+      eventEndDate = eventStartDate;
+    }
+  } catch (error) {
+    console.warn(`Error parsing date: ${dateString}`, error);
+  }
+
+  // If date parsing failed, return 'upcoming' as default
+  if (!eventStartDate || isNaN(eventStartDate)) {
+    console.warn(`Could not parse date: ${dateString}`);
+    return "upcoming";
+  }
+
+  // Set times to start of day for comparison
+  eventStartDate.setHours(0, 0, 0, 0);
+  if (eventEndDate) {
+    eventEndDate.setHours(23, 59, 59, 999); // End of end date
+  } else {
+    eventEndDate = new Date(eventStartDate);
+    eventEndDate.setHours(23, 59, 59, 999);
+  }
+
+  // Determine status based on date comparison
+  const now = new Date();
+
+  if (now < eventStartDate) {
+    return "upcoming";
+  } else if (now >= eventStartDate && now <= eventEndDate) {
+    return "ongoing";
+  } else {
+    return "past";
+  }
+};
+
+// Events data with auto-calculated status
+const eventsData = [
   {
-    title:"WSW 25 Article Competition",
+    title: "WSW 25 Article Competition",
     date: "October 5th - 13th, 2025",
     time: "-",
     location: "Virtual",
@@ -8,12 +160,13 @@ export const allEvents = [
       "Space Clubs LASU invites students and space enthusiasts to submit insightful articles on futuristic space themes including habitats, healthcare, and energy systems beyond Earth. Join us in celebrating World Space Week by sharing your ideas.",
     category: "Webinar",
     image: "/images/events/articles_wsw.jpg",
-    status: "ongoing",
-    registerLink: "https://www.linkedin.com/posts/space-clubs-lasu_wsw2025-spaceclubslasu-callforarticles-activity-7379900084903292928-In7p",
+    registerLink:
+      "https://www.linkedin.com/posts/space-clubs-lasu_wsw2025-spaceclubslasu-callforarticles-activity-7379900084903292928-In7p",
   },
 
   {
-    title:"Space Robotics & AI: How Robotics & AI help astronauts perform tasks",
+    title:
+      "Space Robotics & AI: How Robotics & AI help astronauts perform tasks",
     date: "October 9th, 2025",
     time: "4:00 PM",
     location: "Virtual",
@@ -21,11 +174,10 @@ export const allEvents = [
       "Join us for a technical webinar on how robotics & AI help astronauts perform tasks in Space.",
     category: "Webinar",
     image: "/images/events/robotics_wsw.jpg",
-    status: "upcoming",
     registerLink: "https://luma.com/4c67u6uo",
   },
-   {
-    title:"WSW 25 School Outreach(2)",
+  {
+    title: "WSW 25 School Outreach(2)",
     date: "October 8th, 2025",
     time: "10:00 AM",
     location: "Temmrej College, Epe",
@@ -33,11 +185,10 @@ export const allEvents = [
       "As part of World Space Week 2025, Space Clubs LASU will visit Temrej College  to inspire and educate students about space science, technology, and exploration. Join us as we nurture the next generation of young innovators and space leaders!",
     category: "Outreach",
     image: "/images/events/temrej.jpg",
-    status: "past",
     registerLink: "",
   },
   {
-    title:"Astrovate Virtual Hackathon.",
+    title: "Astrovate Virtual Hackathon.",
     date: "October 7th, 2025",
     time: "10:00 AM",
     location: "Virtual",
@@ -49,7 +200,7 @@ export const allEvents = [
     registerLink: "https://lu.ma/q1m9m9ru",
   },
   {
-    title:"WSW 25 School Outreach(1)",
+    title: "WSW 25 School Outreach(1)",
     date: "October 6th, 2025",
     time: "12:00 PM",
     location: "Rosenik Private School, Epe",
@@ -60,13 +211,14 @@ export const allEvents = [
     status: "past",
     registerLink: "",
   },
-    
+
   {
-    title:"Space for All: Why Living in Space matters to life on earth ",
+    title: "Space for All: Why Living in Space matters to life on earth ",
     date: "October 4th, 2025",
     time: "4:00 PM",
     location: "Virtual",
-    description:"Living in space pushes us to develop new technologies for health, energy, and sustainability. The solutions we create for survival beyond Earth often improve daily life right here at home. Exploring how we live in space is ultimately about building a better future for life on Earth.",
+    description:
+      "Living in space pushes us to develop new technologies for health, energy, and sustainability. The solutions we create for survival beyond Earth often improve daily life right here at home. Exploring how we live in space is ultimately about building a better future for life on Earth.",
     category: "Webinar",
     image: "/images/events/space4all.jpg",
     status: "past",
@@ -230,6 +382,11 @@ export const allEvents = [
       "From tracking deforestation to disaster management, this webinar will showcase how space technology is shaping the future of environmental sustainability.",
     category: "Webinar",
     image: "/images/events/sc_onboard.jpg",
-    status: "past",
   },
 ];
+
+// Export events with automatically calculated status
+export const allEvents = eventsData.map((event) => ({
+  ...event,
+  status: getEventStatus(event.date),
+}));
