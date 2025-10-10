@@ -152,6 +152,16 @@ const getEventStatus = (dateString) => {
 // Events data with auto-calculated status
 const eventsData = [
   {
+    title: "WSW Movie Night",
+    date: "October 10th, 2025",
+    time: "6:00 PM",
+    location: "School buttery, Lagos State University, Epe",
+    description: "Over the last 6 days, we've learned, wrote, inspired, innovated, and engaged. Tomorrow? We film! What a week it’s been! Come with your curiosity, laughter, and good vibes as we wrap up this cosmic week in the most fun way possible with a movie that take us beyond Earth and remind us why space truly connects us all.",
+    category: "Meetup",
+    image: "/images/events/movie_wsw.jpg",
+    registerLink: "https://luma.com/x79sib51",
+  },
+  {
     title: "WSW 25 Article Competition",
     date: "October 5th - 13th, 2025",
     time: "-",
