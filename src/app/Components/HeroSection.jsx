@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <>
       {/* Marquee Component */}
-      <MarqueeComponent />
+      {/* <MarqueeComponent /> */}
 
       <section className="mx-[4vw] text-center relative">
         <h1
