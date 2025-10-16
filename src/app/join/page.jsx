@@ -17,7 +17,7 @@ const JoinPage = () => {
   const [socialMediaError, setSocialMediaError] = useState("");
 
   // Set this to true when accepting applications
-  const isAcceptingApplications = true;
+  const isAcceptingApplications = false;
 
   const scrollToMailList = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -97,7 +97,7 @@ const JoinPage = () => {
         Applications Currently Closed
       </h1>
       <p className="text-gray-200 text-lg mb-8 leading-relaxed max-w-2xl">
-        Application Window will Open today by 4:30pm GMT+1 today.
+        Application Window is closed and will reopen next academic session.
         Follow us on social media or join our newsletter to be notified when
         applications are open!
       </p>
