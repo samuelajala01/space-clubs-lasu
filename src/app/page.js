@@ -62,7 +62,8 @@ export default function Home() {
           fill
           className="object-cover"
           priority
-          quality={60}
+          fetchPriority="high"
+          quality={50}
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
           sizes="100vw"
@@ -80,6 +81,7 @@ export default function Home() {
           height={400}
           className="w-[90%] max-w-6xl h-auto"
           priority
+          fetchPriority="high"
           quality={70}
           sizes="(max-width: 768px) 90vw, 1200px"
         />

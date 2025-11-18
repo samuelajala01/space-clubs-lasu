@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import { WebVitals } from "./Components/WebVitals";
 import { Open_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -9,12 +10,18 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-open-sans",
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 export const metadata = {
   title: "Space Clubs LASU | Community of Space Enthusiasts",
   description:
     "Space Clubs LASU is a community of space enthusiasts in Lagos State University passionate about space science and technology. We organise events, resources, and connect, and also build with fellow space lovers.",
+  other: {
+    // Preconnect to essential domains
+    preconnect: "https://fonts.googleapis.com",
+  },
   icons: {
     icon: [
       {
@@ -62,6 +69,24 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/icons/favicon.ico" />
+        {/* Critical resource hints */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.spaceclubslasu.org" />
+        {/* Preload critical images */}
+        <link
+          rel="preload"
+          href="/images/home-bg.png"
+          as="image"
+          type="image/png"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/images/club-icons.png"
+          as="image"
+          type="image/png"
+        />
         <link
           rel="icon"
           type="image/png"
@@ -90,6 +115,7 @@ export default function RootLayout({ children }) {
         <main className="pt-24">{children}</main>
         <Footer />
         <Analytics />
+        <WebVitals />
       </body>
     </html>
   );

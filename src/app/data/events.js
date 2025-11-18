@@ -119,12 +119,12 @@ const getEventStatus = (dateString) => {
       eventEndDate = eventStartDate;
     }
   } catch (error) {
-    console.warn(`Error parsing date: ${dateString}`, error);
+    // console.warn(`Error parsing date: ${dateString}`, error);
   }
 
   // If date parsing failed, return 'upcoming' as default
   if (!eventStartDate || isNaN(eventStartDate)) {
-    console.warn(`Could not parse date: ${dateString}`);
+    // console.warn(`Could not parse date: ${dateString}`);
     return "upcoming";
   }
 

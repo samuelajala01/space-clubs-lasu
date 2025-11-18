@@ -115,7 +115,9 @@ const TeamPreview = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                     width={500}
                     height={500}
-                    quality={100}
+                    quality={75}
+                    loading={index < 3 ? "eager" : "lazy"}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">

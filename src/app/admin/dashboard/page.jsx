@@ -17,10 +17,10 @@ export default function AdminDashboard() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        console.log("User authenticated:", currentUser.email);
+        // console.log("User authenticated:", currentUser.email);
         setUser(currentUser);
       } else {
-        console.log("No user authenticated, redirecting to login");
+        // console.log("No user authenticated, redirecting to login");
         router.push("/admin/login");
       }
       setLoading(false);
@@ -33,10 +33,10 @@ export default function AdminDashboard() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      console.log("Firebase logout successful");
+      // console.log("Firebase logout successful");
       router.push("/admin/login");
     } catch (error) {
-      console.error('Firebase logout error:', error);
+      // console.error('Firebase logout error:', error);
       router.push("/admin/login");
     }
   };

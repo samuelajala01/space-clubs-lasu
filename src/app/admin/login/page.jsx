@@ -36,7 +36,7 @@ const LoginPage = () => {
           password
         );
         const user = userCredential.user;
-        console.log("User signed up:", user);
+        // console.log("User signed up:", user);
         setSuccess("Account created successfully! Redirecting to dashboard...");
         // Redirect to dashboard after successful signup
         setLoading(false);
@@ -52,7 +52,7 @@ const LoginPage = () => {
           password
         );
         const user = userCredential.user;
-        console.log("User signed in:", user);
+        // console.log("User signed in:", user);
         setSuccess("Login successful! Redirecting to dashboard...");
         // Redirect to dashboard after successful signin
         setLoading(false);
