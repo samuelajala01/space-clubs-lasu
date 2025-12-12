@@ -19,42 +19,8 @@ const TeamPreview = () => {
       social: {
         linkedin: "https://www.linkedin.com/in/sylvesteragose/",
         twitter: "https://twitter.com/vester_agose",
-        email: "sarah.johnson@university.edu",
-      },
-    },
-    {
-      name: "David Muraina",
-      role: "Vice President",
-      image: "/images/team/DavidMuraina.jpg",
-      bio: "Computer Science graduate dedicated to harnessing the power of space science and technology to drive meaningful impact for humanity",
-      social: {
-        linkedin: "https://www.linkedin.com/in/muraina-david-017b51157/",
-        twitter: "https://twitter.com/_CodeNerd_",
-        email: "alex.chen@university.edu",
-      },
-    },
-    {
-      name: "Kehinde Fodunrin",
-      role: "PR Lead",
-      image: "/images/team/KehindeFodunrin_.png",
-      bio: "Senior Aerospace Engineering student passionate about space exploration.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
-        twitter: "https://twitter.com/KFodunrin6986",
-        email: "kehindefodunrin@gmail.com",
-      },
-    },
-    {
-      name: "Favour Akinsiku",
-      role: "General Secretary",
-      image: "/images/team/FAVOURAKINSIKU.jpg",
-      bio: "Aspiring astronaut and Aerospace Engineering Major fueled by curiosity and a passion for space exploration.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/favourakinsiku/",
-        twitter: "https://twitter.com/Astronautfavour",
-        email: "favourakinsiku@gmail.com",
-      },
-    },
+        email: "sylvesteragose@gmail.com",
+      }},
     {
       name: "Samuel Ajala",
       role: "Project Lead I",
@@ -64,19 +30,42 @@ const TeamPreview = () => {
         linkedin: "https://linkedin.com/in/samuelajala01",
         twitter: "https://twitter.com/cy63rx_",
         email: "samuelajala01@gmail.com",
-      },
-    },
-    {
-      name: "Abraham Fakorede",
-      role: "Projects Lead II",
-      image: "/images/team/AbrahamFakorede_.jpg",
-      bio: "Strategic thinker and execution expert, leading and managing projects that push the boundaries of innovation and space exploration",
+      }},
+      {
+      name: "Rukayat Seriki",
+      role: "Secretary",
+      image: "/images/team/RukayatSeriki.jpg",
+      bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
       social: {
-        linkedin: "https://www.linkedin.com/in/abraham-fakorede-436658255/",
-        twitter: "https://twitter.com/abraham_fakored",
-        email: "james.wilson@university.edu",
+        linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
+        twitter: "https://twitter.com/RSayrikey",
+        email: "serikirukayat45@gmail.com",
       },
     },
+     {
+      name: "Benjamin Yekini",
+      role: "Learning and Development Lead",
+      image: "",
+      bio: "Aerospace Engineering student driving education and community building.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
+        twitter: "https://twitter.com/EMPERORS_0001",
+        email: "esikepeace81@gmail.com",
+      },
+    },
+{
+      name: "Kehinde Ayodele",
+      role: "Outreach and PR Lead",
+      image: "/images/team/EsikePeace_.jpg",
+      bio: "A curious, driven, and multi-faceted individual—a certified product manager, award-winning essayist, aspiring aerospace engineer.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/kehinde-ayodele/",
+        twitter: "https://twitter.com/EMPERORS_0001",
+        email: "esikepeace81@gmail.com",
+      },
+    },
+
+
   ];
 
   useEffect(() => {
