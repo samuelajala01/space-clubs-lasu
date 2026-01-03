@@ -38,7 +38,7 @@ const AboutPage = () => {
     {
       name: "Kehinde Fodunrin",
       role: "Vice President",
-      image: "/images/team/KehindeFodunrin_.png",
+      image: "/images/team/KehindeFodunrin.jpg",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
@@ -60,7 +60,7 @@ const AboutPage = () => {
     {
       name: "Yusuf Atolagbe",
       role: "Project Lead II",
-      image: "",
+      image: "/images/team/YusufAtolagbe.jpg",
       bio: "Hardware Enthusiast and Computer Engineering student with a passion for space technology.",
       social: {
         linkedin: "",
@@ -71,7 +71,7 @@ const AboutPage = () => {
     {
       name: "Rukayat Seriki",
       role: "Secretary",
-      image: "/images/team/RukayatSeriki.jpg",
+      image: "/images/team/RukayatSeriki_.jpg",
       bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
       social: {
         linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
@@ -82,8 +82,8 @@ const AboutPage = () => {
     {
       name: "Mercy Obanor",
       role: "Programs Lead II",
-      image: "/images/team/MercyObanor_.jpg",
-      bio: "Mechanical Engineering student driving space awareness through education and community building.",
+      image: "/images/team/MercyObanor.jpg",
+      bio: "Electornics Engineering student driving space awareness through education and community building.",
       social: {
         linkedin: "https://www.linkedin.com/in/mercy-obanor-166018333/",
         twitter: "https://twitter.com/EMPERORS_0001",
@@ -93,7 +93,7 @@ const AboutPage = () => {
     {
       name: "Esike Peace",
       role: "Programs Lead I",
-      image: "/images/team/EsikePeace_.jpg",
+      image: "/images/team/EsikePeace.jpg",
       bio: "Mechanical Engineering student driving space awareness through education and community building.",
       social: {
         linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
@@ -104,29 +104,29 @@ const AboutPage = () => {
     {
       name: "Kehinde Ayodele",
       role: "Outreach and PR Lead",
-      image: "",
-      bio: "A curious, driven, and multi-faceted individual—a certified product manager, award-winning essayist, aspiring aerospace engineer.",
+      image: "/images/team/KennyAyodele.jpg",
+      bio: "Purpose. Principle. Progress.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-ayodele",
         twitter: "https://twitter.com/EMPERORS_0001",
-        email: "esikepeace81@gmail.com",
+        email: "kennyayodele01@gmail.com",
       },
     },
     {
       name: "Benjamin Yekini",
       role: "Learning and Development Lead",
-      image: "",
-      bio: "Aerospace Engineering student driving education and community building.",
+      image: "/images/team/BenjaminYekinni.jpg",
+      bio: "Cultivating technical excellence and professional growth within the next generation of aerospace leaders.",
       social: {
-        linkedin: "",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "",
+        linkedin: "https://www.linkedin.com/in/benjamin-yekinni-5b93612a6",
+        twitter: "hhttps://x.com/BenjaminAd97085",
+        email: "benyyeks@gmail.com",
       },
     },
     {
       name: "Praise Maye",
       role: "Editorial Lead",
-      image: "",
+      image: "/images/team/PraiseMaye.jpg",
       bio: "Aerospace Engineering student driving space awareness through education and community building.",
       social: {
         linkedin: "",
@@ -135,14 +135,14 @@ const AboutPage = () => {
       },
     },
     {
-      name: "Olisameka Julius",
+      name: "Julius Olisameka",
       role: "Community Manager",
-      image: "/",
-      bio: "Mechanical Engineering student driving space awareness through education and community building.",
+      image: "/images/team/JuliusOlisameka.jpeg",
+      bio: "Chemical Engineering Student | Focused on Process Design, Reactor Kinetics & Transport Phenomena",
       social: {
-        linkedin: "",
-        twitter: "",
-        email: "",
+        linkedin: " https://www.linkedin.com/in/olisaemeka-julius-23552b387",
+        twitter: "https://x.com/olisaemekajuli1",
+        email: "juliusolisaemeka93@gmail.com",
       },
     },
     

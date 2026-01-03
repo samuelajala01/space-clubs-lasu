@@ -21,6 +21,16 @@ const TeamPreview = () => {
         twitter: "https://twitter.com/vester_agose",
         email: "sylvesteragose@gmail.com",
       }},
+       {
+      name: "Kehinde Fodunrin",
+      role: "Vice President",
+      image: "/images/team/KehindeFodunrin.jpg",
+      bio: "Aerospace Engineering Student pushing the boundaries of space engineering through research & innovation",
+      social: {
+        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin/",
+        twitter: "https://twitter.com/kehinde_fodunrin",
+        email: "kehindefodunrin@gmail.com",
+      }},
     {
       name: "Samuel Ajala",
       role: "Project Lead I",
@@ -34,7 +44,7 @@ const TeamPreview = () => {
       {
       name: "Rukayat Seriki",
       role: "Secretary",
-      image: "/images/team/RukayatSeriki.jpg",
+      image: "/images/team/RukayatSeriki_.jpg",
       bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
       social: {
         linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
@@ -45,23 +55,23 @@ const TeamPreview = () => {
      {
       name: "Benjamin Yekini",
       role: "Learning and Development Lead",
-      image: "",
-      bio: "Aerospace Engineering student driving education and community building.",
+      image: "/images/team/BenjaminYekinni.jpg",
+      bio: "Cultivating technical excellence and professional growth within the next generation of aerospace leaders.",
       social: {
-        linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "esikepeace81@gmail.com",
+        linkedin: "https://www.linkedin.com/in/benjamin-yekinni-5b93612a6",
+        twitter: "hhttps://x.com/BenjaminAd97085",
+        email: "benyyeks@gmail.com",
       },
     },
 {
       name: "Kehinde Ayodele",
       role: "Outreach and PR Lead",
-      image: "/images/team/EsikePeace_.jpg",
-      bio: "A curious, driven, and multi-faceted individual—a certified product manager, award-winning essayist, aspiring aerospace engineer.",
+      image: "/images/team/KennyAyodele.jpg",
+      bio: "Purpose. Principle. Progress.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-ayodele/",
         twitter: "https://twitter.com/EMPERORS_0001",
-        email: "esikepeace81@gmail.com",
+        email: "kennyayodele01@gmail.com",
       },
     },
 

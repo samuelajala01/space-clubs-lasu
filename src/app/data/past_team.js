@@ -24,7 +24,7 @@ const team = [
     {
       name: "Kehinde Fodunrin",
       role: "PR Lead",
-      image: "/images/team/KehindeFodunrin_.png",
+      image: "/images/team/KehindeFodunrin.jpg",
       bio: "Senior Aerospace Engineering student passionate about space exploration.",
       social: {
         linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
@@ -101,7 +101,7 @@ const team = [
     {
       name: "Rukayat Seriki",
       role: "Editorial Lead",
-      image: "/images/team/RukayatSeriki.jpg",
+      image: "/images/team/RukayatSeriki_.jpg",
       bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
       social: {
         linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
