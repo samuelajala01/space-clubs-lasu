@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/images/Logo-light.png";
 import { useState, useEffect, useCallback, memo } from "react";
+
+const Logo = "/images/Logo-light.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
