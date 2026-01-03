@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 // Lazy load heavy components
 const HeroSection = dynamic(() => import("./Components/HeroSection"), {
-  loading: () => <div className="h-screen bg-black/20 animate-pulse" />,
+  loading: () => <div className="h-screen bg-black/20" />,
 });
 const ActivitiesSection = dynamic(() => import("./Components/ActivitiesSection"), {
   loading: () => <div className="h-96 bg-black/20 animate-pulse" />,
