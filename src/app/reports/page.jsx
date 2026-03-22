@@ -57,6 +57,30 @@ const Reports = () => {
       date: "2025-07-03",
       fileName: "Under The Epe Sky Impact Report.pdf",
     },
+    {
+      id: 3,
+      title: "Under The Epe Sky Impact Report",
+      category: "events",
+      description:
+        "Impact report from the Under The Epe Sky event showcasing community engagement and educational outcomes.",
+      fileSize: "10 MB",
+      fileType: "PDF",
+      downloadCount: 25,
+      date: "2025-07-03",
+      fileName: "Under The Epe Sky Impact Report.pdf",
+    },
+    {
+      id: 3,
+      title: "Photo Day Impact Report",
+      category: "events",
+      description:
+        "Impact report from the photo day event showcasing community engagement and educational outcomes.",
+      fileSize: "10 MB",
+      fileType: "PDF",
+      downloadCount: 200,
+      date: "2025-07-03",
+      fileName: "SPE LASU PHOTO Day Impact Report",
+    },
   ];
 
   const categories = [
