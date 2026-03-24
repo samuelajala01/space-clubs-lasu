@@ -18,7 +18,7 @@ const ResourcesPage = () => {
       title: "Sleeping Under Stars & Planets",
       description:
         "NapLab provides a list of amazing resources for stargazing and learning about celestial bodies.",
-      link: "naplab.com/guides/sleeping-under-stars-planets/",
+      link: "https://naplab.com/guides/sleeping-under-stars-planets/",
       category: "Official Resources",
     },
     {
