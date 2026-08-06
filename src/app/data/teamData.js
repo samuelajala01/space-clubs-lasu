@@ -18,17 +18,17 @@ export const currentTeam = [
     social: {
       linkedin: "https://www.linkedin.com/in/nihinlolawa-ojo-202a5b278",
       twitter: "",
-      email: "samuelajala01@gmail.com",
+      email: "ojotofunmi79@gmail.com",
     },
   },
   {
     name: "Yusuf Atolagbe",
     role: "Vice President",
     image: "/images/team/YusufAtolagbe.jpg",
-    bio: "Hardware Enthusiast and Computer Engineering student with a passion for space technology.",
+    bio: "An innovator by design, a changemaker by mission.",
     social: {
-      linkedin: "",
-      twitter: "https://twitter.com/cy63rx_",
+      linkedin: "https://www.linkedin.com/in/yusuf-atolagbe-a24947328/",
+      twitter: "https://x.com/YusufAtola59656",
       email: "",
     },
   },
@@ -47,22 +47,22 @@ export const currentTeam = [
     name: "Chimaroke John",
     role: "Projects Lead I",
     image: "/images/team/ChimarokeJohn.jpeg",
-    bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
+    bio: "A 400lvl Aerospace Engineering student that is passionate about AI, embedded systems, Cfd, Rocketry, Aerodynamics and everything tech related.",
     social: {
-      linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
-      twitter: "https://twitter.com/RSayrikey",
-      email: "serikirukayat45@gmail.com",
+      linkedin: "https://www.linkedin.com/in/chimaroke-onwukanjo-378796337",
+      twitter: "https://twitter.com/Amics_xoxo",
+      email: "",
     },
   },
   {
     name: "Favour Obama",
     role: "Projects Lead II",
     image: "",
-    bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
+    bio: "A builder of solutions that outlive generations.",
     social: {
-      linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
-      twitter: "https://twitter.com/RSayrikey",
-      email: "serikirukayat45@gmail.com",
+      linkedin: "https://www.linkedin.com/in/favourobama",
+      twitter: "https://x.com/favourobama26",
+      email: "favourobama26@gmail.com",
     },
   },
   {
@@ -106,7 +106,7 @@ export const currentTeam = [
     social: {
       linkedin: "https://www.linkedin.com/in/hephzibah-ola-hezekiah-bab94b361",
       twitter: "https://x.com/Hepzeey",
-      email: "kennyayodele01@gmail.com",
+      email: "olazibah12@gmail.com",
     },
   },
   {

@@ -5,59 +5,67 @@ import JoinMailList from "../Components/JoinMailList";
 import CountdownTimer from "../Components/CountdownTimer";
 import SuccessModal from "../Components/SuccessModal";
 import { useRef, useState, useEffect } from "react";
-import { useForm } from "@formspree/react";
-
+import { submitApplication } from "./actions";
 
 const JoinPage = () => {
   const mailListRef = useRef(null);
   const formRef = useRef(null);
-  const [state, handleFormSubmit] = useForm("myznerza");
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [succeeded, setSucceeded] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [socialMediaError, setSocialMediaError] = useState("");
 
-  // Set this to true when accepting applications
-  const isAcceptingApplications = false;
+  const isAcceptingApplications = true;
 
   const scrollToMailList = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleCustomFormSubmit = (e) => {
-    
+  const handleCustomFormSubmit = async (e) => {
+    e.preventDefault();
     setSocialMediaError("");
-    
-    // Get form data
-    const formData = new FormData(e.target);
-    const linkedin = formData.get("linkedin")?.trim();
-    const twitter = formData.get("twitter")?.trim(); 
-    const github = formData.get("github")?.trim();
-    
-    
+
+    const formDataObj = new FormData(e.target);
+    const linkedin = formDataObj.get("linkedin")?.trim();
+    const twitter = formDataObj.get("twitter")?.trim();
+    const github = formDataObj.get("github")?.trim();
+
     if (!linkedin && !twitter && !github) {
-      e.preventDefault();
       setSocialMediaError("Please provide at least one social media profile (LinkedIn, Twitter, or GitHub)");
-      
       const socialMediaSection = document.querySelector('[data-section="social-media"]');
       if (socialMediaSection) {
         socialMediaSection.scrollIntoView({ behavior: "smooth", block: "center" });
       }
       return;
     }
-    
-    
-    handleFormSubmit(e);
-  };
 
- 
-  useEffect(() => {
-    if (state.succeeded) {
+    setSubmitting(true);
+
+    // Convert FormData into an object, capturing multiple checked boxes as arrays
+    const rawData = {};
+    for (const [key, value] of formDataObj.entries()) {
+      if (rawData[key]) {
+        if (!Array.isArray(rawData[key])) {
+          rawData[key] = [rawData[key]];
+        }
+        rawData[key].push(value);
+      } else {
+        rawData[key] = value;
+      }
+    }
+
+    const res = await submitApplication(rawData);
+    setSubmitting(false);
+
+    if (res.success) {
+      setSucceeded(true);
       setShowSuccessModal(true);
       formRef.current?.reset();
-      setSocialMediaError(""); 
+      setSocialMediaError("");
+    } else {
+      alert(res.error || "Submission failed. Please check your network connection.");
     }
-  }, [state.succeeded]);
-
+  };
 
   useEffect(() => {
     const form = formRef.current;
@@ -70,12 +78,12 @@ const JoinPage = () => {
     };
 
     const socialMediaInputs = form.querySelectorAll('input[name="linkedin"], input[name="twitter"], input[name="github"]');
-    socialMediaInputs.forEach(input => {
+    socialMediaInputs.forEach((input) => {
       input.addEventListener('input', handleInputChange);
     });
 
     return () => {
-      socialMediaInputs.forEach(input => {
+      socialMediaInputs.forEach((input) => {
         input.removeEventListener('input', handleInputChange);
       });
     };
@@ -83,6 +91,7 @@ const JoinPage = () => {
 
   const handleCloseModal = () => {
     setShowSuccessModal(false);
+    setSucceeded(false);
   };
 
   const NotAcceptingMessage = () => (
@@ -114,27 +123,6 @@ const JoinPage = () => {
           Join Newsletter
         </button>
       </div>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-white text-xl mb-3">Follow Updates</h3>
-          <p className="text-gray-300">
-            Stay informed about our next application window and club activities.
-          </p>
-        </div>
-        <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-white text-xl mb-3">Prepare</h3>
-          <p className="text-gray-300">
-            Learn about our club activities and requirements for the next
-            intake.
-          </p>
-        </div>
-        <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <h3 className="text-white text-xl mb-3">Get Involved</h3>
-          <p className="text-gray-300">
-            Attend our public events and connect with current members.
-          </p>
-        </div>
-      </div>
     </div>
   );
 
@@ -142,17 +130,18 @@ const JoinPage = () => {
     <div className="max-w-4xl mx-auto">
       <div>
         <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
-        Applications are Open
-      </h1>
+          Applications are Open
+        </h1>
       </div>
 
-      {/* Countdown Timer */}
-      <CountdownTimer targetDate="October 14, 2025 23:59:59 GMT+0100" />
+      <CountdownTimer targetDate="August 22, 2026 23:59:59 GMT+0100" />
 
       <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
-        <p>We receive many outstanding applications for limited spots, but We carefully review all applications 
+        <p>
+          We receive many outstanding applications for limited spots, but We carefully review all applications 
           and select members who demonstrate strong potential and genuine enthusiasm for our mission. We encourage you 
-          to put your best foot forward.</p>
+          to put your best foot forward.
+        </p>
       </div>
 
       <form
@@ -266,7 +255,7 @@ const JoinPage = () => {
                   { value: "Aerospace Engineering", label: "Aerospace Engineering" },
                   { value: "Agricultural Science", label: "Agricultural Science" },
                   { value: "Anaesthesia", label: "Anaesthesia" },
-                  {value: "Anatomy", label: "Anatomy" },
+                  { value: "Anatomy", label: "Anatomy" },
                   { value: "Architecture", label: "Architecture" },
                   { value: "Banking and Finance", label: "Banking and Finance" },
                   { value: "Biochemistry", label: "Biochemistry" },
@@ -276,7 +265,6 @@ const JoinPage = () => {
                   { value: "Chemical Pathology", label: "Chemical Pathology" },
                   { value: "Chemistry", label: "Chemistry" },
                   { value: "Civil Engineering", label: "Civil Engineering" },
-          
                   { value: "Computer Science", label: "Computer Science" },
                   { value: "Dentistry", label: "Dentistry" },
                   { value: "Economics", label: "Economics" },
@@ -308,7 +296,6 @@ const JoinPage = () => {
                   { value: "Physics", label: "Physics" },
                   { value: "Physics Education", label: "Physics Education" },
                   { value: "Political Science", label: "Political Science" },
-                  
                   { value: "Physiology and Medical Biochemistry", label: "Physiology and Medical Biochemistry" },
                   { value: "Psychology", label: "Psychology" },
                   { value: "Quantity Surveying", label: "Quantity Surveying" },
@@ -407,7 +394,7 @@ const JoinPage = () => {
           </div>
         </div>
 
-        {/* Areas of Interest (checkboxes) */}
+        {/* Areas of Interest */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6">Areas of Interest</h2>
           <p className="text-gray-300 text-sm mb-4">We recommend picking at most 3</p>
@@ -429,7 +416,6 @@ const JoinPage = () => {
               "Space Education",
             ].map((interest) => (
               <label key={interest} className="flex items-center space-x-3">
-                {/* Use the same name so multiple checked values are submitted as repeated fields */}
                 <input
                   type="checkbox"
                   name="areasOfInterest"
@@ -478,13 +464,12 @@ const JoinPage = () => {
             </div>
 
             <div className="space-y-4 my-8">
-              <p>Pick one or more of the following skills you are proficient in</p>
+              <p className="text-white">Pick one or more of the following skills you are proficient in</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   "Programming",
                   "Simulation and Modeling",
                   "Graphics Design",
-
                   "Electronics and Circuit Design",
                   "Computer-Aided Design (CAD)",
                   "UI/UX Design",
@@ -493,7 +478,6 @@ const JoinPage = () => {
                   "Research and Technical Writing",
                   "Data Analysis",
                   "Photography or Videography",
-
                 ].map((skill) => (
                   <label key={skill} className="flex items-center space-x-3">
                     <input
@@ -534,10 +518,10 @@ const JoinPage = () => {
 
         <button
           type="submit"
-          disabled={state.submitting}
+          disabled={submitting}
           className="w-full bg-[#f65d2a] text-white py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
-          {state.submitting ? (
+          {submitting ? (
             <>
               <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -545,7 +529,7 @@ const JoinPage = () => {
               </svg>
               Submitting...
             </>
-          ) : state.succeeded ? (
+          ) : succeeded ? (
             "Submitted Successfully ✓"
           ) : (
             "Submit Application"
@@ -568,7 +552,6 @@ const JoinPage = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       </div>
 
-      {/* Content */}
       <div className="">
         <div className="pt-20 pb-16">
           <div className="mx-auto px-4">
@@ -584,7 +567,6 @@ const JoinPage = () => {
         <JoinMailList />
       </div>
       
-      {/* Success Modal */}
       <SuccessModal 
         isOpen={showSuccessModal} 
         onClose={handleCloseModal} 
