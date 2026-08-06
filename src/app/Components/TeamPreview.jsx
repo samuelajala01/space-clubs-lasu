@@ -6,77 +6,11 @@ import Image from "next/image";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { featuredCurrentTeam } from "../data/teamData";
 
 const TeamPreview = () => {
   const [isClient, setIsClient] = useState(false);
-
-  const coreTeam = [
-    {
-      name: "Sylvester Agose",
-      role: "President",
-      image: "/images/team/SylvesterAgose_.jpg",
-      bio: "Driven by a passion for space education, innovation, and empowering the next generation of explorers and problem-solvers",
-      social: {
-        linkedin: "https://www.linkedin.com/in/sylvesteragose/",
-        twitter: "https://twitter.com/vester_agose",
-        email: "sylvesteragose@gmail.com",
-      }},
-       {
-      name: "Kehinde Fodunrin",
-      role: "Vice President",
-      image: "/images/team/KehindeFodunrin.jpg",
-      bio: "Aerospace Engineering Student pushing the boundaries of space engineering through research & innovation",
-      social: {
-        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin/",
-        twitter: "https://twitter.com/kehinde_fodunrin",
-        email: "kehindefodunrin@gmail.com",
-      }},
-    {
-      name: "Samuel Ajala",
-      role: "Project Lead I",
-      image: "/images/team/SamuelAjala.jpg",
-      bio: "Computer Engineering student, Machine Learning and Robotics Engineer",
-      social: {
-        linkedin: "https://linkedin.com/in/samuelajala01",
-        twitter: "https://twitter.com/cy63rx_",
-        email: "samuelajala01@gmail.com",
-      }},
-      {
-      name: "Rukayat Seriki",
-      role: "Secretary",
-      image: "/images/team/RukayatSeriki_.jpg",
-      bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
-        twitter: "https://twitter.com/RSayrikey",
-        email: "serikirukayat45@gmail.com",
-      },
-    },
-     {
-      name: "Benjamin Yekini",
-      role: "Learning and Development Lead",
-      image: "/images/team/BenjaminYekinni.jpg",
-      bio: "Cultivating technical excellence and professional growth within the next generation of aerospace leaders.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/benjamin-yekinni-5b93612a6",
-        twitter: "hhttps://x.com/BenjaminAd97085",
-        email: "benyyeks@gmail.com",
-      },
-    },
-{
-      name: "Kehinde Ayodele",
-      role: "Outreach and PR Lead",
-      image: "/images/team/KennyAyodele.jpg",
-      bio: "Purpose. Principle. Progress.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/kehinde-ayodele/",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "kennyayodele01@gmail.com",
-      },
-    },
-
-
-  ];
+  const coreTeam = featuredCurrentTeam;
 
   useEffect(() => {
     setIsClient(true);

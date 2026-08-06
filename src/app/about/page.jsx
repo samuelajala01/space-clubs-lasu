@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import dynamic from "next/dynamic";
+import { currentTeam } from "../data/teamData";
 
 const AOS = dynamic(() => import("aos"), { ssr: false });
 
@@ -22,131 +23,7 @@ const AboutPage = () => {
     { src: "/images/DSC_3563.jpg", alt: "Members around the telescope" },
   ], []);
 
-  // Memoize team data
-  const coreTeam = useMemo(() => [
-    {
-      name: "Sylvester Agose",
-      role: "President",
-      image: "/images/team/SylvesterAgose_.jpg",
-      bio: "Driven by a passion for space education, innovation, and empowering the next generation of explorers and problem-solvers",
-      social: {
-        linkedin: "https://www.linkedin.com/in/sylvesteragose/",
-        twitter: "https://twitter.com/vester_agose",
-        email: "sylvesteragose@gmail.com",
-      },
-    },
-    {
-      name: "Kehinde Fodunrin",
-      role: "Vice President",
-      image: "/images/team/KehindeFodunrin.jpg",
-      bio: "Senior Aerospace Engineering student passionate about space exploration.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/kehinde-fodunrin-4a68b7257/",
-        twitter: "https://twitter.com/KFodunrin6986",
-        email: "kehindefodunrin@gmail.com",
-      },
-    },
-    {
-      name: "Samuel Ajala",
-      role: "Project Lead I",
-      image: "/images/team/SamuelAjala.jpg",
-      bio: "Computer Engineering student, Machine Learning and Robotics Engineer",
-      social: {
-        linkedin: "https://linkedin.com/in/samuelajala01",
-        twitter: "https://twitter.com/cy63rx_",
-        email: "samuelajala01@gmail.com",
-      },
-    },
-    {
-      name: "Yusuf Atolagbe",
-      role: "Project Lead II",
-      image: "/images/team/YusufAtolagbe.jpg",
-      bio: "Hardware Enthusiast and Computer Engineering student with a passion for space technology.",
-      social: {
-        linkedin: "",
-        twitter: "https://twitter.com/cy63rx_",
-        email: "",
-      },
-    },
-    {
-      name: "Rukayat Seriki",
-      role: "Secretary",
-      image: "/images/team/RukayatSeriki_.jpg",
-      bio: "Aspiring Chemical and Polymer Engineer passionate about space education and sustainability.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/rukayat-seriki-39b262321/",
-        twitter: "https://twitter.com/RSayrikey",
-        email: "serikirukayat45@gmail.com",
-      },
-    },
-    {
-      name: "Mercy Obanor",
-      role: "Programs Lead II",
-      image: "/images/team/MercyObanor.jpg",
-      bio: "Electornics Engineering student driving space awareness through education and community building.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/mercy-obanor-166018333/",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "mercyobanor08@gmail.com",
-      },
-    },
-    {
-      name: "Esike Peace",
-      role: "Programs Lead I",
-      image: "/images/team/EsikePeace.jpg",
-      bio: "Mechanical Engineering student driving space awareness through education and community building.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/peace-esike-166018333/",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "esikepeace81@gmail.com",
-      },
-    },
-    {
-      name: "Kehinde Ayodele",
-      role: "Outreach and PR Lead",
-      image: "/images/team/KennyAyodele.jpg",
-      bio: "Purpose. Principle. Progress.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/kehinde-ayodele",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "kennyayodele01@gmail.com",
-      },
-    },
-    {
-      name: "Benjamin Yekini",
-      role: "Learning and Development Lead",
-      image: "/images/team/BenjaminYekinni.jpg",
-      bio: "Cultivating technical excellence and professional growth within the next generation of aerospace leaders.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/benjamin-yekinni-5b93612a6",
-        twitter: "hhttps://x.com/BenjaminAd97085",
-        email: "benyyeks@gmail.com",
-      },
-    },
-    {
-      name: "Praise Maye",
-      role: "Editorial Lead",
-      image: "/images/team/PraiseMaye.jpg",
-      bio: "Aerospace Engineering student driving space awareness through education and community building.",
-      social: {
-        linkedin: "",
-        twitter: "https://twitter.com/EMPERORS_0001",
-        email: "",
-      },
-    },
-    {
-      name: "Julius Olisameka",
-      role: "Community Manager",
-      image: "/images/team/JuliusOlisameka.jpeg",
-      bio: "Chemical Engineering Student | Focused on Process Design, Reactor Kinetics & Transport Phenomena",
-      social: {
-        linkedin: " https://www.linkedin.com/in/olisaemeka-julius-23552b387",
-        twitter: "https://x.com/olisaemekajuli1",
-        email: "juliusolisaemeka93@gmail.com",
-      },
-    },
-    
-  ], []);
+  const coreTeam = currentTeam;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -175,8 +52,7 @@ const AboutPage = () => {
       });
       setIsAOSLoaded(true);
     });
-
-   
+  
     import("aos/dist/aos.css");
   }, []);
 
