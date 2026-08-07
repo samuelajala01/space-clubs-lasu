@@ -110,36 +110,37 @@ export const currentTeam = [
     },
   },
   {
-    name: "Benjamin Yekini",
+    name: "Benjamin Yekinni",
     role: "Learning and Development Lead",
-    image: "/images/team/BenjaminYekinni.jpg",
-    bio: "I love learning, helping people, breaking limits, and most especially, I Love Space exploration and fighter jets.",
+    image: "/images/team/Benjamin_Yekinni.jpg",
+    bio: "An Aerospace Engineering student with a lifelong curiosity for space, stargazing, and discovering what lies beyond Earth.",
     social: {
       linkedin: "https://www.linkedin.com/in/benjamin-yekinni-5b93612a6",
-      twitter: "hhttps://x.com/BenjaminAd97085",
+      twitter: "https://x.com/BenjaminAd97085",
       email: "benyyeks@gmail.com",
     },
+
   },
   {
     name: "Adegbola John",
     role: "Media Lead",
     image: "/images/team/AdegbolaJohn.jpeg",
-    bio: "Aerospace Engineering student driving space awareness through education and community building.",
+    bio: "An Aerospace Engineering student, creative designer, and community builder passionate about aerospace, technology, and impactful storytelling through design and media.",
     social: {
       linkedin: "",
-      twitter: "https://twitter.com/EMPERORS_0001",
-      email: "",
+      twitter: "https://twitter.com/0xMerniac2",
+      email: "adegbolajohn1@gmail.com",
     },
   },
   {
     name: "Judith Oluchi",
     role: "Editorial Lead",
     image: "/images/team/JudithOluchi.jpeg",
-    bio: "Chemical Engineering Student | Focused on Process Design, Reactor Kinetics & Transport Phenomena",
+    bio: "I'm an Electronics and Computer Engineering student, tech enthusiast, and Public speaker who enjoys using storytelling and technology to educate, inspire, and create impact.",
     social: {
-      linkedin: " https://www.linkedin.com/in/olisaemeka-julius-23552b387",
-      twitter: "https://x.com/olisaemekajuli1",
-      email: "juliusolisaemeka93@gmail.com",
+      linkedin: "https://www.linkedin.com/in/judith-oluchi-69b974269",
+      twitter: "https://x.com/Judith20Oluchi",
+      email: "oluchijudith990@gmail.com",
     },
   },
 ];
