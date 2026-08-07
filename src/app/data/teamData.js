@@ -57,7 +57,7 @@ export const currentTeam = [
   {
     name: "Favour Obama",
     role: "Projects Lead II",
-    image: "",
+    image: "/images/team/FavourObama.jpg",
     bio: "A builder of solutions that outlive generations.",
     social: {
       linkedin: "https://www.linkedin.com/in/favourobama",
