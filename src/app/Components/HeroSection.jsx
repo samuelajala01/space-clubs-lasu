@@ -22,15 +22,13 @@ const HeroSection = () => {
 
   return (
     <>
-      {/* Marquee Component */}
-      {/* <MarqueeComponent /> */}
-
+     
       <section className="mx-[4vw] text-center relative">
         <h1
-          className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl text-white lg:px-32 font-medium">
-          We are on a mission to Inspire, Educate, and Engage students.
+          className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl lg:px-32 font-medium text-[#081f54]">
+          We are on a <span className="text-[#f65d2a]">mission</span> to Inspire, Educate, and Engage students.
         </h1>
-        <p className="text-[1.1rem] sm:text-2xl text-gray-300">
+        <p className="text-[1.1rem] sm:text-2xl">
           Empowering them to lead Africa's journey into Space and Advanced
           Technology
         </p>

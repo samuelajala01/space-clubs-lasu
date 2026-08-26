@@ -58,25 +58,12 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/about-bg.jpg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-          quality={60}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
-        />
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-      </div>
 
       <div className="relative min-h-screen">
         {/* Hero Section */}
-        <section className="py-16">
+        <section className="pt-4 pb-16">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="relative rounded-2xl overflow-hidden h-[500px] md:h-[700px]">
+            <div className="relative rounded-2xl border-8 border-orange-500 overflow-hidden h-[450px] md:h-[550px]">
               <div className="absolute inset-0">
                 {heroImages.map((image, index) => (
                   <div

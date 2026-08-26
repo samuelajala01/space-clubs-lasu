@@ -55,21 +55,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative">
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/home-bg.png"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-          fetchPriority="high"
-          quality={50}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
-      </div>
       
       <HeroSection />
       

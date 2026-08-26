@@ -541,16 +541,6 @@ const JoinPage = () => {
 
   return (
     <div className="" id="join-page">
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/join-bg.jpg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      </div>
 
       <div className="">
         <div className="pt-20 pb-16">
