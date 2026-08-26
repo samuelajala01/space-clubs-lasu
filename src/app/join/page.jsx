@@ -134,7 +134,7 @@ const JoinPage = () => {
         </h1>
       </div>
 
-      <CountdownTimer targetDate="August 22, 2026 23:59:59 GMT+0100" />
+      <CountdownTimer targetDate="October 15, 2026 23:59:59 GMT+0100" />
 
       <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
         <p>
