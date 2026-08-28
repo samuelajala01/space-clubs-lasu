@@ -60,7 +60,7 @@ const EventCard = memo(({ event }) => {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div className="absolute bottom-4 left-4 flex gap-2">
-          <span className="bg-[#f65d2a] text-white px-3 py-1 rounded-full text-sm">
+          <span className="bg-[#f65d2a] px-3 py-1 rounded-full text-sm">
             {event.category}
           </span>
           <span
@@ -78,7 +78,7 @@ const EventCard = memo(({ event }) => {
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-white">{event.title}</h3>
+        <h3 className="text-xl font-bold mb-2">{event.title}</h3>
         <div className="text-gray-200 mb-4">
           <p className="flex items-center mb-1">
             <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">

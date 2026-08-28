@@ -27,10 +27,7 @@ const TeamPreview = () => {
     <section className="py-16">
       <div className="container mx-auto px-4 max-w-7xl">
         <h2
-          className="text-4xl text-white mb-12 text-center"
-          {...(isClient && {
-            "data-aos": "fade-up",
-          })}
+          className="text-4xl mb-12 text-center"
         >
           Meet Our Team
         </h2>
@@ -59,11 +56,11 @@ const TeamPreview = () => {
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   {member.name}
                 </h3>
                 <p className="text-[#f65d2a] mb-3">{member.role}</p>
-                <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+                <p className="text-sm mb-4">{member.bio}</p>
 
                 <div className="flex space-x-4">
                   {member.social.linkedin && (

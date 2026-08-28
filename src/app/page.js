@@ -160,10 +160,10 @@ export default function Home() {
       {/* Reports Section */}
       <section className="py-16 px-4 bg-black/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl mb-6">
             Read our Reports
           </h2>
-          <p className="text-lg text-gray-300 mb-8">
+          <p className="text-lg mb-8">
             Access our comprehensive reports, research findings, and
             publications from Space Clubs LASU activities and events.
           </p>
