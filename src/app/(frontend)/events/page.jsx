@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useMemo, useCallback, memo } from "react";
+import React, { useState, useEffect, useMemo, useCallback, memo } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { allEvents } from "../data/events";
 
 // Lazy load JoinMailList component
 const JoinMailList = dynamic(() => import("../Components/JoinMailList"), {
@@ -44,7 +43,7 @@ const EventCard = memo(({ event }) => {
         {event.image ? (
           <Image
             src={event.image}
-            alt={event.title}
+            alt={event.title || "Event Cover"}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -128,19 +127,62 @@ const EventsPage = () => {
   );
   const statuses = useMemo(() => ["All", "Past", "Ongoing", "Upcoming"], []);
 
+  const [events, setEvents] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState("All");
 
-  // Memoize filtered events
+  // Fetch events on component mount
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('/api/events?sort=-date&limit=100');
+        const data = await response.json();
+        
+        // Map Payload data to match the EventCard structure safely
+        const formattedEvents = data.docs.map(evt => {
+          const eventDate = new Date(evt.date);
+          const today = new Date();
+          today.setHours(0, 0, 0, 0);
+          
+          // Safely extract URL whether Payload returns a populated object or a raw string
+          const imageUrl = evt.coverImage?.url || (typeof evt.coverImage === 'string' ? evt.coverImage : null);
+
+          return {
+            id: evt.id,
+            title: evt.title,
+            category: evt.category,
+            date: eventDate.toLocaleDateString(),
+            time: evt.time,
+            location: evt.location,
+            description: evt.description,
+            registerLink: evt.registerLink,
+            status: eventDate < today ? "past" : "upcoming",
+            image: imageUrl
+          };
+        });
+        
+        setEvents(formattedEvents);
+      } catch (error) {
+        console.error("Failed to fetch events:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+
+  // Memoize filtered events using the state rather than hardcoded array
   const filteredEvents = useMemo(() => {
-    return allEvents.filter((event) => {
+    return events.filter((event) => {
       const categoryMatch =
         categoryFilter === "All" || event.category === categoryFilter;
       const statusMatch =
         statusFilter === "All" || event.status === statusFilter.toLowerCase();
       return categoryMatch && statusMatch;
     });
-  }, [categoryFilter, statusFilter]);
+  }, [events, categoryFilter, statusFilter]);
 
   const handleCategoryChange = useCallback((category) => {
     setCategoryFilter(category);
@@ -235,7 +277,11 @@ const EventsPage = () => {
 
           {/* Events Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredEvents.length > 0 ? (
+            {isLoading ? (
+              <div className="col-span-full text-center py-12">
+                <p className="text-white text-xl">Loading events...</p>
+              </div>
+            ) : filteredEvents.length > 0 ? (
               filteredEvents.map((event) => (
                 <EventCard key={event.id || event.title} event={event} />
               ))

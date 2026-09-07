@@ -68,7 +68,7 @@ const TeamPreview = () => {
                       href={member.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="hover:text-white transition-colors"
                     >
                       <FaLinkedin className="w-5 h-5" />
                     </a>
@@ -78,7 +78,7 @@ const TeamPreview = () => {
                       href={member.social.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className=" transition-colors"
                     >
                       <FaTwitter className="w-5 h-5" />
                     </a>
@@ -86,7 +86,7 @@ const TeamPreview = () => {
                   {member.social.email && (
                     <a
                       href={`mailto:${member.social.email}`}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className=""
                     >
                       <FaEnvelope className="w-5 h-5" />
                     </a>

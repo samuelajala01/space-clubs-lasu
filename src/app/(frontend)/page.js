@@ -24,6 +24,7 @@ const JoinMailList = dynamic(() => import("./Components/JoinMailList"), {
 export default function Home() {
   // Memoize partner logos
   const partnerLogos = useMemo(() => [
+    { src: "/images/partners/adtf.png", alt: "ADTF" },
     { src: "/images/partners/NASRDA-Logo_N2.png", alt: "NASRDA" },
     { src: "/images/partners/wsw_naija.png", alt: "WSW Naija" },
     { src: "/images/partners/unisec.png", alt: "UNISEC" },

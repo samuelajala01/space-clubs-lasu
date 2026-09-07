@@ -1,5 +1,6 @@
 import "./globals.css";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar"
+// import Navbar from "../Components/Navbar";
 import Footer from "./Components/Footer";
 import { WebVitals } from "./Components/WebVitals";
 import { Open_Sans } from "next/font/google";
