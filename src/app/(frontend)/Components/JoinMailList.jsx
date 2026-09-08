@@ -62,7 +62,7 @@ const JoinMailList = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="bg-white/10 backdrop-blur-md text-white px-6 py-3 rounded-full border border-white/20 focus:outline-none focus:border-[#f65d2a]"
+              className="bg-white/10 backdrop-blur-md  px-6 py-3 rounded-full border border-white/20 focus:outline-none focus:border-[#f65d2a]"
             />
             <button
               type="submit"

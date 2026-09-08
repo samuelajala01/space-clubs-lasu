@@ -130,13 +130,13 @@ const JoinPage = () => {
     <div className="max-w-4xl mx-auto">
       <div>
         <h1 className="text-5xl md:text-[4vw]  mb-8 text-center">
-          Applications are Open
+          Applications are <span className="text-[#f65d2a]">Open</span> 
         </h1>
       </div>
 
       <CountdownTimer targetDate="October 15, 2026 23:59:59 GMT+0100" />
 
-      <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 mb-16">
+      <div className="bg-[#081f54]/10 backdrop-blur-md  border-l-2 border-l-[#081f54] rounded-xl p-6 border border-white/10 mb-16">
         <p>
           We receive many outstanding applications for limited spots, but We carefully review all applications 
           and select members who demonstrate strong potential and genuine enthusiasm for our mission. We encourage you 
@@ -150,7 +150,7 @@ const JoinPage = () => {
         className="space-y-8"
       >
         {/* Personal Information */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl p-6 border border-white/10">
           <h2 className="text-2xl font-bold  mb-6">Personal Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -159,7 +159,7 @@ const JoinPage = () => {
                 type="text"
                 name="firstName"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -168,7 +168,7 @@ const JoinPage = () => {
                 type="text"
                 name="lastName"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -177,7 +177,7 @@ const JoinPage = () => {
                 type="email"
                 name="email"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -186,7 +186,7 @@ const JoinPage = () => {
                 name="phone"
                 type="tel"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -195,7 +195,7 @@ const JoinPage = () => {
                 type="date"
                 name="dateOfBirth"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -203,7 +203,7 @@ const JoinPage = () => {
               <select
                 name="gender"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -218,7 +218,7 @@ const JoinPage = () => {
         </div>
 
         {/* Academic Information */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl p-6 border border-white/10">
           <h2 className="text-2xl font-bold  mb-6">Academic Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -226,7 +226,7 @@ const JoinPage = () => {
               <select
                 required
                 name="campus"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -243,7 +243,7 @@ const JoinPage = () => {
               <select
                 required
                 name="department"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-[#081f54]/10 backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -317,7 +317,7 @@ const JoinPage = () => {
               <select
                 required
                 name="level"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -341,16 +341,16 @@ const JoinPage = () => {
                 type="text"
                 name="matricNumber"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
         </div>
 
         {/* Social Media Links */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10" data-section="social-media">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl p-6 border border-[#081f54]" data-section="social-media">
           <h2 className="text-2xl font-bold  mb-6">Social Media Links</h2>
-          <p className="text-gray-300 text-sm mb-4">
+          <p className="text-[#081f54] text-sm mb-4">
             <span className="text-[#f65d2a]">*</span> Please provide at least one social media profile
           </p>
           
@@ -370,7 +370,7 @@ const JoinPage = () => {
                 type="url"
                 name="linkedin"
                 placeholder="https://linkedin.com/in/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -379,7 +379,7 @@ const JoinPage = () => {
                 name="twitter"
                 type="url"
                 placeholder="https://twitter.com/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
@@ -388,16 +388,16 @@ const JoinPage = () => {
                 name="github"
                 type="url"
                 placeholder="https://github.com/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-whitebackdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
         </div>
 
         {/* Areas of Interest */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl p-6 border border-[#081f54]">
           <h2 className="text-2xl font-bold  mb-6">Areas of Interest</h2>
-          <p className="text-gray-300 text-sm mb-4">We recommend picking at most 3</p>
+          <p className="text-[#081f54] text-sm mb-4">We recommend picking at most 3</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               "Astronomy",
@@ -429,7 +429,7 @@ const JoinPage = () => {
         </div>
 
         {/* Personal Statement */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl p-6 border border-[#081f54]">
           <h2 className="text-2xl font-bold  mb-6">Personal Statement</h2>
           <div className="space-y-4">
             <div>
@@ -438,7 +438,7 @@ const JoinPage = () => {
                 required
                 name="motivation"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Tell us about your motivation for joining..."
               ></textarea>
             </div>
@@ -448,7 +448,7 @@ const JoinPage = () => {
                 required
                 name="skillsExperience"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Describe your relevant skills and experiences..."
               ></textarea>
             </div>
@@ -458,7 +458,7 @@ const JoinPage = () => {
                 required
                 name="aspirations"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white backdrop-blur-md border border-[#081f54] rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Share your future goals and aspirations..."
               ></textarea>
             </div>
@@ -495,7 +495,7 @@ const JoinPage = () => {
         </div>
 
         {/* Disclaimer */}
-        <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-4 border border-white/10 items-center flex">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl px-6 py-4 border border-[#081f54] items-center flex">
           <input
             type="checkbox"
             name="agreeRules"
@@ -505,7 +505,7 @@ const JoinPage = () => {
           />
           <span className=" text-xs">By submitting this application, I confirm that the information provided is accurate, and I agree to abide by the rules and regulations of SPACE CLUBS LASU.</span>
         </div>
-        <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10 items-center flex">
+        <div className="bg-[#081f54]/10 backdrop-blur-md rounded-xl px-6 py-2 border border-[#081f54] items-center flex">
           <input
             type="checkbox"
             name="agreeFee"

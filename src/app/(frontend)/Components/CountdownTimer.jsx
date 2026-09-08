@@ -54,7 +54,7 @@ const CountdownTimer = ({ targetDate }) => {
   }
 
   return (
-    <div className="bg-gradient-to-r from-[#081f54]/20 to-blue-600/20 backdrop-blur-md rounded-xl p-6 border border-blue-500/30 mb-8">
+    <div className="bg-gradient-to-r from-[#f65d2a]/20 to-orange-600/20 backdrop-blur-md rounded-xl p-6 border border-blue-500/30 mb-8">
       <div className="text-center">
         <h3 className="text-white font-semibold text-xl mb-2 flex items-center justify-center">
           {/* <span className="mr-2"></span> */}
@@ -64,25 +64,25 @@ const CountdownTimer = ({ targetDate }) => {
         
         <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
+            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
               {timeLeft.days.toString().padStart(2, '0')}
             </div>
             <div className="text-xs md:text-sm  uppercase">Days</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
+            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
               {timeLeft.hours.toString().padStart(2, '0')}
             </div>
             <div className="text-xs md:text-sm  uppercase">Hours</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#]">
+            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </div>
             <div className="text-xs md:text-sm  uppercase">Minutes</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
+            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </div>
             <div className="text-xs md:text-sm uppercase">Seconds</div>
