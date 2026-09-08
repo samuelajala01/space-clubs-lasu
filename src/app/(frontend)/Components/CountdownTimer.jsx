@@ -54,42 +54,42 @@ const CountdownTimer = ({ targetDate }) => {
   }
 
   return (
-    <div className="bg-gradient-to-r from-[#f65d2a]/20 to-orange-600/20 backdrop-blur-md rounded-xl p-6 border border-orange-500/30 mb-8">
+    <div className="bg-gradient-to-r from-[#081f54]/20 to-blue-600/20 backdrop-blur-md rounded-xl p-6 border border-blue-500/30 mb-8">
       <div className="text-center">
         <h3 className="text-white font-semibold text-xl mb-2 flex items-center justify-center">
           {/* <span className="mr-2"></span> */}
           Application Deadline
         </h3>
-        <p className="text-gray-200 mb-4">Applications close on October 15th, 2026</p>
+        <p className=" mb-4">Applications close on October 15th, 2026</p>
         
         <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
+            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
               {timeLeft.days.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm text-gray-300 uppercase">Days</div>
+            <div className="text-xs md:text-sm  uppercase">Days</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
+            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
               {timeLeft.hours.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm text-gray-300 uppercase">Hours</div>
+            <div className="text-xs md:text-sm  uppercase">Hours</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
+            <div className="text-2xl md:text-3xl font-bold text-[#]">
               {timeLeft.minutes.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm text-gray-300 uppercase">Minutes</div>
+            <div className="text-xs md:text-sm  uppercase">Minutes</div>
           </div>
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
-            <div className="text-2xl md:text-3xl font-bold text-[#f65d2a]">
+            <div className="text-2xl md:text-3xl font-bold text-[#081f54]">
               {timeLeft.seconds.toString().padStart(2, '0')}
             </div>
-            <div className="text-xs md:text-sm text-gray-300 uppercase">Seconds</div>
+            <div className="text-xs md:text-sm uppercase">Seconds</div>
           </div>
         </div>
         
-        <div className="mt-4 flex items-center justify-center text-sm text-gray-300">
+        <div className="mt-4 flex items-center justify-center text-sm">
           {/* <span className="animate-pulse mr-2">🚀</span> */}
           <span>Don't miss your chance to join Space Clubs LASU!</span>
         </div>

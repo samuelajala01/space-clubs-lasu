@@ -44,10 +44,10 @@ const JoinMailList = () => {
   return (
     <>
       <div className="my-16 text-center">
-        <h2 className="text-3xl text-white mb-4">
+        <h2 className="text-3xl  mb-4">
           Stay Updated with Our Events
         </h2>
-        <p className="text-gray-200 mb-6">
+        <p className="mb-6">
           Subscribe to our mailing list to receive updates about upcoming events
           and activities.
         </p>

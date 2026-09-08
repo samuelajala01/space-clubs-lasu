@@ -116,7 +116,7 @@ const AboutPage = () => {
               </div>
 
               <div className="relative h-full flex flex-col items-center justify-center px-8 md:px-16 text-center">
-                <h1 className="text-5xl font-bold text-white mb-6 drop-shadow-lg">
+                <h1 className="text-5xl text-white font-bold mb-6 drop-shadow-lg">
                   About Us
                 </h1>
                 <p className="text-xl text-gray-200 max-w-3xl mx-auto drop-shadow-md">
@@ -133,27 +133,27 @@ const AboutPage = () => {
         {/* Mission Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-4xl text-white mb-12 text-center">
+            <h2 className="text-4xl mb-12 text-center">
               Our Mission
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">Inspire</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-bold  mb-4">Inspire</h3>
+                <p className="">
                   Share our passion for space exploration with the community
                   through public events and outreach programs.
                 </p>
               </div>
               <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">Educate</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-bold mb-4">Educate</h3>
+                <p className="">
                   Provide hands-on learning opportunities and workshops for
                   students interested in space science and tech.
                 </p>
               </div>
               <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">Engage</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-bold  mb-4">Engage</h3>
+                <p className="">
                   Conduct cutting-edge research and experiments in space science
                   and technology.
                 </p>
@@ -165,9 +165,10 @@ const AboutPage = () => {
         {/* Core Team Section */}
         <section id="core-team" className="py-16">
           <div className="container mx-auto px-4 max-w-7xl">
-            <h2 className="text-4xl text-white mb-12 text-center">
+            <h2 className="text-4xl  mb-12 text-center">
               Meet the Team
             </h2>
+            {/* <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div> */}
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {coreTeam.map((member, index) => (
                 <div
@@ -196,11 +197,11 @@ const AboutPage = () => {
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold mb-2">
                       {member.name}
                     </h3>
                     <p className="text-[#f65d2a] mb-3">{member.role}</p>
-                    <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
+                    <p className="text-sm mb-4">{member.bio}</p>
                     <div className="flex space-x-4">
                       {member.social.linkedin && (
                         <a
@@ -217,7 +218,7 @@ const AboutPage = () => {
                           href={member.social.twitter}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-white transition-colors"
+                          className=""
                         >
                           <FaTwitter className="w-5 h-5" />
                         </a>
@@ -225,7 +226,7 @@ const AboutPage = () => {
                       {member.social.email && (
                         <a
                           href={`mailto:${member.social.email}`}
-                          className="text-gray-400 hover:text-white transition-colors"
+                          className=" hover:text-white transition-colors"
                         >
                           <FaEnvelope className="w-5 h-5" />
                         </a>

@@ -38,7 +38,7 @@ const EventCard = memo(({ event }) => {
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300">
+    <div className="bg-white/10 backdrop-blur-md border border-orange-400/50 rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300">
       <div className="aspect-video bg-gray-800 relative">
         {event.image ? (
           <Image
@@ -78,7 +78,7 @@ const EventCard = memo(({ event }) => {
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{event.title}</h3>
-        <div className="text-gray-200 mb-4">
+        <div className=" mb-4">
           <p className="flex items-center mb-1">
             <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19,3H18V1H16V3H8V1H6V3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"/>
@@ -98,13 +98,13 @@ const EventCard = memo(({ event }) => {
             {event.location}
           </p>
         </div>
-        <p className="text-gray-200 mb-4 line-clamp-3">{event.description}</p>
+        <p className=" mb-4 line-clamp-3">{event.description}</p>
         {event.status !== "past" ? (
           <a
             href={event.registerLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
+            className="inline-block bg-[#f65d2a] rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
           >
             Register Now
           </a>
@@ -132,7 +132,6 @@ const EventsPage = () => {
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState("All");
 
-  // Fetch events on component mount
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -173,7 +172,6 @@ const EventsPage = () => {
     fetchEvents();
   }, []);
 
-  // Memoize filtered events using the state rather than hardcoded array
   const filteredEvents = useMemo(() => {
     return events.filter((event) => {
       const categoryMatch =
@@ -193,36 +191,21 @@ const EventsPage = () => {
   }, []);
 
   return (
-    <div className="mx-[6vw] pt-28 relative">
-      {/* Background Image with Overlay */}
-      <div className="fixed inset-0 -z-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/80 z-10"></div>
-        <Image
-          src="/images/event-bg.jpg"
-          alt="Space Events Background"
-          fill
-          className="object-cover"
-          priority
-          quality={60}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
-        />
-      </div>
+    <div className="mx-[6vw] pt-6 relative">
 
       <div className="fixed inset-0 bg-black/10 -z-10"></div>
 
       <main className="relative z-0">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-5xl md:text-[4vw] text-center text-white mb-12">
+          <h1 className="text-5xl md:text-[4vw] text-center mb-12">
             All Events
           </h1>
 
-          {/* Filters Section */}
           <div className="mb-12 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              {/* Category Filter */}
+
               <div className="w-full md:w-auto">
-                <h3 className="text-white text-sm font-medium mb-3">
+                <h3 className="text-sm font-medium mb-3">
                   Categories
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -233,7 +216,7 @@ const EventsPage = () => {
                       className={`px-4 py-1.5 rounded-full text-sm transition-all duration-300 ${
                         categoryFilter === category
                           ? "bg-[#f65d2a] text-white"
-                          : "bg-white/10 backdrop-blur-md text-white hover:bg-white/20"
+                          : "bg-white/10 backdrop-blur-md hover:bg-white/20"
                       }`}
                     >
                       {category}
@@ -242,14 +225,13 @@ const EventsPage = () => {
                 </div>
               </div>
 
-              {/* Status Filter Dropdown */}
               <div className="w-full md:w-auto">
-                <h3 className="text-white text-sm font-medium mb-3">Status</h3>
+                <h3 className="text-sm font-medium mb-3">Status</h3>
                 <div className="relative">
                   <select
                     value={statusFilter}
                     onChange={handleStatusChange}
-                    className="appearance-none bg-white/10 backdrop-blur-md text-white px-4 py-2 pr-10 rounded-lg w-full md:w-48 border border-white/20 focus:outline-none focus:border-[#f65d2a]"
+                    className="appearance-none bg-white/10 backdrop-blur-md px-4 py-2 pr-10 rounded-lg w-full md:w-48 border border-white/20 focus:outline-none focus:border-[#f65d2a]"
                   >
                     {statuses.map((status) => (
                       <option
