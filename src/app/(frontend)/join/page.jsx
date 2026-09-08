@@ -102,7 +102,7 @@ const JoinPage = () => {
           <span className="text-6xl">🚀</span>
         </div>
       </div>
-      <h1 className="text-5xl md:text-[4vw] text-white mb-8">
+      <h1 className="text-5xl md:text-[4vw] mb-8">
         Applications Currently Closed
       </h1>
       <p className="text-gray-200 text-lg mb-8 leading-relaxed max-w-2xl">
@@ -112,13 +112,13 @@ const JoinPage = () => {
       </p>
       <div className="flex flex-col sm:flex-row gap-4 mt-4">
         <Link href="/">
-          <button className="bg-[#f65d2a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
+          <button className="bg-[#f65d2a]  px-8 py-3 rounded-full font-semibold hover:bg-[#e54d1a] transition-colors duration-300">
             Back to Home
           </button>
         </Link>
         <button
           onClick={scrollToMailList}
-          className="bg-white/10 backdrop-blur-md text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-colors duration-300"
+          className="bg-white/10 backdrop-blur-md  px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-colors duration-300"
         >
           Join Newsletter
         </button>
@@ -129,7 +129,7 @@ const JoinPage = () => {
   const ApplicationForm = () => (
     <div className="max-w-4xl mx-auto">
       <div>
-        <h1 className="text-5xl md:text-[4vw] text-white mb-8 text-center">
+        <h1 className="text-5xl md:text-[4vw]  mb-8 text-center">
           Applications are Open
         </h1>
       </div>
@@ -151,59 +151,59 @@ const JoinPage = () => {
       >
         {/* Personal Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">Personal Information</h2>
+          <h2 className="text-2xl font-bold  mb-6">Personal Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">First Name *</label>
+              <label className="block  mb-2">First Name *</label>
               <input
                 type="text"
                 name="firstName"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Last Name *</label>
+              <label className="block  mb-2">Last Name *</label>
               <input
                 type="text"
                 name="lastName"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Email *</label>
+              <label className="block  mb-2">Email *</label>
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Phone *</label>
+              <label className="block  mb-2">Phone *</label>
               <input
                 name="phone"
                 type="tel"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Date of Birth *</label>
+              <label className="block  mb-2">Date of Birth *</label>
               <input
                 type="date"
                 name="dateOfBirth"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Gender *</label>
+              <label className="block  mb-2">Gender *</label>
               <select
                 name="gender"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -219,14 +219,14 @@ const JoinPage = () => {
 
         {/* Academic Information */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">Academic Information</h2>
+          <h2 className="text-2xl font-bold  mb-6">Academic Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">Campus *</label>
+              <label className="block  mb-2">Campus *</label>
               <select
                 required
                 name="campus"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -239,11 +239,11 @@ const JoinPage = () => {
               </select>
             </div>
             <div>
-              <label className="block text-white mb-2">Department *</label>
+              <label className="block  mb-2">Department *</label>
               <select
                 required
                 name="department"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -313,11 +313,11 @@ const JoinPage = () => {
               </select>
             </div>
             <div>
-              <label className="block text-white mb-2">Level *</label>
+              <label className="block  mb-2">Level *</label>
               <select
                 required
                 name="level"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "white",
@@ -336,12 +336,12 @@ const JoinPage = () => {
               </select>
             </div>
             <div>
-              <label className="block text-white mb-2">Matriculation/Student ID *</label>
+              <label className="block  mb-2">Matriculation/Student ID *</label>
               <input
                 type="text"
                 name="matricNumber"
                 required
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
@@ -349,7 +349,7 @@ const JoinPage = () => {
 
         {/* Social Media Links */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10" data-section="social-media">
-          <h2 className="text-2xl font-bold text-white mb-6">Social Media Links</h2>
+          <h2 className="text-2xl font-bold  mb-6">Social Media Links</h2>
           <p className="text-gray-300 text-sm mb-4">
             <span className="text-[#f65d2a]">*</span> Please provide at least one social media profile
           </p>
@@ -365,30 +365,30 @@ const JoinPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-white mb-2">LinkedIn Profile</label>
+              <label className="block  mb-2">LinkedIn Profile</label>
               <input
                 type="url"
                 name="linkedin"
                 placeholder="https://linkedin.com/in/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">Twitter Profile</label>
+              <label className="block  mb-2">Twitter Profile</label>
               <input
                 name="twitter"
                 type="url"
                 placeholder="https://twitter.com/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
             <div>
-              <label className="block text-white mb-2">GitHub Profile</label>
+              <label className="block  mb-2">GitHub Profile</label>
               <input
                 name="github"
                 type="url"
                 placeholder="https://github.com/your-profile"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
               />
             </div>
           </div>
@@ -396,7 +396,7 @@ const JoinPage = () => {
 
         {/* Areas of Interest */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">Areas of Interest</h2>
+          <h2 className="text-2xl font-bold  mb-6">Areas of Interest</h2>
           <p className="text-gray-300 text-sm mb-4">We recommend picking at most 3</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
@@ -422,7 +422,7 @@ const JoinPage = () => {
                   value={interest}
                   className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
                 />
-                <span className="text-white">{interest}</span>
+                <span className="">{interest}</span>
               </label>
             ))}
           </div>
@@ -430,41 +430,41 @@ const JoinPage = () => {
 
         {/* Personal Statement */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-white mb-6">Personal Statement</h2>
+          <h2 className="text-2xl font-bold  mb-6">Personal Statement</h2>
           <div className="space-y-4">
             <div>
-              <label className="block text-white mb-2">Why do you want to join Space Clubs LASU? *</label>
+              <label className="block  mb-2">Why do you want to join Space Clubs LASU? *</label>
               <textarea
                 required
                 name="motivation"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Tell us about your motivation for joining..."
               ></textarea>
             </div>
             <div>
-              <label className="block text-white mb-2">What skills or experiences can you bring to the club? *</label>
+              <label className="block  mb-2">What skills or experiences can you bring to the club? *</label>
               <textarea
                 required
                 name="skillsExperience"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Describe your relevant skills and experiences..."
               ></textarea>
             </div>
             <div>
-              <label className="block text-white mb-2">What are your future aspirations in space *</label>
+              <label className="block  mb-2">What are your future aspirations in space *</label>
               <textarea
                 required
                 name="aspirations"
                 rows="4"
-                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-[#f65d2a]"
+                className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2  focus:outline-none focus:border-[#f65d2a]"
                 placeholder="Share your future goals and aspirations..."
               ></textarea>
             </div>
 
             <div className="space-y-4 my-8">
-              <p className="text-white">Pick one or more of the following skills you are proficient in</p>
+              <p className="">Pick one or more of the following skills you are proficient in</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   "Programming",
@@ -486,7 +486,7 @@ const JoinPage = () => {
                       value={skill}
                       className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
                     />
-                    <span className="text-white">{skill}</span>
+                    <span className="">{skill}</span>
                   </label>
                 ))}
               </div>
@@ -503,7 +503,7 @@ const JoinPage = () => {
             required
             className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
           />
-          <span className="text-white text-xs">By submitting this application, I confirm that the information provided is accurate, and I agree to abide by the rules and regulations of SPACE CLUBS LASU.</span>
+          <span className=" text-xs">By submitting this application, I confirm that the information provided is accurate, and I agree to abide by the rules and regulations of SPACE CLUBS LASU.</span>
         </div>
         <div className="bg-white/5 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10 items-center flex">
           <input
@@ -513,17 +513,17 @@ const JoinPage = () => {
             required
             className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a] mr-3"
           />
-          <span className="text-white text-xs">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
+          <span className=" text-xs">Note: By ticking this box or submitting your Application, you agree to paying a membership fee of #2000 upon acceptance.</span>
         </div>
 
         <button
           type="submit"
           disabled={submitting}
-          className="w-full bg-[#f65d2a] text-white py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-full bg-[#f65d2a]  py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {submitting ? (
             <>
-              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>

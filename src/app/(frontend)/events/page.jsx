@@ -38,7 +38,7 @@ const EventCard = memo(({ event }) => {
   };
 
   return (
-    <div className="bg-white/10 backdrop-blur-md border border-orange-400/50 rounded-lg overflow-hidden hover:bg-white/20 transition-all duration-300">
+    <div className="bg-black/10 backdrop-blur-lg border-none rounded-lg overflow-hidden transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
       <div className="aspect-video bg-gray-800 relative">
         {event.image ? (
           <Image
@@ -201,7 +201,7 @@ const EventsPage = () => {
             All Events
           </h1>
 
-          <div className="mb-12 bg-white/10 backdrop-blur-md p-6 rounded-3xl border border-white/10">
+          <div className="mb-12 bg-black/10 backdrop-blur-md p-6 rounded-3xl border border-white/10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
               <div className="w-full md:w-auto">

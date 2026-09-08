@@ -25,14 +25,14 @@ const ArticleCard = memo(({ article, index }) => {
           />
         </div>
         <div className="px-0 sm:px-6 sm:mt-2 w-full sm:w-2/3 flex flex-col h-full">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+          <h2 className="text-2xl text-white md:text-3xl font-bold mb-4 md:mb-6">
             {article.title}
           </h2>
-          <p className="text-gray-300 mb-4 md:mb-6 flex-grow text-sm md:text-base line-clamp-4">
+          <p className="text-white mb-4 md:mb-6 flex-grow text-sm md:text-base line-clamp-4">
             {article.description}
           </p>
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-4 text-sm text-gray-400">
+            <div className="flex items-center gap-4 text-sm text-white">
               <span>{article.date}</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
@@ -191,24 +191,13 @@ const Blog = () => {
   return (
     <div className="min-h-screen py-20 px-4 md:px-8">
       <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/home-bg.png"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-          quality={60}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+        {/* <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div> */}
       </div>
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-center">
           The Orbit
         </h1>
-        <p className="text-center text-lg text-gray-300 mb-12">
+        <p className="text-center text-xl mb-12">
           Explore our latest articles on space exploration, technology, and the
           future of humanity in space.
         </p>
