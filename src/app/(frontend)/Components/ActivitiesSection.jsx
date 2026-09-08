@@ -42,9 +42,9 @@ const ActivitiesSection = () => {
               key={activity.title}
               className="
                 relative
-                rounded-xl
-                border border-gray-700/70
-                bg-white/5
+                rounded-lg
+                border-4 border-gray-700/70
+                bg-white/50
                 p-6
 
                 shadow-[0_6px_0_rgba(0,0,0,0.12),0_12px_25px_rgba(0,0,0,0.18)]

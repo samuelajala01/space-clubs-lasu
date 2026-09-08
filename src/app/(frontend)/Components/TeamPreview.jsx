@@ -33,10 +33,12 @@ const TeamPreview = () => {
         </h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {coreTeam.map((member, index) => (
-            <div
-              key={index}
-              className="rounded-xl border-2 bg-black/15 border-[#f65d2a] overflow-hidden "
-            >
+            // <div
+            //   key={index}
+            //   className="rounded-xl border-2 bg-black/15 border-[#f65d2a] overflow-hidden "
+            // >
+                <div key={index} className="bg-white/5 backdrop-blur-lg border-4 border-orange-500 rounded-md transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
+                  
               <div className="relative h-64">
                 {member.image ? (
                   <Image

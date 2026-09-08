@@ -137,21 +137,23 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+              <div className="bg-white/5 backdrop-blur-lg border-none rounded-lg  p-8 transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
+    
+              {/* <div className="bg-white/5 backdrop-blur-md shadow-md rounded-xl p-8 border border-white/10"> */}
                 <h3 className="text-xl font-bold  mb-4">Inspire</h3>
                 <p className="">
                   Share our passion for space exploration with the community
                   through public events and outreach programs.
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+              <div className="bg-white/5 backdrop-blur-lg border-none rounded-lg  p-8 transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
                 <h3 className="text-xl font-bold mb-4">Educate</h3>
                 <p className="">
                   Provide hands-on learning opportunities and workshops for
                   students interested in space science and tech.
                 </p>
               </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-xl p-8 border border-white/10">
+            <div className="bg-white/5 backdrop-blur-lg border-none rounded-lg  p-8 transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
                 <h3 className="text-xl font-bold  mb-4">Engage</h3>
                 <p className="">
                   Conduct cutting-edge research and experiments in space science
@@ -171,10 +173,11 @@ const AboutPage = () => {
             {/* <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div> */}
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {coreTeam.map((member, index) => (
-                <div
-                  key={member.name}
-                  className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
-                >
+                // <div
+                //   key={member.name}
+                //   className="bg-white/5 backdrop-blur-md rounded-md border-8 border-orange-500 overflow-hidden hover:bg-white/10 transition-all duration-300"
+                // >
+                <div key={member.name} className="bg-white/5 backdrop-blur-lg border-8 border-orange-500 rounded-lg transition-all duration-300 shadow-[12px_12px_15px_-4px_rgba(0,0,0,0.6)] hover:shadow-[16px_16px_20px_-4px_rgba(0,0,0,0.7)] hover:-translate-y-1 hover:-translate-x-1 hover:bg-white/20">
                   <div className="relative h-64">
                     {member.image ? (
                       <Image
