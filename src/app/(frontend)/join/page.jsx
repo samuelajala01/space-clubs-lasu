@@ -415,7 +415,7 @@ const JoinPage = () => {
               "Planetary Science",
               "Space Education",
             ].map((interest) => (
-              <label key={interest} className="flex items-center space-x-3">
+              <label key={interest} className="flex bg-white p-4 border-2 rounded-xl items-center space-x-3">
                 <input
                   type="checkbox"
                   name="areasOfInterest"
@@ -479,12 +479,12 @@ const JoinPage = () => {
                   "Data Analysis",
                   "Photography or Videography",
                 ].map((skill) => (
-                  <label key={skill} className="flex items-center space-x-3">
+                  <label key={skill} className="flex bg-white p-4 border-2 rounded-xl items-center space-x-3">
                     <input
                       type="checkbox"
                       name="skills"
                       value={skill}
-                      className="form-checkbox h-5 w-5 text-[#f65d2a] rounded border-gray-300 focus:ring-[#f65d2a]"
+                      className="form-checkbox h-5 w-5 text-[#f65d2a] focus:ring-[#f65d2a]"
                     />
                     <span className="">{skill}</span>
                   </label>
@@ -519,7 +519,7 @@ const JoinPage = () => {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full bg-[#f65d2a]  py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-full bg-[#f65d2a] text-white py-3 rounded-lg font-semibold hover:bg-[#e54d1a] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {submitting ? (
             <>
