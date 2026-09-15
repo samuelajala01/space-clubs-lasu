@@ -41,16 +41,19 @@ const UpcomingEvents = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => {
-            // Calculate status dynamically based on current date
             const eventDate = new Date(event.date);
             const today = new Date();
-            today.setHours(0, 0, 0, 0); // Reset time to midnight for accurate day comparison
+            today.setHours(0, 0, 0, 0); 
+            
+            const day = String(eventDate.getDate()).padStart(2, '0');
+            const month = String(eventDate.getMonth() + 1).padStart(2, '0');
+            const year = eventDate.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
             
             const isPast = eventDate < today;
             const status = isPast ? "past" : "upcoming";
             
-            // Extract the URL from Payload's Media object
-            const imageUrl = event.coverImage?.url;
+            const imageUrl = event.coverImage?.url || (typeof event.coverImage === 'string' ? event.coverImage : null);
 
             return (
               <div
@@ -91,7 +94,7 @@ const UpcomingEvents = () => {
                     {event.title}
                   </h3>
                   <div className="text-gray-200 mb-4">
-                    <p>📅 {new Date(event.date).toLocaleDateString()}</p>
+                    <p>📅 {formattedDate}</p>
                     <p>⏰ {event.time}</p>
                     <p>📍 {event.location}</p>
                   </div>

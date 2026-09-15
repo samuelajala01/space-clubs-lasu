@@ -143,6 +143,11 @@ const EventsPage = () => {
           const eventDate = new Date(evt.date);
           const today = new Date();
           today.setHours(0, 0, 0, 0);
+
+          // Force strict DD/MM/YYYY format
+          const day = String(eventDate.getDate()).padStart(2, '0');
+          const month = String(eventDate.getMonth() + 1).padStart(2, '0');
+          const year = eventDate.getFullYear();
           
           // Safely extract URL whether Payload returns a populated object or a raw string
           const imageUrl = evt.coverImage?.url || (typeof evt.coverImage === 'string' ? evt.coverImage : null);
@@ -151,7 +156,7 @@ const EventsPage = () => {
             id: evt.id,
             title: evt.title,
             category: evt.category,
-            date: eventDate.toLocaleDateString(),
+            date: `${day}/${month}/${year}`,
             time: evt.time,
             location: evt.location,
             description: evt.description,
@@ -171,7 +176,6 @@ const EventsPage = () => {
 
     fetchEvents();
   }, []);
-
   const filteredEvents = useMemo(() => {
     return events.filter((event) => {
       const categoryMatch =
