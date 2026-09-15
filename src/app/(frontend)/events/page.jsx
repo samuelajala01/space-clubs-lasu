@@ -101,7 +101,7 @@ const EventCard = memo(({ event }) => {
         <p className=" mb-4 line-clamp-3">{event.description}</p>
         {event.status !== "past" ? (
           <a
-            href={event.registerLink}
+            href={event.registrationLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#f65d2a] rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
@@ -155,7 +155,7 @@ const EventsPage = () => {
             time: evt.time,
             location: evt.location,
             description: evt.description,
-            registerLink: evt.registerLink,
+            registrationLink: evt.registrationLink,
             status: eventDate < today ? "past" : "upcoming",
             image: imageUrl
           };

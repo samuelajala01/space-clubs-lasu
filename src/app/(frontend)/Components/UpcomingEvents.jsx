@@ -97,9 +97,9 @@ const UpcomingEvents = () => {
                   </div>
                   <p className="text-gray-200 mb-4">{event.description}</p>
                   
-                  {!isPast && event.registerLink && (
+                  {!isPast && event.registrationLink && (
                     <a
-                      href={event.registerLink}
+                      href={event.registrationLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block bg-[#f65d2a] text-white rounded-full py-2 px-6 font-semibold hover:bg-[#e54d1a] transition-colors duration-300"
