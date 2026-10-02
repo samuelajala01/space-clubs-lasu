@@ -54,8 +54,8 @@ const ActivitiesSection = () => {
                 ease-out
 
                 hover:-translate-y-1.5
-                hover:border-gray-600
-                hover:bg-white/10
+                hover:border-white-600
+                hover:bg-[#ff5b00]/50
                 hover:shadow-[0_8px_0_rgba(0,0,0,0.12),0_20px_35px_rgba(0,0,0,0.22)]
               "
             >
