@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useCallback, memo } from "react";
 
-const Logo = "/images/Logo.png";
+const Logo = "/images/Logo-light.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -144,7 +144,7 @@ const Navbar = () => {
             />
           </div>
 
-            <ul className="flex gap-[4vw] items-center px-10 py-6 rounded-2xl text-[#081f54] shadow-md bg-white/5 backdrop-blur-md font-medium">
+            <ul className="flex gap-[4vw] items-center px-10 py-6 rounded-2xl text-[#dcfefc] shadow-md bg-white/5 backdrop-blur-md font-medium">
               <li>
               <Link href="/" className="hover:text-[#f65d2a] transition-colors">
                 Home

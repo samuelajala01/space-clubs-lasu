@@ -2,7 +2,7 @@ const Donate = () => {
   const donateLink = "https://paystack.shop/pay/jfspl56fa3";
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen bg-[#0a1553]/60 relative">
       {/* Background Image */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>

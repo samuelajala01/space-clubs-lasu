@@ -25,7 +25,7 @@ const HeroSection = () => {
      
       <section className="mx-[4vw] text-center relative">
         <h1
-          className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl lg:px-32 font-medium text-[#081f54]">
+          className="mt-[12vh] mb-8 text-4xl md:text-5xl lg:text-7xl lg:px-32 font-medium text-[#dcfefc]">
           We are on a <span className="text-[#f65d2a]">mission</span> to Inspire, Educate, and Engage students.
         </h1>
         <p className="text-[1.1rem] sm:text-2xl">
