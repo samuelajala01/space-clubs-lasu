@@ -130,13 +130,13 @@ const Reports = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           {/* <Image
-            src="/images/report-bg.jpg"
+            src="/images/article-bg.png"
             alt="Reports Background"
             fill
             className="object-cover"
             priority
           /> */}
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/10"></div>
         </div>
 
         {/* Hero Content */}
@@ -184,7 +184,8 @@ const Reports = () => {
       </div>
 
       {/* Main Content */}
-      <div className="bg-black min-h-screen py-16 px-4">
+      <div className="bg-[#0a1553]/60 min-h-screen py-16 px-4">
+         
         <div className="max-w-7xl mx-auto">
           {/* Search and Filter Section */}
           <div className="mb-12">
