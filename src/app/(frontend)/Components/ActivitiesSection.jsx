@@ -43,8 +43,8 @@ const ActivitiesSection = () => {
               className="
                 relative
                 rounded-lg
-                border-4 border-gray-700/70
-                bg-white/50
+                border-4 border-white-700/70
+                bg-[#ff5b00]/70
                 p-6
 
                 shadow-[0_6px_0_rgba(0,0,0,0.12),0_12px_25px_rgba(0,0,0,0.18)]
@@ -63,7 +63,7 @@ const ActivitiesSection = () => {
                 {activity.title}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-[#ffffff] leading-relaxed">
                 {activity.description}
               </p>
             </div>
