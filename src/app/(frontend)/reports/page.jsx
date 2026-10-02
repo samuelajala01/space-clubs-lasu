@@ -129,13 +129,13 @@ const Reports = () => {
       <div className="relative min-h-screen flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image
+          {/* <Image
             src="/images/report-bg.jpg"
             alt="Reports Background"
             fill
             className="object-cover"
             priority
-          />
+          /> */}
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
