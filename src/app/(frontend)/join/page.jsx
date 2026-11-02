@@ -15,7 +15,7 @@ const JoinPage = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [socialMediaError, setSocialMediaError] = useState("");
 
-  const isAcceptingApplications = true;
+  const isAcceptingApplications = false;
 
   const scrollToMailList = () => {
     mailListRef.current?.scrollIntoView({ behavior: "smooth" });
