@@ -29,7 +29,7 @@ const Reports = () => {
         "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2025.",
       fileSize: "8.1 MB",
       fileType: "PDF",
-      downloadCount: 15,
+      downloadCount: 85,
       date: "2025-12-31",
       fileName: "SCL Annual Report 2025.pdf",
     },
@@ -46,7 +46,7 @@ const Reports = () => {
       fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
     },
     {
-      id: 6,
+      id: 3,
       title: "WORLD SPACE WEEK REPORT 2026 - SPACE CLUBS LASU",
       category: "events",
       description:
@@ -58,7 +58,7 @@ const Reports = () => {
       fileName: "Space Clubs LASU World Space Week 2026 Impact Report.pdf",
     },
     {
-      id: 6,
+      id: 4,
       title: "WORLD SPACE WEEK REPORT 2025 - SPACE CLUBS LASU",
       category: "events",
       description:
@@ -70,7 +70,7 @@ const Reports = () => {
       fileName: "World Space Week 2025 Report.pdf",
     },
     {
-      id: 2,
+      id: 5,
       title: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU",
       category: "events",
       description:
@@ -82,7 +82,7 @@ const Reports = () => {
       fileName: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU.pdf",
     },
     {
-      id: 3,
+      id: 6,
       title: "Under The Epe Sky Impact Report",
       category: "events",
       description:
@@ -94,19 +94,19 @@ const Reports = () => {
       fileName: "Under The Epe Sky Impact Report.pdf",
     },
     {
-      id: 4,
-      title: "Under The Epe Sky Impact Report",
+      id: 7,
+      title: "Space4Naija Impact Report",
       category: "events",
       description:
-        "Impact report from the Under The Epe Sky event showcasing community engagement and educational outcomes.",
-      fileSize: "10 MB",
+        "Impact report from the Space4Naija event showcasing community engagement and educational outcomes.",
+      fileSize: "4.6 MB",
       fileType: "PDF",
       downloadCount: 25,
       date: "2025-07-03",
-      fileName: "Under The Epe Sky Impact Report.pdf",
+      fileName: "Space4Naija Schools Outreach Impact Report.pdf",
     },
     {
-      id: 5,
+      id: 8,
       title: "Photo Day Impact Report",
       category: "events",
       description:
