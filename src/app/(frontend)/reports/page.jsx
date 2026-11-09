@@ -23,6 +23,18 @@ const Reports = () => {
   const reports = [
     {
       id: 1,
+      title: "SPACE CLUBS LASU Annual Report 2025",
+      category: "annual",
+      description:
+        "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2025.",
+      fileSize: "3.6 MB",
+      fileType: "PDF",
+      downloadCount: 15,
+      date: "2024-12-31",
+      fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
+    },
+    {
+      id: 2,
       title: "SPACE CLUBS LASU Annual Report 2024",
       category: "annual",
       description:
@@ -32,6 +44,30 @@ const Reports = () => {
       downloadCount: 15,
       date: "2024-12-31",
       fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
+    },
+    {
+      id: 6,
+      title: "WORLD SPACE WEEK REPORT 2026 - SPACE CLUBS LASU",
+      category: "events",
+      description:
+        "Detailed report covering the successful Space Week celebration including workshops, webinars, and community engagement.",
+      fileSize: "2.6 MB",
+      fileType: "PDF",
+      downloadCount: 200,
+      date: "2026-10-15",
+      fileName: "Space Clubs LASU World Space Week 2026 Impact Report",
+    },
+    {
+      id: 6,
+      title: "WORLD SPACE WEEK REPORT 2025 - SPACE CLUBS LASU",
+      category: "events",
+      description:
+        "Detailed report covering the successful Space Week celebration including workshops, webinars, and community engagement.",
+      fileSize: "2.4 MB",
+      fileType: "PDF",
+      downloadCount: 200,
+      date: "2025-10-15",
+      fileName: "World Space Week 2025 Report",
     },
     {
       id: 2,
@@ -58,7 +94,7 @@ const Reports = () => {
       fileName: "Under The Epe Sky Impact Report.pdf",
     },
     {
-      id: 3,
+      id: 4,
       title: "Under The Epe Sky Impact Report",
       category: "events",
       description:
@@ -70,7 +106,7 @@ const Reports = () => {
       fileName: "Under The Epe Sky Impact Report.pdf",
     },
     {
-      id: 3,
+      id: 5,
       title: "Photo Day Impact Report",
       category: "events",
       description:
@@ -82,6 +118,7 @@ const Reports = () => {
       fileName: "SPE LASU PHOTO Day Impact Report",
     },
   ];
+  
 
   const categories = [
     { id: "all", name: "All Reports", count: reports.length },
