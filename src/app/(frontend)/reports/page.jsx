@@ -27,11 +27,11 @@ const Reports = () => {
       category: "annual",
       description:
         "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2025.",
-      fileSize: "3.6 MB",
+      fileSize: "8.1 MB",
       fileType: "PDF",
       downloadCount: 15,
-      date: "2024-12-31",
-      fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
+      date: "2025-12-31",
+      fileName: "SCL Annual Report 2025.pdf",
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ const Reports = () => {
       fileType: "PDF",
       downloadCount: 200,
       date: "2026-10-15",
-      fileName: "Space Clubs LASU World Space Week 2026 Impact Report",
+      fileName: "Space Clubs LASU World Space Week 2026 Impact Report.pdf",
     },
     {
       id: 6,
@@ -67,7 +67,7 @@ const Reports = () => {
       fileType: "PDF",
       downloadCount: 200,
       date: "2025-10-15",
-      fileName: "World Space Week 2025 Report",
+      fileName: "World Space Week 2025 Report.pdf",
     },
     {
       id: 2,
@@ -115,7 +115,7 @@ const Reports = () => {
       fileType: "PDF",
       downloadCount: 200,
       date: "2025-11-23",
-      fileName: "SPE LASU PHOTO Day Impact Report",
+      fileName: "SPE LASU PHOTO Day Impact Report.pdf",
     },
   ];
   
