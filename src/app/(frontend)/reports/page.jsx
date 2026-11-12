@@ -23,18 +23,54 @@ const Reports = () => {
   const reports = [
     {
       id: 1,
+      title: "SPACE CLUBS LASU Annual Report 2025",
+      category: "annual",
+      description:
+        "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2025.",
+      fileSize: "8.1 MB",
+      fileType: "PDF",
+      downloadCount: 85,
+      date: "2025-12-31",
+      fileName: "SCL Annual Report 2025.pdf",
+    },
+    {
+      id: 2,
       title: "SPACE CLUBS LASU Annual Report 2024",
       category: "annual",
       description:
         "Comprehensive overview of all activities, events, and achievements of Space Clubs LASU throughout 2024.",
       fileSize: "3.6 MB",
       fileType: "PDF",
-      downloadCount: 15,
+      downloadCount: 98,
       date: "2024-12-31",
       fileName: "SPACE CLUBS LASU Annual Report 2024.pdf",
     },
     {
-      id: 2,
+      id: 3,
+      title: "WORLD SPACE WEEK REPORT 2026 - SPACE CLUBS LASU",
+      category: "events",
+      description:
+        "Detailed report covering the successful Space Week celebration including workshops, webinars, and community engagement.",
+      fileSize: "2.6 MB",
+      fileType: "PDF",
+      downloadCount: 200,
+      date: "2026-10-15",
+      fileName: "Space Clubs LASU World Space Week 2026 Impact Report.pdf",
+    },
+    {
+      id: 4,
+      title: "WORLD SPACE WEEK REPORT 2025 - SPACE CLUBS LASU",
+      category: "events",
+      description:
+        "Detailed report covering the successful Space Week celebration including workshops, webinars, and community engagement.",
+      fileSize: "2.4 MB",
+      fileType: "PDF",
+      downloadCount: 200,
+      date: "2025-10-15",
+      fileName: "World Space Week 2025 Report.pdf",
+    },
+    {
+      id: 5,
       title: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU",
       category: "events",
       description:
@@ -46,31 +82,31 @@ const Reports = () => {
       fileName: "WORLD SPACE WEEK REPORT 2024 - SPACE CLUBS LASU.pdf",
     },
     {
-      id: 3,
+      id: 6,
       title: "Under The Epe Sky Impact Report",
       category: "events",
       description:
         "Impact report from the Under The Epe Sky event showcasing community engagement and educational outcomes.",
       fileSize: "10 MB",
       fileType: "PDF",
-      downloadCount: 25,
+      downloadCount: 75,
       date: "2025-07-03",
       fileName: "Under The Epe Sky Impact Report.pdf",
     },
     {
-      id: 3,
-      title: "Under The Epe Sky Impact Report",
+      id: 7,
+      title: "Space4Naija Impact Report",
       category: "events",
       description:
-        "Impact report from the Under The Epe Sky event showcasing community engagement and educational outcomes.",
-      fileSize: "10 MB",
+        "Impact report from the Space4Naija event showcasing community engagement and educational outcomes.",
+      fileSize: "4.6 MB",
       fileType: "PDF",
       downloadCount: 25,
       date: "2025-07-03",
-      fileName: "Under The Epe Sky Impact Report.pdf",
+      fileName: "Space4Naija Schools Outreach Impact Report.pdf",
     },
     {
-      id: 3,
+      id: 8,
       title: "Photo Day Impact Report",
       category: "events",
       description:
@@ -79,9 +115,10 @@ const Reports = () => {
       fileType: "PDF",
       downloadCount: 200,
       date: "2025-11-23",
-      fileName: "SPE LASU PHOTO Day Impact Report",
+      fileName: "SPE LASU PHOTO Day Impact Report.pdf",
     },
   ];
+  
 
   const categories = [
     { id: "all", name: "All Reports", count: reports.length },
