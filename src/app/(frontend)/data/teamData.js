@@ -11,7 +11,7 @@ export const currentTeam = [
     },
   },
   {
-    name: "Tofunmi Ojo",
+    name: "Oluwatofunmi Ojo",
     role: "Finance Officer",
     image: "/images/team/OjoTofunmi.jpg",
     bio: "I'm a relentless question asker with a passion for growth, always chasing the next thing to learn.",
@@ -122,7 +122,7 @@ export const currentTeam = [
 
   },
   {
-    name: "Adegbola John",
+    name: "Adegbola Johnbeulah",
     role: "Media Lead",
     image: "/images/team/AdegbolaJohn.jpeg",
     bio: "An Aerospace Engineering student, creative designer, and community builder passionate about aerospace, technology, and impactful storytelling through design and media.",

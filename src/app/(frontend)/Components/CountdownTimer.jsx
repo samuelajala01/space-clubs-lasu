@@ -60,7 +60,7 @@ const CountdownTimer = ({ targetDate }) => {
           {/* <span className="mr-2"></span> */}
           Application Deadline
         </h3>
-        <p className=" mb-4">Applications close on October 15th, 2026</p>
+        <p className=" mb-4">Applications close on November 22nd, 2026</p>
         
         <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 border border-white/20">
